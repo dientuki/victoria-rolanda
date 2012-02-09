@@ -8,4 +8,4 @@ $slug = explode(".",$slug[3]);
 $wpdb->query("UPDATE $wpdb->posts SET post_name ='" . $slug[0] . "' WHERE ID = $row->post_id");
 $wpdb->print_error();
 }
-echo "DONE";
+echo "very well DONE";
