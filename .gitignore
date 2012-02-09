@@ -1,0 +1,6 @@
+wp-config.php
+.buildpath
+.project
+.settings/*
+Thumbs.db
+.htaccess
