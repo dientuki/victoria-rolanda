@@ -1,0 +1,75 @@
+#header-975x75 {
+  width: 975px;
+  height: 75px;
+  margin-bottom: 2px; }
+
+#header.default {
+  background: url(../images/header-vr.jpg) left top no-repeat; }
+#header #logo {
+  height: 190px;
+  display: block;
+  text-indent: -999em; }
+  #header #logo img {
+    width: 990px;
+    height: 190px;
+    display: block; }
+
+#header-menu {
+  height: 45px;
+  margin-top: 1px;
+  background: #333333;
+  /* Old browsers */
+  background: -moz-linear-gradient(top, #333333 0%, #1f1f1f 100%);
+  /* FF3.6+ */
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #333333), color-stop(100%, #1f1f1f));
+  /* Chrome,Safari4+ */
+  background: -webkit-linear-gradient(top, #333333 0%, #1f1f1f 100%);
+  /* Chrome10+,Safari5.1+ */
+  background: -o-linear-gradient(top, #333333 0%, #1f1f1f 100%);
+  /* Opera 11.10+ */
+  background: -ms-linear-gradient(top, #333333 0%, #1f1f1f 100%);
+  /* IE10+ */
+  background: linear-gradient(top, #333333 0%, #1f1f1f 100%);
+  /* W3C */ }
+  #header-menu ul {
+    height: 45px; }
+  #header-menu li {
+    height: 45px;
+    line-height: 45px;
+    float: left; }
+    #header-menu li a {
+      color: #f9adce;
+      padding: 2px; }
+      #header-menu li a:hover {
+        text-decoration: none;
+        background: #ff58b0;
+        color: white; }
+
+#home-slideshow {
+  width: 660px;
+  height: 370px;
+  background: black; }
+
+#sidebar-left {
+  width: 180px;
+  float: left;
+  height: 300px;
+  background: blue; }
+
+#sidebar-right {
+  width: 300px;
+  float: right;
+  height: 500px;
+  background: red; }
+
+.banner {
+  margin: 0 auto;
+  background: grey; }
+
+.container {
+  width: 660px;
+  float: left; }
+
+.wrapper {
+  width: 990px;
+  margin: 0 auto; }

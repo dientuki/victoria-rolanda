@@ -1,0 +1,7 @@
+/*
+  @todo: fix this
+*/
+
+@mixin gradient_ie($top: black, $bottom: white) {
+  filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='$top', endColorstr='$bottom', GradientType=0 );  
+}

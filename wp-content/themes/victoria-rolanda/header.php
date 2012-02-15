@@ -28,7 +28,8 @@
 
 	?></title>
 <link rel="profile" href="http://gmpg.org/xfn/11" />
-<link rel="stylesheet" type="text/css" media="all" href="<?php bloginfo( 'stylesheet_url' ); ?>" />
+<link rel="stylesheet" type="text/css" media="all" href="<?php bloginfo( 'template_url' ); ?>/css/normalize.css" />
+<link rel="stylesheet" type="text/css" media="all" href="<?php bloginfo( 'template_url' ); ?>/css/style.css" />
 <link rel="pingback" href="<?php bloginfo( 'pingback_url' ); ?>" />
 <?php
 	/* We add some JavaScript to pages with the comment form
@@ -41,12 +42,12 @@
 </head>
 
 <body <?php body_class(); ?>>
-	<div id="header-990x75" class="banner" role="banner"></div>
+	<div id="header-975x75" class="banner" role="banner"></div>
 	<header id="header" class="wrapper <?php if (get_header_image() == false ):?>default<?php endif;?>">
 		<?php if ( get_header_image() ):?>
 			<img src="<?php header_image(); ?>" width="<?php echo HEADER_IMAGE_WIDTH; ?>" height="<?php echo HEADER_IMAGE_HEIGHT; ?>" alt="<?php bloginfo( 'name' ); ?>" />
 		<?php endif; ?>
-		<a href="<?php echo home_url( '/' ); ?>" title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a>
+		<a id="logo" href="<?php echo home_url( '/' ); ?>" title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a>
 		<div class="tagline hidden"><?php bloginfo( 'description' ); ?></div>
 		<?php wp_nav_menu( array( 'theme_location' => 'header',
 		                          'container' => 'nav', 'container_id' => 'header-menu', 'container_class' => '',
