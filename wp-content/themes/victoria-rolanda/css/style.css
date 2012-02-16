@@ -92,7 +92,7 @@
   float: right; }
   #river-news article {
     padding-bottom: 50px;
-    border-bottom: 5px; }
+    border-bottom: solid 1px #eaeaea; }
 
 #sidebar-left {
   width: 180px;
