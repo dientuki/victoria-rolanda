@@ -41,7 +41,9 @@
     float: left; }
     #header-menu li a {
       color: #f9adce;
-      padding: 2px; }
+      padding: 2px;
+      font-family: 'KGSkinnyLatteRegular', Arial;
+      text-transform: uppercase; }
       #header-menu li a:hover {
         text-decoration: none;
         background: #ff58b0;
