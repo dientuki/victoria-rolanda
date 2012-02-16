@@ -16,6 +16,7 @@ $lpink: #F9ADCE;
 }
 
 #header {
+	margin-bottom:6px;
 	
 	&.default {
 	  background: url(../images/header-vr.jpg) left top no-repeat;
@@ -64,9 +65,50 @@ $lpink: #F9ADCE;
 }
 
 #home-slideshow {
-	width: 660px;
-	height: 370px;
+	width: 658px;
+	height: 368px;
 	background: black;
+	border:solid 1px #eaeaea;
+}
+
+#footer {
+	$h: 47px;
+	height:$h;
+	border-top:solid 1px #e8e8e8;
+	text-align:center;
+
+  a {
+    color:$cyan;
+    
+    &:hover {
+      text-decoration:underline;
+    }
+  }
+
+  li {
+    height:$h;
+    line-height:$h;
+    float:left;
+  }
+
+	ul,
+	#footer-menu {
+	  height:$h;
+	}
+	
+}
+
+#footer-slideshow {
+  width: 448px;
+  height: 251px;
+  background: black;
+  border:solid 1px #eaeaea;
+  float:right;
+}
+
+#river-news {
+	width: 450px;
+	float:right;
 }
 
 #sidebar-left {

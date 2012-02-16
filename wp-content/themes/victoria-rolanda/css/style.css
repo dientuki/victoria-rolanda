@@ -3,16 +3,18 @@
   height: 75px;
   margin-bottom: 2px; }
 
-#header.default {
-  background: url(../images/header-vr.jpg) left top no-repeat; }
-#header #logo {
-  height: 190px;
-  display: block;
-  text-indent: -999em; }
-  #header #logo img {
-    width: 990px;
+#header {
+  margin-bottom: 6px; }
+  #header.default {
+    background: url(../images/header-vr.jpg) left top no-repeat; }
+  #header #logo {
     height: 190px;
-    display: block; }
+    display: block;
+    text-indent: -999em; }
+    #header #logo img {
+      width: 990px;
+      height: 190px;
+      display: block; }
 
 #header-menu {
   height: 45px;
@@ -46,9 +48,37 @@
         color: white; }
 
 #home-slideshow {
-  width: 660px;
-  height: 370px;
-  background: black; }
+  width: 658px;
+  height: 368px;
+  background: black;
+  border: solid 1px #eaeaea; }
+
+#footer {
+  height: 47px;
+  border-top: solid 1px #e8e8e8;
+  text-align: center; }
+  #footer a {
+    color: #1dcaff; }
+    #footer a:hover {
+      text-decoration: underline; }
+  #footer li {
+    height: 47px;
+    line-height: 47px;
+    float: left; }
+  #footer ul,
+  #footer #footer-menu {
+    height: 47px; }
+
+#footer-slideshow {
+  width: 448px;
+  height: 251px;
+  background: black;
+  border: solid 1px #eaeaea;
+  float: right; }
+
+#river-news {
+  width: 450px;
+  float: right; }
 
 #sidebar-left {
   width: 180px;
