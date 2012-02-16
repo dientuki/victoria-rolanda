@@ -1,3 +1,4 @@
+<section id="river-news">
 <?php while ( have_posts() ) : ?>
   <?php the_post(); ?>
   
@@ -27,3 +28,4 @@
   </article>
 
 <?php endwhile; // End the loop. Whew. ?>
+</section>
