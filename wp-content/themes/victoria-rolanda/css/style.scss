@@ -8,6 +8,7 @@ $black20: #f5f5f5;
 $cyan: #1DCAFF;
 $pink: #FF58B0;
 $lpink: #F9ADCE;
+$border-color: #eaeaea;
 
 #header-975x75 {
 	width: 975px;
@@ -16,7 +17,7 @@ $lpink: #F9ADCE;
 }
 
 #header {
-	margin-bottom:6px;
+	margin-bottom:10px;
 	
 	&.default {
 	  background: url(../images/header-vr.jpg) left top no-repeat;
@@ -48,12 +49,14 @@ $lpink: #F9ADCE;
 	  height: $h;
 	  line-height: $h;
 	  float:left;
+	  padding:0 10px;
 	  
 	  a {
 	    color: $lpink;
 	    padding:2px;
 	    font-family: 'KGSkinnyLatteRegular', Arial;
 	    text-transform:uppercase;
+	    font-size:20px;
 	    
 	    &:hover {
 	      text-decoration:none;
@@ -67,10 +70,12 @@ $lpink: #F9ADCE;
 }
 
 #home-slideshow {
-	width: 658px;
-	height: 368px;
+	width: 660px;
+	height: 370px;
 	background: black;
-	border:solid 1px #eaeaea;
+	border:solid 1px $border-color;
+	margin-bottom: 25px;
+	@include border_radius(8px);
 }
 
 #footer {
@@ -104,13 +109,18 @@ $lpink: #F9ADCE;
   width: 448px;
   height: 251px;
   background: black;
-  border:solid 1px #eaeaea;
+  border:solid 1px $border-color;
   float:right;
 }
 
 #river-news {
 	width: 450px;
 	float:right;
+	
+	article {
+	  padding-bottom: 50px;
+	  border-bottom: 5px; 
+	}
 }
 
 #sidebar-left {
@@ -135,6 +145,13 @@ $lpink: #F9ADCE;
 .container {
   width: 660px;
   float:left;
+}
+
+.sidebar {
+	
+	.block {
+	  margin-bottom:20px;
+	}
 }
 
 .wrapper {

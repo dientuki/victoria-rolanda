@@ -4,7 +4,7 @@
   margin-bottom: 2px; }
 
 #header {
-  margin-bottom: 6px; }
+  margin-bottom: 10px; }
   #header.default {
     background: url(../images/header-vr.jpg) left top no-repeat; }
   #header #logo {
@@ -38,22 +38,31 @@
   #header-menu li {
     height: 45px;
     line-height: 45px;
-    float: left; }
+    float: left;
+    padding: 0 10px; }
     #header-menu li a {
       color: #f9adce;
       padding: 2px;
       font-family: 'KGSkinnyLatteRegular', Arial;
-      text-transform: uppercase; }
+      text-transform: uppercase;
+      font-size: 20px; }
       #header-menu li a:hover {
         text-decoration: none;
         background: #ff58b0;
         color: white; }
 
 #home-slideshow {
-  width: 658px;
-  height: 368px;
+  width: 660px;
+  height: 370px;
   background: black;
-  border: solid 1px #eaeaea; }
+  border: solid 1px #eaeaea;
+  margin-bottom: 25px;
+  -webkit-border-radius: 8px;
+  -moz-border-radius: 8px;
+  border-radius: 8px;
+  -moz-background-clip: padding;
+  -webkit-background-clip: padding-box;
+  background-clip: padding-box; }
 
 #footer {
   height: 47px;
@@ -81,6 +90,9 @@
 #river-news {
   width: 450px;
   float: right; }
+  #river-news article {
+    padding-bottom: 50px;
+    border-bottom: 5px; }
 
 #sidebar-left {
   width: 180px;
@@ -101,6 +113,9 @@
 .container {
   width: 660px;
   float: left; }
+
+.sidebar .block {
+  margin-bottom: 20px; }
 
 .wrapper {
   width: 990px;
