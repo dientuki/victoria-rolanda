@@ -51,7 +51,7 @@
         background: #ff58b0;
         color: white; }
 
-#home-slideshow {
+#home-carousel {
   width: 660px;
   height: 370px;
   background: black;
@@ -80,7 +80,7 @@
   #footer #footer-menu {
     height: 47px; }
 
-#footer-slideshow {
+#footer-carousel {
   width: 448px;
   height: 251px;
   background: black;
