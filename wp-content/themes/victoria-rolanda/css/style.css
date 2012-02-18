@@ -110,6 +110,9 @@
   margin: 0 auto;
   background: grey; }
 
+.carousel {
+  overflow: hidden; }
+
 .container {
   width: 660px;
   float: left; }

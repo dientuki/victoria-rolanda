@@ -25,7 +25,7 @@
 		        <a href="<?php the_permalink(); ?>" title="<?php the_title(); ?>">
 		          <?php the_post_thumbnail('featured_thumbnail'); ?>
 		        </a>
-		        <figcaption><?php the_title(); ?>/figcaption>
+		        <figcaption><?php the_title(); ?></figcaption>
 		      </figure>
 		      <a href="#"></a>
 		    </div>
@@ -37,7 +37,9 @@
 		    </div>
 		
 		    <footer>
-		      <div class="author vcard"></div>      
+		      <div class="author vcard">
+		      	Por: <a href="<?php echo get_author_posts_url( get_the_author_meta( 'ID' ) ); ?>" rel="author"><?php the_author()?></a>
+		      </div>      
 		    </footer>
 		  </article>
 		
