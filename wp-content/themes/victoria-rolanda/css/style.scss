@@ -10,6 +10,12 @@ $pink: #FF58B0;
 $lpink: #F9ADCE;
 $border-color: #eaeaea;
 
+#banner300x200 {
+	height: 200px;
+	background: white;
+	border:solid 1px $border-color;
+}
+
 #header-975x75 {
 	width: 975px;
 	height: 75px;
@@ -70,7 +76,7 @@ $border-color: #eaeaea;
 }
 
 #home-carousel {
-	width: 660px;
+	width: 658px;
 	height: 370px;
 	background: black;
 	border:solid 1px $border-color;
@@ -111,6 +117,14 @@ $border-color: #eaeaea;
   background: black;
   border:solid 1px $border-color;
   float:right;
+}
+
+#pov {
+	
+	height: 150px;
+	overflow: hidden;
+	background: black;
+	@include border_radius(7px);
 }
 
 #river-news {

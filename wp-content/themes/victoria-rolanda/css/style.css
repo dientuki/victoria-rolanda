@@ -1,3 +1,8 @@
+#banner300x200 {
+  height: 200px;
+  background: white;
+  border: solid 1px #eaeaea; }
+
 #header-975x75 {
   width: 975px;
   height: 75px;
@@ -52,7 +57,7 @@
         color: white; }
 
 #home-carousel {
-  width: 660px;
+  width: 658px;
   height: 370px;
   background: black;
   border: solid 1px #eaeaea;
@@ -86,6 +91,17 @@
   background: black;
   border: solid 1px #eaeaea;
   float: right; }
+
+#pov {
+  height: 150px;
+  overflow: hidden;
+  background: black;
+  -webkit-border-radius: 7px;
+  -moz-border-radius: 7px;
+  border-radius: 7px;
+  -moz-background-clip: padding;
+  -webkit-background-clip: padding-box;
+  background-clip: padding-box; }
 
 #river-news {
   width: 450px;
