@@ -1,6 +1,6 @@
 <?php get_header(); ?>
 
-<div id="container" class="wrapper clearfix">
+<section id="container" class="wrapper clearfix">
   <div class="container clearfix">
 		<?php 
 			$args = array();
@@ -64,5 +64,5 @@
     </section>
   </div> 
   <?php get_sidebar('right'); ?>
-</div>
+</section>
 <?php get_footer(); ?>

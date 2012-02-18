@@ -1,5 +1,5 @@
 <section id="river-news">
-	
+			
   <?php if (is_home() == false):?>
     <header>header</header>
 	<?php endif; ?>

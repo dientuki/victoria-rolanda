@@ -1,7 +1,7 @@
 <?php get_header(); ?>
 <?php the_post(); ?>
 
-<div id="container" class="wrapper clearfix">
+<section id="container" class="wrapper clearfix">
   <div class="container clearfix">
     <article>
     	<div class="entry-content">
@@ -10,5 +10,5 @@
     </article>
   </div> 
   <?php get_sidebar('right'); ?>
-</div>
+</section>
 <?php get_footer(); ?>
