@@ -3,8 +3,8 @@
 		<header>Puntos de vista</header>
 		<?php 
 		$args = array();
-		$arg['parent'] = 1;
-		$arg['hierarchical'] = false;
+		$args['parent'] = 3;
+		$args['hierarchical'] = false;
 		$categories = get_categories( $args );
 		?> 
 		<ul>

@@ -10,6 +10,9 @@ if ( ! function_exists( 'victoriarolanda_setup' ) ) {
     
     // This theme uses post thumbnails
     add_theme_support( 'post-thumbnails' );
+    if (class_exists('MultiPostThumbnails')) {
+    	new MultiPostThumbnails(array( 'label' => 'Slideshow Image', 'id' => 'secondary-image', 'post_type' => 'post' ) );
+    }    
     
     add_theme_support( 'menus' );
     

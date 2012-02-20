@@ -6,6 +6,8 @@
 			$args = array();
 			$args['posts_per_page'] = 5;
 			$args['cat'] = 1;
+			$args['meta_key'] = 'dbt_text';
+			$args['meta_value'] = 'test de algo';
 			$query = new WP_Query($args);
 		?>
 		<section id="home-carousel" class="carousel">
