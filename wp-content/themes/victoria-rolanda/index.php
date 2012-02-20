@@ -2,8 +2,13 @@
 
 <section id="container" class="wrapper clearfix">
   <div class="container clearfix">
-    <?php get_template_part('river-news') ?>
+
+    <?php if (is_home() && (is_paged() == false)): get_template_part('featured-carousel'); endif ?>
+
+		<?php get_template_part('river-news') ?>
     <?php get_sidebar('left'); ?>
+
+   <?php if (is_home() && (is_paged() == false)): get_template_part('footer-carousel'); endif; ?>
   </div> 
   <?php get_sidebar('right'); ?>
 </section>
