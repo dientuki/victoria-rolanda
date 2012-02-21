@@ -1,3 +1,11 @@
+article .entry-content,
+article .entry-content p {
+  font-size: 16px;
+  line-height: 1.3em;
+  color: #333333; }
+article .entry-content p {
+  margin: 0; }
+
 #banner300x200 {
   height: 200px;
   background: white;
@@ -44,7 +52,7 @@
     height: 45px;
     line-height: 45px;
     float: left;
-    padding: 0 12px; }
+    padding: 0 12.5px; }
     #header-menu li a {
       color: #f9adce;
       padding: 2px;
@@ -56,12 +64,11 @@
         background: #ff58b0;
         color: white; }
 
-#home-carousel {
-  width: 658px;
-  height: 370px;
+#featured-carousel {
+  width: 660px;
+  height: 371px;
   background: black;
-  border: solid 1px #eaeaea;
-  margin-bottom: 25px;
+  margin-bottom: 30px;
   -webkit-border-radius: 8px;
   -moz-border-radius: 8px;
   border-radius: 8px;
@@ -107,8 +114,80 @@
   width: 450px;
   float: right; }
   #river-news article {
-    padding-bottom: 50px;
-    border-bottom: solid 1px #eaeaea; }
+    padding-bottom: 20px;
+    margin-bottom: 20px;
+    border-bottom: solid 1px #eaeaea;
+    position: relative; }
+    #river-news article.has-media {
+      padding-left: 110px; }
+    #river-news article header {
+      padding-top: 1px;
+      margin-bottom: 5px; }
+      #river-news article header .category {
+        line-height: 14px;
+        height: 20px;
+        margin-bottom: 5px; }
+        #river-news article header .category a {
+          text-transform: uppercase;
+          color: white;
+          background: #ff58b0;
+          font-size: 11px;
+          padding: 3px 7px; }
+      #river-news article header h1 {
+        height: 33px;
+        line-height: 33px; }
+        #river-news article header h1 a {
+          font-family: 'KGSkinnyLatteRegular', Arial;
+          text-transform: uppercase;
+          color: black;
+          font-size: 25px;
+          text-decoration: none; }
+          #river-news article header h1 a:hover {
+            background: #1dcaff; }
+    #river-news article footer {
+      margin-top: 5px; }
+    #river-news article .author,
+    #river-news article .author a {
+      font-size: 12px; }
+    #river-news article .hmedia {
+      position: absolute;
+      left: 0;
+      top: 0;
+      width: 100px; }
+      #river-news article .hmedia img {
+        -webkit-border-radius: 5px;
+        -moz-border-radius: 5px;
+        border-radius: 5px;
+        -moz-background-clip: padding;
+        -webkit-background-clip: padding-box;
+        background-clip: padding-box; }
+      #river-news article .hmedia figure {
+        margin-bottom: 10px; }
+        #river-news article .hmedia figure a {
+          display: block;
+          width: 100%;
+          height: 100%; }
+      #river-news article .hmedia .comments {
+        background: #f9adce;
+        color: white;
+        font-size: 11px;
+        font-style: italic;
+        padding: 2px 5px;
+        -webkit-border-radius: 3px;
+        -moz-border-radius: 3px;
+        border-radius: 3px;
+        -moz-background-clip: padding;
+        -webkit-background-clip: padding-box;
+        background-clip: padding-box;
+        line-height: 14px;
+        height: 14px;
+        display: block;
+        width: 85px; }
+    #river-news article .share {
+      position: absolute;
+      left: 0;
+      top: 135px;
+      width: 100px; }
 
 #sidebar-left {
   width: 180px;
@@ -132,6 +211,67 @@
 .container {
   width: 660px;
   float: left; }
+
+footer .only-next .next {
+  width: 100%; }
+
+.pager .button {
+  width: 48%;
+  display: block;
+  height: 50px; }
+  .pager .button a {
+    font-size: 35px;
+    display: block;
+    height: 100%;
+    width: 100%;
+    text-align: center;
+    line-height: 50px;
+    color: white;
+    font-family: 'KGSkinnyLatteRegular', Arial;
+    text-transform: uppercase;
+    background: #333333;
+    /* Old browsers */
+    background: -moz-linear-gradient(top, #333333 0%, #1f1f1f 100%);
+    /* FF3.6+ */
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #333333), color-stop(100%, #1f1f1f));
+    /* Chrome,Safari4+ */
+    background: -webkit-linear-gradient(top, #333333 0%, #1f1f1f 100%);
+    /* Chrome10+,Safari5.1+ */
+    background: -o-linear-gradient(top, #333333 0%, #1f1f1f 100%);
+    /* Opera 11.10+ */
+    background: -ms-linear-gradient(top, #333333 0%, #1f1f1f 100%);
+    /* IE10+ */
+    background: linear-gradient(top, #333333 0%, #1f1f1f 100%);
+    /* W3C */
+    -webkit-border-radius: 6px;
+    -moz-border-radius: 6px;
+    border-radius: 6px;
+    -moz-background-clip: padding;
+    -webkit-background-clip: padding-box;
+    background-clip: padding-box; }
+    .pager .button a:hover {
+      text-decoration: none;
+      background: #1f1f1f;
+      /* Old browsers */
+      background: -moz-linear-gradient(top, #1f1f1f 0%, #333333 100%);
+      /* FF3.6+ */
+      background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #1f1f1f), color-stop(100%, #333333));
+      /* Chrome,Safari4+ */
+      background: -webkit-linear-gradient(top, #1f1f1f 0%, #333333 100%);
+      /* Chrome10+,Safari5.1+ */
+      background: -o-linear-gradient(top, #1f1f1f 0%, #333333 100%);
+      /* Opera 11.10+ */
+      background: -ms-linear-gradient(top, #1f1f1f 0%, #333333 100%);
+      /* IE10+ */
+      background: linear-gradient(top, #1f1f1f 0%, #333333 100%);
+      /* W3C */ }
+.pager .previous {
+  float: left; }
+.pager .next {
+  float: right; }
+
+.share .item {
+  display: block; }
 
 .sidebar .block {
   margin-bottom: 20px; }

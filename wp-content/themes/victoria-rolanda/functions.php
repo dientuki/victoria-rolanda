@@ -3,7 +3,7 @@ add_action( 'after_setup_theme', 'victoriarolanda_setup' );
 
 if ( ! function_exists( 'victoriarolanda_setup' ) ) {
   
-  function victoriarolanda_setup() {
+  function victoriarolanda_setup() {	
     
     // This theme styles the visual editor with editor-style.css to match the theme style.
     add_editor_style();
@@ -32,3 +32,19 @@ if ( ! function_exists( 'victoriarolanda_setup' ) ) {
 }
 
 function victoriarolanda_admin_header_style() {}
+
+add_filter('next_posts_link_attributes', 'get_next_posts_link_attributes');
+add_filter('previous_posts_link_attributes', 'get_previous_posts_link_attributes');
+
+if (!function_exists('get_next_posts_link_attributes')){
+	function get_next_posts_link_attributes($attr){
+		$attr = 'rel="next"';
+		return $attr;
+	}
+}
+if (!function_exists('get_previous_posts_link_attributes')){
+	function get_previous_posts_link_attributes($attr){
+		$attr = 'rel="prev"';
+		return $attr;
+	}
+}

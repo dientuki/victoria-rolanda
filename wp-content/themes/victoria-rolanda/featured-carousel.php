@@ -5,7 +5,7 @@
 			$args['ignore_sticky_posts'] = 1;
 			$query = new WP_Query($args);
 		?>
-		<section id="home-carousel" class="carousel">
+		<section id="featured-carousel" class="carousel">
 			<div class="button prev">&lt;</div>
 			<div class="button next">&gt;</div>		
 			<div class="carousel-wrapper">
