@@ -1,0 +1,51 @@
+$black: black;
+$black80: #333;
+$black60: #c2c2c2;
+$black40: #e8e8e8;
+$black20: #f5f5f5;
+$cyan: #1DCAFF;
+$pink: #FF58B0;
+$lpink: #F9ADCE;
+$border-color: #eaeaea;
+
+.carousel {
+  overflow: hidden;
+  position:relative;
+  
+  .button {
+    $h: 52px;
+    height:$h;
+    width: 25px;
+    position:absolute;
+    top:50%;
+    margin-top: $h / -2;
+    background: red;
+    z-index: 50;
+    cursor: pointer;
+    display: none;
+    background: url(../images/carousel.png) no-repeat;
+    text-indent: -999em;
+  }
+  
+  .prev {
+    left:0;
+    background-position: -26px top;
+    
+    &:hover {
+      background-position: -78px top;
+    }
+  }
+  
+  .next {
+    right: 0;
+    background-position: left top;
+   
+    &:hover {
+      background-position: -52px top;
+    }    
+  }
+  
+  article {
+    float:left;
+  }
+}

@@ -3,14 +3,14 @@
   <?php if (is_home() == false):?>
     <header>header</header>
 	<?php endif; ?>
-	<?php query_posts('ignore_sticky_posts=1') ?>
+	<?php //query_posts('ignore_sticky_posts=1') ?>
+	<?php //if ( $paged > 1 ) query_posts('paged=' . $paged) ?>
 	<div class="content">
 		<?php while ( have_posts() ) : ?>
 		  <?php the_post(); ?>
 		  <?php $category = get_the_category(); ?>
-		  <?php $media = (has_post_thumbnail() ? 'has':'no') . '-media';?>
 		  
-		  <article class="hnews <?php echo $media ; ?>">
+		  <article class="hnews">
 		    <header>
 		      <div class="category"><a href="<?php bloginfo( 'url' ); ?>/category/<?php echo $category[0]->category_nicename; ?>" title="<?php echo $category[0]->cat_name; ?>"><?php echo $category[0]->cat_name; ?></a></div>
 		      <h1 class="entry-title"><a href="<?php the_permalink(); ?>" title="<?php the_title(); ?>" rel="bookmark"><?php the_title(); ?></a></h1>
@@ -20,17 +20,23 @@
 		      <?php the_excerpt(); ?>
 		    </div>
 		    
-		    <?php if (has_post_thumbnail()): ?>
 		    <div class="hmedia">
-		      <figure>
+		    <figure>
+		    <?php if (has_post_thumbnail()): ?>	      
 		        <a href="<?php the_permalink(); ?>" title="<?php the_title(); ?>">
 		          <?php the_post_thumbnail('thumbnail'); ?>
 		        </a>
-		        <figcaption class="hidden"><?php the_title(); ?></figcaption>
+		    <?php else:?>
+		    	<a href="<?php the_permalink(); ?>" title="<?php the_title(); ?>">
+		    		<img src="<?php bloginfo( 'template_url' ); ?>/images/post-default.jpg" width="100" height="100" title="<?php the_title(); ?>" alt="<?php the_title(); ?>" />
+		    	</a>	    
+		    <?php endif; ?>
 		      </figure>
+		      <figcaption class="hidden"><?php the_title(); ?></figcaption>
+		    		    
 		      <?php comments_popup_link( '0 comentarios', '1 comentario', '% comentarios', 'comments'); ?>
 		    </div>
-		    <?php endif; ?>
+		    
 		    
 		    <div class="share">
 		      <div class="fb item">fabook</div>
@@ -57,3 +63,4 @@
   </footer>  
 
 </section>
+<?php wp_reset_query();?>

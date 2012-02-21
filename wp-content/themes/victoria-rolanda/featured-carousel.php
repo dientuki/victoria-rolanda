@@ -1,7 +1,7 @@
 		<?php 
 			$args = array();
 			$args['post__in'] = get_option( 'sticky_posts' );
-			$args['posts_per_page'] = 2;
+			$args['posts_per_page'] = 5;
 			$args['ignore_sticky_posts'] = 1;
 			$query = new WP_Query($args);
 		?>

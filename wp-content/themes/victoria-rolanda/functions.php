@@ -22,6 +22,7 @@ if ( ! function_exists( 'victoriarolanda_setup' ) ) {
 		}
 		
 		if (function_exists('add_image_size')){
+			add_image_size('featured_carousel', '660', '290', true);
 			add_image_size('footer_carousel', '450', '253', true);
 		}		
 		
@@ -32,7 +33,7 @@ if ( ! function_exists( 'victoriarolanda_setup' ) ) {
 }
 
 function victoriarolanda_admin_header_style() {}
-
+/*
 add_filter('next_posts_link_attributes', 'get_next_posts_link_attributes');
 add_filter('previous_posts_link_attributes', 'get_previous_posts_link_attributes');
 
@@ -48,3 +49,4 @@ if (!function_exists('get_previous_posts_link_attributes')){
 		return $attr;
 	}
 }
+*/

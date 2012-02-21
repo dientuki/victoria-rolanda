@@ -208,6 +208,8 @@ $.fn.jCarouselLite = function(o) {
         btnGo: null,
         mouseWheel: false,
         auto: null,
+        wrapper: 'ul',
+        element: 'li',
 
         speed: 200,
         easing: null,
@@ -225,7 +227,7 @@ $.fn.jCarouselLite = function(o) {
     return this.each(function() {                           // Returns the element collection. Chainable.
 
         var running = false, animCss=o.vertical?"top":"left", sizeCss=o.vertical?"height":"width";
-        var div = $(this), ul = $("ul", div), tLi = $("li", ul), tl = tLi.size(), v = o.visible;
+        var div = $(this), ul = $(o.wrapper, div), tLi = $(o.element, ul), tl = tLi.size(), v = o.visible;
 
         if(o.circular) {
             ul.prepend(tLi.slice(tl-v-1+1).clone())
@@ -233,7 +235,7 @@ $.fn.jCarouselLite = function(o) {
             o.start += v;
         }
 
-        var li = $("li", ul), itemLength = li.size(), curr = o.start;
+        var li = $(o.element, ul), itemLength = li.size(), curr = o.start;
         div.css("visibility", "visible");
 
         li.css({overflow: "hidden", float: o.vertical ? "none" : "left"});
@@ -249,15 +251,22 @@ $.fn.jCarouselLite = function(o) {
 
         div.css(sizeCss, divSize+"px");                     // Width of the DIV. length of visible images
 
-        if(o.btnPrev)
-            $(o.btnPrev).click(function() {
+        if(o.btnPrev) {
+            $(this).find(o.btnPrev).click(function() {
                 return go(curr-o.scroll);
             });
+        }
 
-        if(o.btnNext)
-            $(o.btnNext).click(function() {
+        if(o.btnNext) {
+        	$(this).find(o.btnNext).click(function() {
                 return go(curr+o.scroll);
             });
+        }
+        
+        if ((o.btnPrev) || (o.btnNext)) {
+        	$(this).find(o.btnPrev).fadeIn('slow');
+        	$(this).find(o.btnNext).fadeIn('slow');
+        }
 
         if(o.btnGo)
             $.each(o.btnGo, function(i, val) {

@@ -75,6 +75,50 @@ article .entry-content p {
   -moz-background-clip: padding;
   -webkit-background-clip: padding-box;
   background-clip: padding-box; }
+  #featured-carousel article {
+    width: 660px;
+    height: 371px;
+    overflow: hidden;
+    position: relative; }
+  #featured-carousel header {
+    position: absolute;
+    bottom: 0;
+    width: 660px; }
+    #featured-carousel header a {
+      color: white;
+      font-family: 'KGSkinnyLatteRegular', Arial;
+      text-transform: uppercase;
+      font-size: 25px;
+      line-height: 25px;
+      display: block;
+      padding: 4px 15px 4px 15px; }
+      #featured-carousel header a:hover {
+        text-decoration: none; }
+    #featured-carousel header h1 {
+      background: rgba(0, 0, 0, 0.4);
+      position: relative;
+      z-index: 5;
+      line-height: 25px; }
+    #featured-carousel header .dropline {
+      height: 54px;
+      line-height: 1.1em;
+      color: white;
+      overflow: hidden;
+      margin: 13px 15px; }
+      #featured-carousel header .dropline p {
+        margin: 0; }
+  #featured-carousel figure {
+    width: 660px;
+    height: 290px;
+    position: absolute;
+    top: 0; }
+    #featured-carousel figure img {
+      width: 660px;
+      height: 290px;
+      display: block; }
+  #featured-carousel .carousel-wrapper {
+    width: 660px;
+    height: 371px; }
 
 #footer {
   height: 47px;
@@ -93,11 +137,64 @@ article .entry-content p {
     height: 47px; }
 
 #footer-carousel {
-  width: 448px;
+  width: 450px;
   height: 251px;
   background: black;
-  border: solid 1px #eaeaea;
-  float: right; }
+  float: right;
+  position: relative;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  border-radius: 5px;
+  -moz-background-clip: padding;
+  -webkit-background-clip: padding-box;
+  background-clip: padding-box; }
+  #footer-carousel article {
+    width: 450px;
+    height: 251px;
+    float: left;
+    position: relative; }
+    #footer-carousel article header {
+      position: absolute;
+      bottom: 0;
+      height: 42px;
+      background: rgba(0, 0, 0, 0.4);
+      z-index: 20;
+      width: 100%;
+      overflow: hidden; }
+      #footer-carousel article header h1 {
+        padding: 4px 10px 4px 85px;
+        height: 34px;
+        line-height: 34px; }
+    #footer-carousel article a {
+      color: white;
+      display: block;
+      height: 34px;
+      line-height: 34px; }
+  #footer-carousel figure {
+    width: 450px;
+    height: 251px;
+    position: absolute;
+    bottom: 0;
+    z-index: 10; }
+  #footer-carousel .carousel-header {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    background: #ff58b0;
+    color: white;
+    border-right: solid white 1px;
+    font-family: 'KGSkinnyLatteRegular', Arial;
+    text-transform: uppercase;
+    padding: 4px;
+    height: 34px;
+    z-index: 50; }
+    #footer-carousel .carousel-header h2 {
+      font-size: 34px;
+      line-height: 34px;
+      height: 34px; }
+  #footer-carousel .carousel-wrapper {
+    width: 450px;
+    height: 251px; }
 
 #pov {
   height: 150px;
@@ -117,9 +214,8 @@ article .entry-content p {
     padding-bottom: 20px;
     margin-bottom: 20px;
     border-bottom: solid 1px #eaeaea;
-    position: relative; }
-    #river-news article.has-media {
-      padding-left: 110px; }
+    position: relative;
+    padding-left: 110px; }
     #river-news article header {
       padding-top: 1px;
       margin-bottom: 5px; }
@@ -134,14 +230,14 @@ article .entry-content p {
           font-size: 11px;
           padding: 3px 7px; }
       #river-news article header h1 {
-        height: 33px;
-        line-height: 33px; }
+        line-height: 25px; }
         #river-news article header h1 a {
           font-family: 'KGSkinnyLatteRegular', Arial;
           text-transform: uppercase;
           color: black;
           font-size: 25px;
-          text-decoration: none; }
+          text-decoration: none;
+          line-height: 25px; }
           #river-news article header h1 a:hover {
             background: #1dcaff; }
     #river-news article footer {
@@ -205,9 +301,6 @@ article .entry-content p {
   margin: 0 auto;
   background: grey; }
 
-.carousel {
-  overflow: hidden; }
-
 .container {
   width: 660px;
   float: left; }
@@ -215,60 +308,62 @@ article .entry-content p {
 footer .only-next .next {
   width: 100%; }
 
-.pager .button {
-  width: 48%;
-  display: block;
-  height: 50px; }
-  .pager .button a {
-    font-size: 35px;
+.pager {
+  margin-bottom: 30px; }
+  .pager .button {
+    width: 48%;
     display: block;
-    height: 100%;
-    width: 100%;
-    text-align: center;
-    line-height: 50px;
-    color: white;
-    font-family: 'KGSkinnyLatteRegular', Arial;
-    text-transform: uppercase;
-    background: #333333;
-    /* Old browsers */
-    background: -moz-linear-gradient(top, #333333 0%, #1f1f1f 100%);
-    /* FF3.6+ */
-    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #333333), color-stop(100%, #1f1f1f));
-    /* Chrome,Safari4+ */
-    background: -webkit-linear-gradient(top, #333333 0%, #1f1f1f 100%);
-    /* Chrome10+,Safari5.1+ */
-    background: -o-linear-gradient(top, #333333 0%, #1f1f1f 100%);
-    /* Opera 11.10+ */
-    background: -ms-linear-gradient(top, #333333 0%, #1f1f1f 100%);
-    /* IE10+ */
-    background: linear-gradient(top, #333333 0%, #1f1f1f 100%);
-    /* W3C */
-    -webkit-border-radius: 6px;
-    -moz-border-radius: 6px;
-    border-radius: 6px;
-    -moz-background-clip: padding;
-    -webkit-background-clip: padding-box;
-    background-clip: padding-box; }
-    .pager .button a:hover {
-      text-decoration: none;
-      background: #1f1f1f;
+    height: 50px; }
+    .pager .button a {
+      font-size: 35px;
+      display: block;
+      height: 100%;
+      width: 100%;
+      text-align: center;
+      line-height: 50px;
+      color: white;
+      font-family: 'KGSkinnyLatteRegular', Arial;
+      text-transform: uppercase;
+      background: #333333;
       /* Old browsers */
-      background: -moz-linear-gradient(top, #1f1f1f 0%, #333333 100%);
+      background: -moz-linear-gradient(top, #333333 0%, #1f1f1f 100%);
       /* FF3.6+ */
-      background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #1f1f1f), color-stop(100%, #333333));
+      background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #333333), color-stop(100%, #1f1f1f));
       /* Chrome,Safari4+ */
-      background: -webkit-linear-gradient(top, #1f1f1f 0%, #333333 100%);
+      background: -webkit-linear-gradient(top, #333333 0%, #1f1f1f 100%);
       /* Chrome10+,Safari5.1+ */
-      background: -o-linear-gradient(top, #1f1f1f 0%, #333333 100%);
+      background: -o-linear-gradient(top, #333333 0%, #1f1f1f 100%);
       /* Opera 11.10+ */
-      background: -ms-linear-gradient(top, #1f1f1f 0%, #333333 100%);
+      background: -ms-linear-gradient(top, #333333 0%, #1f1f1f 100%);
       /* IE10+ */
-      background: linear-gradient(top, #1f1f1f 0%, #333333 100%);
-      /* W3C */ }
-.pager .previous {
-  float: left; }
-.pager .next {
-  float: right; }
+      background: linear-gradient(top, #333333 0%, #1f1f1f 100%);
+      /* W3C */
+      -webkit-border-radius: 6px;
+      -moz-border-radius: 6px;
+      border-radius: 6px;
+      -moz-background-clip: padding;
+      -webkit-background-clip: padding-box;
+      background-clip: padding-box; }
+      .pager .button a:hover {
+        text-decoration: none;
+        background: #1f1f1f;
+        /* Old browsers */
+        background: -moz-linear-gradient(top, #1f1f1f 0%, #333333 100%);
+        /* FF3.6+ */
+        background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #1f1f1f), color-stop(100%, #333333));
+        /* Chrome,Safari4+ */
+        background: -webkit-linear-gradient(top, #1f1f1f 0%, #333333 100%);
+        /* Chrome10+,Safari5.1+ */
+        background: -o-linear-gradient(top, #1f1f1f 0%, #333333 100%);
+        /* Opera 11.10+ */
+        background: -ms-linear-gradient(top, #1f1f1f 0%, #333333 100%);
+        /* IE10+ */
+        background: linear-gradient(top, #1f1f1f 0%, #333333 100%);
+        /* W3C */ }
+  .pager .previous {
+    float: left; }
+  .pager .next {
+    float: right; }
 
 .share .item {
   display: block; }

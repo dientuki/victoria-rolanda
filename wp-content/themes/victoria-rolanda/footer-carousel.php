@@ -8,14 +8,13 @@
 			<div class="button prev">&lt;</div>
 			<div class="button next">&gt;</div>
 			
-			<header><h2>Moda</h2></header>
+			<header class="carousel-header"><h2>Moda</h2></header>
 			<div class="carousel-wrapper">
 			<?php while ( $query->have_posts() ): ?>
 				<?php $query->the_post(); ?>
 					<article>
 						<header>
 							<h1><a href="<?php the_permalink() ?>" title="<?php echo the_title(); ?>"><?php echo the_title(); ?></a></h1>
-							<div class="dropline"><?php the_excerpt(); ?></div>
 						</header>
 						<?php if (has_post_thumbnail()) : ?>
 							<figure>
