@@ -5,4 +5,5 @@ wp-config.php
 Thumbs.db
 .htaccess
 wp-content/themes/victoria-rolanda/css/.sass-cache/*
+wp-content/themes/victoria-rolanda/.sass-cache/*
 wp-content/uploads/*
