@@ -1,7 +1,7 @@
     <?php
       $args = array();
       $args['posts_per_page'] = 5;
-      $args['cat'] = 1;
+      $args['cat'] = 25;
       $query = new WP_Query($args);
     ?>
     <section id="footer-carousel" class="carousel">
@@ -17,9 +17,9 @@
 							<h1><a href="<?php the_permalink() ?>" title="<?php echo the_title(); ?>"><?php echo the_title(); ?></a></h1>
 							<div class="dropline"><?php the_excerpt(); ?></div>
 						</header>
-						<?php if (has_post_thumbnail()): ?>
+						<?php if (has_post_thumbnail()) : ?>
 							<figure>
-								<a href="<?php the_permalink() ?>" title="<?php echo the_title(); ?>"><?php the_post_thumbnail('featured_thumbnail'); ?></a>
+								<a href="<?php the_permalink() ?>" title="<?php echo the_title(); ?>"><?php echo the_post_thumbnail('footer_carousel'); ?></a>
 								<figcaption class="hidden"><?php echo the_title(); ?></figcaption>
 							</figure>
 						<?php endif; ?>

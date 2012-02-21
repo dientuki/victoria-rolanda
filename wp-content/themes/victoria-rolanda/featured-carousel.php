@@ -1,9 +1,8 @@
 		<?php 
 			$args = array();
-			$args['posts_per_page'] = 5;
-			$args['cat'] = 1;
-			$args['meta_key'] = 'dbt_text';
-			$args['meta_value'] = 'test de algo';
+			$args['post__in'] = get_option( 'sticky_posts' );
+			$args['posts_per_page'] = 2;
+			$args['ignore_sticky_posts'] = 1;
 			$query = new WP_Query($args);
 		?>
 		<section id="home-carousel" class="carousel">

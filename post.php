@@ -118,7 +118,7 @@ echo strip_tags($html, '<a><b><br><img><i><u>');
 
 //echo $html;
 
-
+echo print_r(unserialize('a:4:{s:9:"full-orig";a:3:{s:5:"width";s:3:"680";s:6:"height";s:3:"383";s:4:"file";s:12:"random-6.jpg";}s:14:"thumbnail-orig";a:3:{s:4:"file";s:20:"random-6-100x100.jpg";s:5:"width";s:3:"100";s:6:"height";s:3:"100";}s:18:"full-1329787321534";a:3:{s:5:"width";s:3:"177";s:6:"height";s:3:"100";s:4:"file";s:27:"random-6-e1329787268926.jpg";}s:18:"full-1329787360500";a:3:{s:5:"width";s:3:"100";s:6:"height";s:3:"100";s:4:"file";s:27:"random-6-e1329787321534.jpg";}}'));
 ?>
 </body>
 </html>
