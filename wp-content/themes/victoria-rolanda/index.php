@@ -5,6 +5,11 @@
 
     <?php if (is_home()): get_template_part('featured-carousel'); endif ?>
 
+    
+    <?php if (is_category() || is_tag()):?>
+        <header>header</header>
+    <?php endif; ?>
+    	    
 		<?php get_template_part('river-news') ?>
     <?php get_sidebar('left'); ?>
 

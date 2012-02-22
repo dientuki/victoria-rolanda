@@ -6,8 +6,8 @@ article .entry-content p {
 article .entry-content p {
   margin: 0; }
 
-#banner300x200 {
-  height: 200px;
+#banner300x250 {
+  height: 250px;
   background: white;
   border: solid 1px #eaeaea; }
 
@@ -199,13 +199,36 @@ article .entry-content p {
 #pov {
   height: 150px;
   overflow: hidden;
-  background: black;
+  background: #333333;
+  padding: 15px;
   -webkit-border-radius: 7px;
   -moz-border-radius: 7px;
   border-radius: 7px;
   -moz-background-clip: padding;
   -webkit-background-clip: padding-box;
   background-clip: padding-box; }
+  #pov header {
+    margin-bottom: 25px; }
+    #pov header h2 {
+      color: #ff58b0;
+      font-size: 19px;
+      line-height: 19px; }
+  #pov a {
+    color: #f9adce;
+    font-size: 19px;
+    line-height: 19px; }
+    #pov a:hover {
+      color: white;
+      background: #ff58b0;
+      text-decoration: none; }
+  #pov header h2,
+  #pov a {
+    font-family: 'KGSkinnyLatteRegular', Arial;
+    text-transform: uppercase; }
+  #pov ul li {
+    width: 50%;
+    float: left;
+    margin-bottom: 15px; }
 
 #river-news {
   width: 450px;
@@ -294,8 +317,7 @@ article .entry-content p {
 #sidebar-right {
   width: 300px;
   float: right;
-  height: 500px;
-  background: red; }
+  height: 500px; }
 
 .banner {
   margin: 0 auto;

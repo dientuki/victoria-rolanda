@@ -33,7 +33,7 @@ if ( ! function_exists( 'victoriarolanda_setup' ) ) {
 }
 
 function victoriarolanda_admin_header_style() {}
-/*
+
 add_filter('next_posts_link_attributes', 'get_next_posts_link_attributes');
 add_filter('previous_posts_link_attributes', 'get_previous_posts_link_attributes');
 
@@ -49,4 +49,12 @@ if (!function_exists('get_previous_posts_link_attributes')){
 		return $attr;
 	}
 }
-*/
+
+function is_new($id) {
+	$post_time = get_the_time('U', $id);
+	$now = time();
+	$diff = $now - $post_time;
+	if (date('d', $diff) <= 7 ) {
+		return 'has-new';
+	}
+}

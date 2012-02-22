@@ -1,10 +1,8 @@
+<?php global $query_string; ?>
 <section id="river-news">
-			
-  <?php if (is_home() == false):?>
-    <header>header</header>
-	<?php endif; ?>
-	<?php //query_posts('ignore_sticky_posts=1') ?>
-	<?php //if ( $paged > 1 ) query_posts('paged=' . $paged) ?>
+  
+	<?php query_posts($query_string . '&ignore_sticky_posts=1') ?>
+
 	<div class="content">
 		<?php while ( have_posts() ) : ?>
 		  <?php the_post(); ?>

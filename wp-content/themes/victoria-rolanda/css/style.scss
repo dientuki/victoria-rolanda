@@ -24,8 +24,8 @@ article {
 	}
 }
 
-#banner300x200 {
-	height: 200px;
+#banner300x250 {
+	height: 250px;
 	background: white;
 	border:solid 1px $border-color;
 }
@@ -268,11 +268,45 @@ article {
 }
 
 #pov {
-	
 	height: 150px;
 	overflow: hidden;
-	background: black;
+	background: $black80;
+	padding: 15px;
 	@include border_radius(7px);
+	
+	header {
+	  margin-bottom:25px;
+	  
+	  h2 {
+	    color: $pink;
+	    font-size: 19px;
+	    line-height: 19px;
+	  }
+	}
+	
+	a {
+	  color:$lpink;
+	  font-size: 19px;
+	  line-height:19px;
+	  
+	  &:hover {
+	    color:white;
+	    background: $pink;
+	    text-decoration: none;
+	  }
+	}
+	
+	header h2,
+	a {
+    font-family: 'KGSkinnyLatteRegular', Arial;
+    text-transform: uppercase; 	
+	}
+	
+	ul li {
+	  width: 50%;
+	  float:left;
+	  margin-bottom: 15px;
+	}
 }
 
 #river-news {
@@ -384,7 +418,6 @@ article {
 	width: 300px;
 	float:right;
 	height: 500px;
-	background: red;
 }
 
 .banner {
