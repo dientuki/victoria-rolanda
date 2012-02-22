@@ -65,8 +65,9 @@ article .entry-content p {
         color: white; }
 
 #featured-carousel {
+  /*$h:371px;*/
   width: 660px;
-  height: 371px;
+  height: 451px;
   background: black;
   margin-bottom: 30px;
   -webkit-border-radius: 8px;
@@ -77,7 +78,7 @@ article .entry-content p {
   background-clip: padding-box; }
   #featured-carousel article {
     width: 660px;
-    height: 371px;
+    height: 451px;
     overflow: hidden;
     position: relative; }
   #featured-carousel header {
@@ -108,17 +109,27 @@ article .entry-content p {
       #featured-carousel header .dropline p {
         margin: 0; }
   #featured-carousel figure {
+    /*$fh: 290px;*/
     width: 660px;
-    height: 290px;
+    height: 371px;
     position: absolute;
     top: 0; }
     #featured-carousel figure img {
       width: 660px;
-      height: 290px;
-      display: block; }
+      height: 371px;
+      display: block;
+      -webkit-border-top-left-radius: 8px;
+      -webkit-border-top-right-radius: 8px;
+      -moz-border-radius-topleft: 8px;
+      -moz-border-radius-topright: 8px;
+      border-top-left-radius: 8px;
+      border-top-right-radius: 8px;
+      -moz-background-clip: padding;
+      -webkit-background-clip: padding-box;
+      background-clip: padding-box; }
   #featured-carousel .carousel-wrapper {
     width: 660px;
-    height: 371px; }
+    height: 451px; }
 
 #footer {
   height: 47px;
@@ -176,6 +187,13 @@ article .entry-content p {
     position: absolute;
     bottom: 0;
     z-index: 10; }
+    #footer-carousel figure img {
+      -webkit-border-radius: 5px;
+      -moz-border-radius: 5px;
+      border-radius: 5px;
+      -moz-background-clip: padding;
+      -webkit-background-clip: padding-box;
+      background-clip: padding-box; }
   #footer-carousel .carousel-header {
     position: absolute;
     left: 0;
@@ -187,7 +205,10 @@ article .entry-content p {
     text-transform: uppercase;
     padding: 4px;
     height: 34px;
-    z-index: 50; }
+    z-index: 50;
+    -webkit-border-bottom-left-radius: 5px;
+    -moz-border-radius-bottomleft: 5px;
+    border-bottom-left-radius: 5px; }
     #footer-carousel .carousel-header h2 {
       font-size: 34px;
       line-height: 34px;
@@ -197,7 +218,6 @@ article .entry-content p {
     height: 251px; }
 
 #pov {
-  height: 150px;
   overflow: hidden;
   background: #333333;
   padding: 15px;
@@ -211,12 +231,12 @@ article .entry-content p {
     margin-bottom: 25px; }
     #pov header h2 {
       color: #ff58b0;
-      font-size: 19px;
-      line-height: 19px; }
+      font-size: 20px;
+      line-height: 20px; }
   #pov a {
     color: #f9adce;
-    font-size: 19px;
-    line-height: 19px; }
+    font-size: 17px;
+    line-height: 17px; }
     #pov a:hover {
       color: white;
       background: #ff58b0;
@@ -228,7 +248,16 @@ article .entry-content p {
   #pov ul li {
     width: 50%;
     float: left;
-    margin-bottom: 15px; }
+    margin-bottom: 10px; }
+
+#ranking {
+  border: solid 1px #eaeaea;
+  -webkit-border-radius: 7px;
+  -moz-border-radius: 7px;
+  border-radius: 7px;
+  -moz-background-clip: padding;
+  -webkit-background-clip: padding-box;
+  background-clip: padding-box; }
 
 #river-news {
   width: 450px;

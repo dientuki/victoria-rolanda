@@ -24,10 +24,10 @@
 	</div>
 	<section id="ranking" class="block carousel">
 		<header>
-			<div class="">Más leidas</div>
+			<div class="selected">Más leidas</div>
 			<div class="">Más comentadas</div>
 		</header>
-		<div class="wrapper">
+		<div class="carousel-wrapper">
 			<ul>
 				<?php 
 				$args = array();

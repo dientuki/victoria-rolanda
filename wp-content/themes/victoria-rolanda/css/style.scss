@@ -90,13 +90,15 @@ article {
 }
 
 #featured-carousel {
+	/*$h:371px;*/
 	$w:660px;
-	$h:371px;
+	$h:451px;
+	$br:8px;
 	width: $w;
 	height: $h;
 	background: black;
 	margin-bottom: 30px;
-	@include border_radius(8px);
+	@include border_radius($br);
 	
 	article {
     width: $w;
@@ -145,16 +147,18 @@ article {
   }	
 	
 	figure {
-	  $fh: 290px;
+	  /*$fh: 290px;*/
+	  $fh: 371px;
     width: $w;
     height: $fh;
     position:absolute;
-    top: 0;    
+    top: 0;
     
     img {
       width: $w;
       height: $fh;
       display:block;
+      @include border_radius_top($br);
     }	  
 	}
 	
@@ -194,13 +198,14 @@ article {
 #footer-carousel {
 	$w:450px;
 	$h:251px;
+	$br:5px;
 
   width:$w;
   height:$h;
   background: black;
   float:right;
   position:relative;
-  @include border_radius(5px);
+  @include border_radius($br);
   
   article {
 	  width:$w;
@@ -215,7 +220,7 @@ article {
 	    background: rgba(0,0,0,.4);
 	    z-index: 20;
 	    width: 100%;
-	    overflow:hidden;
+	    overflow:hidden;  
 	    
 	    h1 {
         padding: 4px 10px 4px 85px;
@@ -238,6 +243,10 @@ article {
     position: absolute;
     bottom:0;
     z-index: 10;
+    
+    img {
+      @include border_radius($br);
+    }
 	}
   
   .carousel-header {
@@ -253,6 +262,10 @@ article {
     height:34px;
     z-index:50;
     
+      -webkit-border-bottom-left-radius: $br;
+      -moz-border-radius-bottomleft: $br;
+      border-bottom-left-radius: $br;       
+    
     h2 {
 	    font-size: 34px;
 	    line-height: 34px;
@@ -261,14 +274,13 @@ article {
   }
   
   .carousel-wrapper {
-  width:$w;
-  height:$h;  
+	  width:$w;
+	  height:$h;  
   }
   
 }
 
 #pov {
-	height: 150px;
 	overflow: hidden;
 	background: $black80;
 	padding: 15px;
@@ -279,15 +291,15 @@ article {
 	  
 	  h2 {
 	    color: $pink;
-	    font-size: 19px;
-	    line-height: 19px;
+	    font-size: 20px;
+	    line-height: 20px;
 	  }
 	}
 	
 	a {
 	  color:$lpink;
-	  font-size: 19px;
-	  line-height:19px;
+	  font-size: 17px;
+	  line-height:17px;
 	  
 	  &:hover {
 	    color:white;
@@ -305,8 +317,14 @@ article {
 	ul li {
 	  width: 50%;
 	  float:left;
-	  margin-bottom: 15px;
+	  margin-bottom: 10px;
 	}
+}
+
+#ranking {
+	border:solid 1px $border-color;
+	@include border_radius(7px);
+	
 }
 
 #river-news {
