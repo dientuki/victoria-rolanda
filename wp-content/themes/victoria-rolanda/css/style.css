@@ -433,6 +433,8 @@ footer .only-next .next {
     width: auto;
     height: auto; }
 
+.sidebar #follow-fb {
+  height: 258px; }
 .sidebar .block {
   margin-bottom: 20px; }
 

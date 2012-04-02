@@ -27,7 +27,14 @@ if ( ! function_exists( 'victoriarolanda_setup' ) ) {
 		}		
 		
 		add_custom_image_header( '', 'victoriarolanda_admin_header_style' );
- 
+		
+		if ( function_exists('register_sidebar') ) {
+			register_sidebar(array(
+        'before_widget' => '<section id="%1$s" class="block %2$s">',
+        'after_widget' => '</section>'
+    ));		
+		}
+		
   }
   
 }

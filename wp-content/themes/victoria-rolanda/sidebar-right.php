@@ -58,5 +58,7 @@
 			</ul>
 		</div>
 	</section>
-	<section id="follow-fb" class="block"></section>
+	<section id="follow-fb" class="block">
+		<div class="fb-like-box" data-href="http://www.facebook.com/platform" height="258" data-width="300" data-show-faces="true" data-stream="false" data-header="false"></div>	
+	</section>
 </aside>
