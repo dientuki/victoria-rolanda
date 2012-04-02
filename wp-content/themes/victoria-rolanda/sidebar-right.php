@@ -24,8 +24,8 @@
 	</div>
 	<section id="ranking" class="block carousel">
 		<header>
-			<div class="selected">Más leidas</div>
-			<div class="">Más comentadas</div>
+			<div class="prev selected">Más leidas</div>
+			<div class="next">Más comentadas</div>
 		</header>
 		<div class="carousel-wrapper">
 			<ul>
@@ -40,25 +40,27 @@
 				<?php while ( $query->have_posts() ): ?>
 					<?php $query->the_post(); ?>
 					<li><?php echo $x; ?><a href="<?php the_permalink() ?>" title="<?php echo the_title(); ?>"><?php echo the_title(); ?></a></li>
+					<?php $x++; ?>
 				<?php endwhile; ?>
 			</ul>
 			<ul>
 				<?php 
-				$args = array();
 				$x = 1;
-				$arg['posts_per_page'] = 5;
-				$arg['order'] = 'ASC';
-				$arg['orderby'] = 'comment_count';
-				$query = new WP_Query($args);
+				$limit = 5;
+				$date = date('Y-m-d H:i:s', mktime(0, 0, 0, date("m"), date("d")-30,   date("Y")));
+				$sql = "SELECT DISTINCT $wpdb->posts.*, (meta_value+0) AS views FROM $wpdb->posts LEFT JOIN $wpdb->postmeta ON $wpdb->postmeta.post_id = $wpdb->posts.ID WHERE post_date < '$date' AND post_status = 'publish' AND post_type = 'post' AND meta_key = 'views' AND post_password = '' ORDER BY views DESC LIMIT $limit";
+				$query = new WP_Query($sql);
 				?>
 				<?php while ( $query->have_posts() ): ?>
 					<?php $query->the_post(); ?>
 					<li><?php echo $x; ?><a href="<?php the_permalink() ?>" title="<?php echo the_title(); ?>"><?php echo the_title(); ?></a></li>
+					<?php $x++; ?>
 				<?php endwhile; ?>
 			</ul>
 		</div>
 	</section>
 	<section id="follow-fb" class="block">
-		<div class="fb-like-box" data-href="http://www.facebook.com/platform" height="258" data-width="300" data-show-faces="true" data-stream="false" data-header="false"></div>	
+	  <header><h2><span>Seguinos</span> en facebook</h2></header>
+		<div class="fb-like-box" data-href="http://www.facebook.com/platform" height="258" data-border-color="#ffffff" data-width="300" data-show-faces="true" data-stream="false" data-header="false"></div>	
 	</section>
 </aside>

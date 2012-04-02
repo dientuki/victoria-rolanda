@@ -9,7 +9,6 @@ $cyan: #1DCAFF;
 $pink: #FF58B0;
 $lpink: #F9ADCE;
 $border-color: #eaeaea;
-
 article {
 	
 	.entry-content,
@@ -325,6 +324,35 @@ article {
 #ranking {
 	border:solid 1px $border-color;
 	@include border_radius(7px);
+	
+	header {
+	  $w:298px;
+	  $wl:123px;
+	  height: 40px;
+	  line-height: 40px;
+	  color:black;
+	  text-align: center;
+	  font-family: 'KGSkinnyLatteRegular', Arial;
+	  @include gradient_cross(#F960B2, #F64398);
+	  font-size:25px;
+	  text-transform:uppercase;
+	  color:white;
+	  cursor:pointer;
+	  
+	  .selected {
+	    color:black;
+	    background: white; 
+	  }
+	  
+	  .prev {
+	    float:left;
+	    width: 123px;
+	  }
+	  .next {
+	    float:right;
+	    width: $w - $wl;
+	  }
+	}
 	
 }
 

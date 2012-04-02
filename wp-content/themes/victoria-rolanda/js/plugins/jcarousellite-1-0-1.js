@@ -293,7 +293,7 @@ $.fn.jCarouselLite = function(o) {
             if(!running) {
 
                 if(o.beforeStart)
-                    o.beforeStart.call(this, vis());
+                    o.beforeStart.call(this, vis(), curr);
 
                 if(o.circular) {            // If circular we are in first or last, then goto the other end
                     if(to<=o.start-v-1) {           // If first, then goto last
@@ -316,7 +316,7 @@ $.fn.jCarouselLite = function(o) {
                     animCss == "left" ? { left: -(curr*liSize) } : { top: -(curr*liSize) } , o.speed, o.easing,
                     function() {
                         if(o.afterEnd)
-                            o.afterEnd.call(this, vis());
+                            o.afterEnd.call(this, vis(), curr);
                         running = false;
                     }
                 );
