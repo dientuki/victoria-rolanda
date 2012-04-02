@@ -323,6 +323,7 @@ article {
 
 #ranking {
 	border:solid 1px $border-color;
+	width:298px !important;
 	@include border_radius(7px);
 	
 	header {
@@ -341,7 +342,8 @@ article {
 	  
 	  .selected {
 	    color:black;
-	    background: white; 
+	    background: white;
+	    cursor:auto;
 	  }
 	  
 	  .prev {
@@ -353,6 +355,24 @@ article {
 	    width: $w - $wl;
 	  }
 	}
+	
+	.item {
+	  padding: 8px 15px;
+	}
+	
+	.carousel-wrapper {
+	  overflow: hidden;
+	  width:298px;
+	}
+	
+  ul {
+    display:none;
+    width: 320px;
+    
+    &.first {
+      display:block;
+    }
+  }
 	
 }
 

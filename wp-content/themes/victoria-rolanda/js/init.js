@@ -24,18 +24,27 @@ $(document).ready(function() {
 		break;
 	}
 	
+	$('#ranking .carousel-wrapper').css('height', $('#ranking .first').height() );
+
 	$('#ranking').jCarouselLite({
 		btnNext: '.next',
 		btnPrev: '.prev',
 		wrapper: '.carousel-wrapper',
 		element: 'ul',
 		visible: 1,
+		circular: false,
 		speed: $('#ranking').data('speed') ? $('#ranking').data('speed') : 500,
-	    afterEnd: function(element, current) {
+	    afterEnd: function($element, current) {
 	    	$('#ranking div').removeClass('selected');
-	    	$('#ranking div:eq(' + (current - 1) + ')').addClass('selected');
+	    	$('#ranking div:eq(' + (current) + ')').addClass('selected');
+	    	var h = 0;
+	    	$element.find('li').each(function(i){
+	    		h += $(this).outerHeight(true);
+	    	});
+	    	$('#ranking .carousel-wrapper ul').css('height', h+'px');
+	    	$('#ranking .carousel-wrapper').animate({height:h});
 	    }				
 	});	
-	
+
 	$('body').addClass('js-finished');
 });

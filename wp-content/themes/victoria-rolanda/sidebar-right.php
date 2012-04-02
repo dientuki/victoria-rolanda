@@ -28,18 +28,18 @@
 			<div class="next">Más comentadas</div>
 		</header>
 		<div class="carousel-wrapper">
-			<ul>
+			<ul class="first">
 				<?php 
 				$args = array();
 				$x = 1;
-				$arg['posts_per_page'] = 5;
+				$arg['posts_per_page'] = 4;
 				$arg['order'] = 'ASC';
 				$arg['orderby'] = 'comment_count';
-				$query = new WP_Query($args);
+				$query = new WP_Query($arg);
 				?>
 				<?php while ( $query->have_posts() ): ?>
 					<?php $query->the_post(); ?>
-					<li><?php echo $x; ?><a href="<?php the_permalink() ?>" title="<?php echo the_title(); ?>"><?php echo the_title(); ?></a></li>
+					<li class="item"><span><?php echo $x; ?></span>as <br />sdf <a href="<?php the_permalink() ?>" title="<?php echo the_title(); ?>"><?php echo the_title(); ?></a></li>
 					<?php $x++; ?>
 				<?php endwhile; ?>
 			</ul>
@@ -53,7 +53,7 @@
 				?>
 				<?php while ( $query->have_posts() ): ?>
 					<?php $query->the_post(); ?>
-					<li><?php echo $x; ?><a href="<?php the_permalink() ?>" title="<?php echo the_title(); ?>"><?php echo the_title(); ?></a></li>
+					<li class="item"><?php echo $x; ?> <a href="<?php the_permalink() ?>" title="<?php echo the_title(); ?>"><?php echo the_title(); ?></a></li>
 					<?php $x++; ?>
 				<?php endwhile; ?>
 			</ul>

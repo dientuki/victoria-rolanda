@@ -253,6 +253,7 @@ article .entry-content p {
 
 #ranking {
   border: solid 1px #eaeaea;
+  width: 298px !important;
   -webkit-border-radius: 7px;
   -moz-border-radius: 7px;
   border-radius: 7px;
@@ -285,13 +286,24 @@ article .entry-content p {
     cursor: pointer; }
     #ranking header .selected {
       color: black;
-      background: white; }
+      background: white;
+      cursor: auto; }
     #ranking header .prev {
       float: left;
       width: 123px; }
     #ranking header .next {
       float: right;
       width: 175px; }
+  #ranking .item {
+    padding: 8px 15px; }
+  #ranking .carousel-wrapper {
+    overflow: hidden;
+    width: 298px; }
+  #ranking ul {
+    display: none;
+    width: 320px; }
+    #ranking ul.first {
+      display: block; }
 
 #river-news {
   width: 450px;
