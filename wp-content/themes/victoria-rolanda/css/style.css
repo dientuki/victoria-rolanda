@@ -32,6 +32,7 @@ article .entry-content p {
 #header-menu {
   height: 45px;
   margin-top: 1px;
+  overflow: hidden;
   background: #333333;
   /* Old browsers */
   background: -moz-linear-gradient(top, #333333 0%, #1f1f1f 100%);
@@ -418,6 +419,19 @@ footer .only-next .next {
 
 .share .item {
   display: block; }
+.share .fb {
+  width: 90px;
+  height: 20px;
+  position: relative;
+  z-index: 50; }
+  .share .fb > div > span {
+    width: 90px;
+    height: 20px;
+    display: block;
+    overflow: hidden; }
+  .share .fb span.fb_edge_comment_widget.fb_iframe_widget {
+    width: auto;
+    height: auto; }
 
 .sidebar .block {
   margin-bottom: 20px; }

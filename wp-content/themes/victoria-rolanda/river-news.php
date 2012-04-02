@@ -37,7 +37,9 @@
 		    
 		    
 		    <div class="share">
-		      <div class="fb item">fabook</div>
+		      <div class="fb item">
+						<div class="fb-like" data-href="<?php the_permalink(); ?>" data-send="false" data-layout="button_count" data-width="450" data-show-faces="false" data-action="recommend" data-font="arial"></div>		      
+		      </div>
 		      <div class="tw item">twitter</div>
 		    </div>
 		

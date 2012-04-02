@@ -60,6 +60,7 @@ article {
 	$h: 45px;
 	height: $h;
 	margin-top:1px;
+	overflow: hidden;
 	
 	ul {
 	  height: $h;
@@ -495,7 +496,26 @@ footer .only-next .next {
 	.item {
 	  display:block;
 	}
-	.fb {}
+	.fb {
+	  width: 90px;
+	  height: 20px;
+	  position:relative;
+	  z-index:50;
+	  
+	  > div > span {
+	    width: 90px;
+	    height: 20px;	  
+	    display: block;
+	    overflow: hidden;
+	  }
+	  
+	  span.fb_edge_comment_widget.fb_iframe_widget{
+      width: auto;
+      height: auto;
+	  } 
+	  
+
+  }
 	.tw {}
 	.gplus {}
 }
