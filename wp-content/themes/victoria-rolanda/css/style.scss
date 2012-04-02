@@ -325,6 +325,7 @@ article {
 	border:solid 1px $border-color;
 	width:298px !important;
 	@include border_radius(7px);
+	padding-bottom:10px;
 	
 	header {
 	  $w:298px;
@@ -339,6 +340,7 @@ article {
 	  text-transform:uppercase;
 	  color:white;
 	  cursor:pointer;
+	  margin-bottom:10px;
 	  
 	  .selected {
 	    color:black;
@@ -357,7 +359,7 @@ article {
 	}
 	
 	.item {
-	  padding: 8px 15px;
+	  padding: 10px 15px;
 	}
 	
 	.carousel-wrapper {
