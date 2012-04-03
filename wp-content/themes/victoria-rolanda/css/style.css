@@ -385,14 +385,11 @@ article .entry-content p {
 
 #sidebar-left {
   width: 180px;
-  float: left;
-  height: 300px;
-  background: blue; }
+  float: left; }
 
 #sidebar-right {
   width: 300px;
-  float: right;
-  height: 500px; }
+  float: right; }
 
 .banner {
   margin: 0 auto;
