@@ -229,11 +229,13 @@ article .entry-content p {
   -webkit-background-clip: padding-box;
   background-clip: padding-box; }
   #pov header {
-    margin-bottom: 25px; }
+    margin-bottom: 25px;
+    height: 20px; }
     #pov header h2 {
       color: #ff58b0;
       font-size: 20px;
-      line-height: 20px; }
+      line-height: 20px;
+      height: 20px; }
   #pov a {
     color: #f9adce;
     font-size: 17px;
@@ -242,7 +244,6 @@ article .entry-content p {
       color: white;
       background: #ff58b0;
       text-decoration: none; }
-  #pov header h2,
   #pov a {
     font-family: 'KGSkinnyLatteRegular', Arial;
     text-transform: uppercase; }
@@ -262,11 +263,8 @@ article .entry-content p {
   background-clip: padding-box;
   padding-bottom: 10px; }
   #ranking header {
-    height: 40px;
-    line-height: 40px;
     color: black;
     text-align: center;
-    font-family: 'KGSkinnyLatteRegular', Arial;
     background: #f960b2;
     /* Old browsers */
     background: -moz-linear-gradient(top, #f960b2 0%, #f64398 100%);
@@ -281,8 +279,6 @@ article .entry-content p {
     /* IE10+ */
     background: linear-gradient(top, #f960b2 0%, #f64398 100%);
     /* W3C */
-    font-size: 25px;
-    text-transform: uppercase;
     color: white;
     cursor: pointer;
     margin-bottom: 10px; }
@@ -303,7 +299,7 @@ article .entry-content p {
     width: 298px; }
   #ranking ul {
     display: none;
-    width: 320px; }
+    width: 298px; }
     #ranking ul.first {
       display: block; }
 
@@ -481,9 +477,31 @@ footer .only-next .next {
     height: auto; }
 
 .sidebar #follow-fb {
-  height: 258px; }
+  border: solid 1px #eaeaea;
+  width: 288px;
+  padding: 5px;
+  -webkit-border-radius: 7px;
+  -moz-border-radius: 7px;
+  border-radius: 7px;
+  -moz-background-clip: padding;
+  -webkit-background-clip: padding-box;
+  background-clip: padding-box; }
+  .sidebar #follow-fb header {
+    padding: 0 5px; }
+    .sidebar #follow-fb header span {
+      color: #1dcaff; }
+  .sidebar #follow-fb .fb-like-box {
+    height: 258px; }
 .sidebar .block {
   margin-bottom: 20px; }
+  .sidebar .block header,
+  .sidebar .block h2 {
+    height: 40px;
+    line-height: 40px;
+    font-size: 25px;
+    text-transform: uppercase;
+    font-family: 'KGSkinnyLatteRegular', Arial;
+    text-transform: uppercase; }
 
 .wrapper {
   width: 990px;
