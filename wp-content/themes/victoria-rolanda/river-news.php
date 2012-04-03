@@ -32,7 +32,7 @@
 		      </figure>
 		      <figcaption class="hidden"><?php the_title(); ?></figcaption>
 		    		    
-		      <?php comments_popup_link( '0 comentarios', '1 comentario', '% comentarios', 'comments'); ?>
+		      <?php comments_popup_link( '<span class="arrow"></span> 0 comentarios', '<span class="arrow"></span> 1 comentario', '<span class="arrow"></span> % comentarios', 'comments'); ?>
 		    </div>
 		    
 		    
@@ -40,7 +40,9 @@
 		      <div class="fb item">
 						<div class="fb-like" data-href="<?php the_permalink(); ?>" data-send="false" data-layout="button_count" data-width="450" data-show-faces="false" data-action="recommend" data-font="arial"></div>		      
 		      </div>
-		      <div class="tw item">twitter</div>
+		      <div class="tw item">
+						<a href="https://twitter.com/share" class="twitter-share-button" data-url="<?php the_permalink(); ?>" data-text="<?php the_title(); ?>" data-via="victoriarolanda" data-lang="es">Twittear</a>
+					</div>
 		    </div>
 		
 		    <footer>

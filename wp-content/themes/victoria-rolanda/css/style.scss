@@ -9,6 +9,7 @@ $cyan: #1DCAFF;
 $pink: #FF58B0;
 $lpink: #F9ADCE;
 $border-color: #eaeaea;
+
 article {
 	
 	.entry-content,
@@ -27,6 +28,10 @@ article {
 	height: 250px;
 	background: white;
 	border:solid 1px $border-color;
+}
+
+#container {
+	margin-bottom: 20px;
 }
 
 #header-975x75 {
@@ -302,6 +307,8 @@ article {
 	  color:$lpink;
 	  font-size: 17px;
 	  line-height:17px;
+    font-family: 'KGSkinnyLatteRegular', Arial;
+    text-transform: uppercase;  	  
 	  
 	  &:hover {
 	    color:white;
@@ -310,15 +317,10 @@ article {
 	  }
 	}
 	
-	a {
-    font-family: 'KGSkinnyLatteRegular', Arial;
-    text-transform: uppercase; 	
-	}
-	
 	ul li {
 	  width: 50%;
 	  float:left;
-	  margin-bottom: 10px;
+	  margin-bottom: 15px;
 	}
 }
 
@@ -542,11 +544,13 @@ footer .only-next .next {
 	.item {
 	  display:block;
 	}
+	
 	.fb {
 	  width: 90px;
 	  height: 20px;
 	  position:relative;
 	  z-index:50;
+	  margin-bottom:10px;
 	  
 	  > div > span {
 	    width: 90px;
