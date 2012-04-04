@@ -109,6 +109,7 @@ $('.wp-polls .see-results').click(function(){
 
 
 // Poll's Voting Booth  (User Click "Vote" Link)
+// @todo: fix this
 function poll_booth(current_poll_id) {
 	if(!WPOLL.is_being_voted) {
 		WPOLL.set_is_being_voted(true);
