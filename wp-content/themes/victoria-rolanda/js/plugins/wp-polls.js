@@ -81,11 +81,12 @@ WPOLL.poll_process = function() {
 	}
 }
 
-// Poll's Result (User Click "View Results" Link)
-function poll_result(current_poll_id) {
+//Poll's Result (User Click "View Results" Link)
+$('.wp-polls .see-results').click(function(){
+
 	if(!WPOLL.is_being_voted) {
 		WPOLL.set_is_being_voted(true);
-		WPOLL.poll_id = current_WPOLL.poll_id;
+		WPOLL.poll_id = $(this).data('poll');
 		if(WPOLL.pollsL10n.show_fading) {
 			$('#polls-' + WPOLL.poll_id).fadeTo('def', 0, function () {
 				if(WPOLL.pollsL10n.show_loading) {
@@ -102,13 +103,16 @@ function poll_result(current_poll_id) {
 	} else {
 		alert(WPOLL.pollsL10n.text_wait);
 	}
-}
+
+	return false;
+});
+
 
 // Poll's Voting Booth  (User Click "Vote" Link)
 function poll_booth(current_poll_id) {
 	if(!WPOLL.is_being_voted) {
 		WPOLL.set_is_being_voted(true);
-		WPOLL.poll_id = current_WPOLL.poll_id;
+		WPOLL.poll_id = current_poll_id;
 		if(WPOLL.pollsL10n.show_fading) {
 			$('#polls-' + WPOLL.poll_id).fadeTo('def', 0, function () {
 				if(WPOLL.pollsL10n.show_loading) {

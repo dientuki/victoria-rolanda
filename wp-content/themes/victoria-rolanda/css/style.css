@@ -6,6 +6,57 @@ article .entry-content p {
 article .entry-content p {
   margin: 0; }
 
+form .submit {
+  -webkit-border-radius: 7px;
+  -moz-border-radius: 7px;
+  border-radius: 7px;
+  -moz-background-clip: padding;
+  -webkit-background-clip: padding-box;
+  background-clip: padding-box;
+  background: #ff58b0;
+  /* Old browsers */
+  background: -moz-linear-gradient(top, #ff58b0 0%, #ff3c95 100%);
+  /* FF3.6+ */
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #ff58b0), color-stop(100%, #ff3c95));
+  /* Chrome,Safari4+ */
+  background: -webkit-linear-gradient(top, #ff58b0 0%, #ff3c95 100%);
+  /* Chrome10+,Safari5.1+ */
+  background: -o-linear-gradient(top, #ff58b0 0%, #ff3c95 100%);
+  /* Opera 11.10+ */
+  background: -ms-linear-gradient(top, #ff58b0 0%, #ff3c95 100%);
+  /* IE10+ */
+  background: linear-gradient(top, #ff58b0 0%, #ff3c95 100%);
+  /* W3C */
+  color: white;
+  font-family: 'KGSkinnyLatteRegular', Arial;
+  text-align: center;
+  display: block;
+  line-height: 25px;
+  border: none;
+  margin: 0 auto;
+  font-size: 20px;
+  height: 25px;
+  padding: 0 30px;
+  text-transform: uppercase; }
+  form .submit:hover {
+    background: #ff3c95;
+    /* Old browsers */
+    background: -moz-linear-gradient(top, #ff3c95 0%, #ff58b0 100%);
+    /* FF3.6+ */
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #ff3c95), color-stop(100%, #ff58b0));
+    /* Chrome,Safari4+ */
+    background: -webkit-linear-gradient(top, #ff3c95 0%, #ff58b0 100%);
+    /* Chrome10+,Safari5.1+ */
+    background: -o-linear-gradient(top, #ff3c95 0%, #ff58b0 100%);
+    /* Opera 11.10+ */
+    background: -ms-linear-gradient(top, #ff3c95 0%, #ff58b0 100%);
+    /* IE10+ */
+    background: linear-gradient(top, #ff3c95 0%, #ff58b0 100%);
+    /* W3C */ }
+
+footer .only-next .next {
+  width: 100%; }
+
 #banner300x250 {
   height: 250px;
   background: white;
@@ -135,6 +186,23 @@ article .entry-content p {
     width: 660px;
     height: 451px; }
 
+#follow-fb {
+  border: solid 1px #eaeaea;
+  width: 288px;
+  padding: 5px;
+  -webkit-border-radius: 7px;
+  -moz-border-radius: 7px;
+  border-radius: 7px;
+  -moz-background-clip: padding;
+  -webkit-background-clip: padding-box;
+  background-clip: padding-box; }
+  #follow-fb header {
+    padding: 0 5px; }
+    #follow-fb header span {
+      color: #1dcaff; }
+  #follow-fb .fb-like-box {
+    height: 258px; }
+
 #footer {
   height: 47px;
   border-top: solid 1px #e8e8e8;
@@ -222,23 +290,9 @@ article .entry-content p {
     height: 251px; }
 
 #pov {
-  overflow: hidden;
-  background: #333333;
-  padding: 15px;
-  -webkit-border-radius: 7px;
-  -moz-border-radius: 7px;
-  border-radius: 7px;
-  -moz-background-clip: padding;
-  -webkit-background-clip: padding-box;
-  background-clip: padding-box; }
+  padding: 15px; }
   #pov header {
-    margin-bottom: 25px;
-    height: 20px; }
-    #pov header h2 {
-      color: #ff58b0;
-      font-size: 20px;
-      line-height: 20px;
-      height: 20px; }
+    margin-bottom: 25px; }
   #pov a {
     color: #f9adce;
     font-size: 17px;
@@ -383,6 +437,18 @@ article .entry-content p {
       top: 135px;
       width: 100px; }
 
+#poll {
+  padding: 10px 10px 5px 10px; }
+  #poll header {
+    margin-bottom: 5px; }
+  #poll form {
+    color: white; }
+  #poll .see-results {
+    text-align: center;
+    display: block;
+    margin-top: 3px;
+    font-size: 12px; }
+
 #sidebar-left {
   width: 180px;
   float: left; }
@@ -398,9 +464,6 @@ article .entry-content p {
 .container {
   width: 660px;
   float: left; }
-
-footer .only-next .next {
-  width: 100%; }
 
 .pager {
   margin-bottom: 30px; }
@@ -476,22 +539,6 @@ footer .only-next .next {
     width: auto;
     height: auto; }
 
-.sidebar #follow-fb {
-  border: solid 1px #eaeaea;
-  width: 288px;
-  padding: 5px;
-  -webkit-border-radius: 7px;
-  -moz-border-radius: 7px;
-  border-radius: 7px;
-  -moz-background-clip: padding;
-  -webkit-background-clip: padding-box;
-  background-clip: padding-box; }
-  .sidebar #follow-fb header {
-    padding: 0 5px; }
-    .sidebar #follow-fb header span {
-      color: #1dcaff; }
-  .sidebar #follow-fb .fb-like-box {
-    height: 258px; }
 .sidebar .block {
   margin-bottom: 20px; }
   .sidebar .block header,
@@ -502,6 +549,29 @@ footer .only-next .next {
     text-transform: uppercase;
     font-family: 'KGSkinnyLatteRegular', Arial;
     text-transform: uppercase; }
+.sidebar .block-black {
+  background: #333333;
+  -webkit-border-radius: 7px;
+  -moz-border-radius: 7px;
+  border-radius: 7px;
+  -moz-background-clip: padding;
+  -webkit-background-clip: padding-box;
+  background-clip: padding-box; }
+  .sidebar .block-black header {
+    height: 20px;
+    margin-bottom: 10px; }
+  .sidebar .block-black h2 {
+    color: #ff58b0;
+    font-size: 20px;
+    line-height: 20px;
+    height: 20px; }
+  .sidebar .block-black h3 {
+    font-family: 'KGSkinnyLatteRegular', Arial;
+    color: white;
+    font-size: 26px;
+    line-height: 33px;
+    text-transform: uppercase;
+    margin-bottom: 5px; }
 
 .wrapper {
   width: 990px;

@@ -24,6 +24,34 @@ article {
 	}
 }
 
+form {
+	
+	.submit {
+    @include border_radius(7px);
+    @include gradient_cross(#FF58B0,#FF3C95);
+    color:white;
+    font-family: 'KGSkinnyLatteRegular', Arial;
+    text-align:center;
+    display:block;
+    line-height:25px;
+    border:none;
+    margin:0 auto;
+    
+    font-size: 20px;
+    height: 25px;
+    padding: 0 30px;
+    text-transform: uppercase;    
+    
+    &:hover {
+      @include gradient_cross(#FF3C95,#FF58B0);
+    }
+	}
+}
+
+footer .only-next .next {
+  width: 100%;
+}
+
 #banner300x250 {
 	height: 250px;
 	background: white;
@@ -173,6 +201,25 @@ article {
 	}
 }
 
+#follow-fb {
+  
+  border:solid 1px $border-color;
+  width:288px;
+  padding: 5px;
+  @include border_radius(7px);
+  
+  header {
+    padding: 0 5px;
+    span {
+      color:$cyan;
+    }
+  }
+      
+  .fb-like-box {
+    height: 258px;
+  }
+}
+
 #footer {
 	$h: 47px;
 	height:$h;
@@ -286,23 +333,12 @@ article {
 }
 
 #pov {
-	overflow: hidden;
-	background: $black80;
 	padding: 15px;
-	@include border_radius(7px);
-	
-	header {
-	  margin-bottom:25px;
-	  height: 20px;
-	  
-	  h2 {
-	    color: $pink;
-	    font-size: 20px;
-	    line-height: 20px;
-	    height: 20px;
-	  }
-	}
-	
+
+  header {
+    margin-bottom:25px;
+  }
+
 	a {
 	  color:$lpink;
 	  font-size: 17px;
@@ -474,6 +510,25 @@ article {
 	}
 }
 
+#poll {
+	padding: 10px 10px 5px 10px;
+	
+	header {
+	  margin-bottom: 5px;
+	}
+	
+	form {
+	  color:white;
+	}
+	
+	.see-results {
+	 text-align: center;
+	 display: block;
+	 margin-top: 3px;
+	 font-size: 12px;
+	}
+}
+
 #sidebar-left {
 	width: 180px;
 	float:left;
@@ -492,10 +547,6 @@ article {
 .container {
   width: 660px;
   float:left;
-}
-
-footer .only-next .next {
-	width: 100%;
 }
 
 .pager {
@@ -569,25 +620,6 @@ footer .only-next .next {
 
 .sidebar {
 	
-	#follow-fb {
-	  
-	  border:solid 1px $border-color;
-	  width:288px;
-	  padding: 5px;
-	  @include border_radius(7px);
-	  
-	  header {
-	    padding: 0 5px;
-		  span {
-		    color:$cyan;
-		  }
-    }
-    	  
-	  .fb-like-box {
-	    height: 258px;
-	  }
-	}
-	
 	.block {
 	  margin-bottom:20px;
 	  
@@ -602,10 +634,35 @@ footer .only-next .next {
 	    text-transform: uppercase;  
 	  }
 	}
+	
+	.block-black {
+	  background: $black80;
+	  @include border_radius(7px);
+	  
+	  header {
+	    height: 20px;
+	    margin-bottom: 10px;
+	  }
+	  
+	  h2 {
+	      color: $pink;
+	      font-size: 20px;
+	      line-height: 20px;
+	      height: 20px;
+	  }
+	  
+	  h3 {
+	    font-family: 'KGSkinnyLatteRegular', Arial;
+	    color:white;
+	    font-size: 26px;
+	    line-height: 33px;
+	    text-transform: uppercase;
+	    margin-bottom: 5px;
+	  }
+	}  
 }
 
 .wrapper {
 	width: 990px;
 	margin: 0 auto; 
 }
-

@@ -2,7 +2,7 @@
 <?php if ( !function_exists('dynamic_sidebar') || !dynamic_sidebar() ) : ?>
 	<section id="day-tweet" class="block"></section>
 	<?php if (function_exists('vote_poll') && !in_pollarchive()): ?>
-	<section id="poll" class="block">
+	<section id="poll" class="block block-black">
 	  <header><h2>Encuesta</h2></header>
 	  <?php get_poll();?>
 	</section>

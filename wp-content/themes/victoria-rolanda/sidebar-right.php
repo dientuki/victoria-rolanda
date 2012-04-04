@@ -1,5 +1,5 @@
 <aside class="sidebar" id="sidebar-right">
-	<section id="pov" class="block">
+	<section id="pov" class="block block-black">
 		<header><h2>Puntos de vista</h2></header>
 		<?php 
 		$args = array();
@@ -8,7 +8,7 @@
 		$args['hide_empty'] = 0;
 		$categories = get_categories( $args );
 		?> 
-		<ul>
+		<ul class="clearfix">
 			<?php //@todo: debe tener el ultimo post de esa categoria ?>
 			<?php foreach ($categories as $category) :?>
 			  <?php $query = new WP_Query(array('posts_per_page'=>1, 'cat' => $category->cat_ID)); ?>
