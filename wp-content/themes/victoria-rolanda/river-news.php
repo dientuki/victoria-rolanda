@@ -19,19 +19,19 @@
 		    </div>
 		    
 		    <div class="hmedia">
-		    <figure>
-		    <?php if (has_post_thumbnail()): ?>	      
-		        <a href="<?php the_permalink(); ?>" title="<?php the_title(); ?>">
-		          <?php the_post_thumbnail('thumbnail'); ?>
-		        </a>
-		    <?php else:?>
-		    	<a href="<?php the_permalink(); ?>" title="<?php the_title(); ?>">
-		    		<img src="<?php bloginfo( 'template_url' ); ?>/images/post-default.jpg" width="100" height="100" title="<?php the_title(); ?>" alt="<?php the_title(); ?>" />
-		    	</a>	    
-		    <?php endif; ?>
+		    	<figure>
+			    <?php if (has_post_thumbnail()): ?>	      
+			        <a href="<?php the_permalink(); ?>" title="<?php the_title(); ?>">
+			          <?php the_post_thumbnail('thumbnail'); ?>
+			        </a>
+			    <?php else:?>
+			    	<a href="<?php the_permalink(); ?>" title="<?php the_title(); ?>">
+			    		<img src="<?php bloginfo( 'template_url' ); ?>/images/post-default.jpg" width="100" height="100" title="<?php the_title(); ?>" alt="<?php the_title(); ?>" />
+			    	</a>	    
+			    <?php endif; ?>
+			    	<figcaption class="hidden"><?php the_title(); ?></figcaption>
 		      </figure>
-		      <figcaption class="hidden"><?php the_title(); ?></figcaption>
-		    		    
+   
 		      <?php comments_popup_link( '<span class="arrow"></span> 0 comentarios', '<span class="arrow"></span> 1 comentario', '<span class="arrow"></span> % comentarios', 'comments'); ?>
 		    </div>
 		    

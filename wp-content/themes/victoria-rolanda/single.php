@@ -3,7 +3,7 @@
 
 <section id="container" class="wrapper clearfix">
   <div class="container clearfix">
-    <article>
+    <article class="hnews new">
     	
     	<header>
     		<h1><?php the_title(); ?></h1>
@@ -14,6 +14,13 @@
     		<?php get_template_part('share', 'single'); ?>
     		<div class="dropline"><?php the_excerpt(); ?></div>
     	</header>
+
+    	<?php if (has_post_thumbnail()): ?>
+    	<figure>
+    	  <?php the_post_thumbnail('featured_thumbnail'); ?>
+    	  <figcaption class="hidden"><?php the_title(); ?></figcaption>
+    	</figure>
+    	<?php endif; ?>
     	
     	<div class="entry-content">
     		<?php the_content(); ?>
@@ -28,6 +35,9 @@
     	</footer>
     	
     </article>
+    
+    <?php get_template_part('comments'); ?>
+    <?php get_template_part( 'single', 'related' ); ?>
   </div> 
   <?php get_sidebar('right'); ?>
 </section>

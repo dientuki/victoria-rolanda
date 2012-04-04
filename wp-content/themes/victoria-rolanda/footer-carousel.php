@@ -1,3 +1,4 @@
+<?php if ( (is_home() == false) || ($paged >= 1) ) return false; ?>
     <?php
       $args = array();
       $args['posts_per_page'] = 5;
