@@ -10,6 +10,7 @@
 	
 	<script src="<?php bloginfo( 'template_url' ); ?>/js/libs/jquery-1.7.1.min.js"></script>
 	<script src="<?php bloginfo( 'template_url' ); ?>/js/plugins/jcarousellite-1-0-1.js"></script>
+	<script src="<?php bloginfo( 'template_url' ); ?>/js/plugins/wp-polls.js"></script>
 	<script src="<?php bloginfo( 'template_url' ); ?>/js/init.js"></script>
 		
 </body>

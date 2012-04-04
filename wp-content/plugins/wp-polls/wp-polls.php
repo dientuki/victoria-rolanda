@@ -174,7 +174,7 @@ function get_poll($temp_poll_id = 0, $display = true) {
 }
 
 ### Function: Print Polls Stylesheets That Are Dynamic And jQuery At The Top
-add_action('wp_head', 'poll_head_scripts');
+//add_action('wp_head', 'poll_head_scripts');
 function poll_head_scripts() {
 	$pollbar = get_option('poll_bar');
 	echo '<style type="text/css">'."\n";	
@@ -203,7 +203,7 @@ function poll_head_scripts() {
 
 
 ### Function: Enqueue Polls JavaScripts/CSS
-add_action('wp_enqueue_scripts', 'poll_scripts');
+//add_action('wp_enqueue_scripts', 'poll_scripts');
 function poll_scripts() {
 	global $text_direction;
 	if(@file_exists(TEMPLATEPATH.'/polls-css.css')) {

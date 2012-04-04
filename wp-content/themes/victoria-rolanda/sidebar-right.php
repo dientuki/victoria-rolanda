@@ -34,6 +34,7 @@
 				$x = 1;
 				$arg['posts_per_page'] = 4;
 				$arg['order'] = 'ASC';
+				$arg['paged'] = 1;
 				$arg['orderby'] = 'comment_count';
 				$query = new WP_Query($arg);
 				?>
@@ -48,7 +49,7 @@
 				$x = 1;
 				$limit = 5;
 				$date = date('Y-m-d H:i:s', mktime(0, 0, 0, date("m"), date("d")-30,   date("Y")));
-				$sql = "SELECT DISTINCT $wpdb->posts.*, (meta_value+0) AS views FROM $wpdb->posts LEFT JOIN $wpdb->postmeta ON $wpdb->postmeta.post_id = $wpdb->posts.ID WHERE post_date < '$date' AND post_status = 'publish' AND post_type = 'post' AND meta_key = 'views' AND post_password = '' ORDER BY views DESC LIMIT $limit";
+				$sql = "SELECT DISTINCT $wpdb->posts.*, (meta_value+0) AS views FROM $wpdb->posts LEFT JOIN $wpdb->postmeta ON $wpdb->postmeta.post_id = $wpdb->posts.ID WHERE post_date < '$date' AND post_status = 'publish' AND post_type = 'post' AND meta_key = 'views' AND post_password = '' ORDER BY views DESC LIMIT 0,  $limit";
 				$query = new WP_Query($sql);
 				?>
 				<?php while ( $query->have_posts() ): ?>
