@@ -2,7 +2,7 @@
 if(!current_user_can('manage_polls')) {
 	die('Access Denied');
 }
-$base_name = plugin_basename('day-twett');
+$base_name = plugin_basename('day-twett/admin/settings.php');
 $base_page = 'admin.php?page='.$base_name;
 ?>
 <div class="wrap" id="setting">
