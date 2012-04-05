@@ -32,10 +32,12 @@
   float: left; }
 
 .wp-polls-ul input {
-  margin-right: 5px; }
+  margin-right: 5px;
+  width: 14px;
+  height: 14px; }
 
 .wp-polls label {
-  width: 140px; }
+  width: 135px; }
 
 .wp-polls-ans {
   width: 100%;

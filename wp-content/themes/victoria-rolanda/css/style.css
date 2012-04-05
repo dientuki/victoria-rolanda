@@ -36,7 +36,7 @@ form .submit {
   margin: 0 auto;
   font-size: 20px;
   height: 25px;
-  padding: 0 30px;
+  width: 100px;
   text-transform: uppercase; }
   form .submit:hover {
     background: #ff3c95;
@@ -60,7 +60,13 @@ footer .only-next .next {
 #banner300x250 {
   height: 250px;
   background: white;
-  border: solid 1px #eaeaea; }
+  border: solid 1px #eaeaea;
+  -webkit-border-radius: 0px;
+  -moz-border-radius: 0px;
+  border-radius: 0px;
+  -moz-background-clip: padding;
+  -webkit-background-clip: padding-box;
+  background-clip: padding-box; }
 
 #container {
   margin-bottom: 20px; }
@@ -187,15 +193,7 @@ footer .only-next .next {
     height: 451px; }
 
 #follow-fb {
-  border: solid 1px #eaeaea;
-  width: 288px;
-  padding: 5px;
-  -webkit-border-radius: 7px;
-  -moz-border-radius: 7px;
-  border-radius: 7px;
-  -moz-background-clip: padding;
-  -webkit-background-clip: padding-box;
-  background-clip: padding-box; }
+  padding: 5px; }
   #follow-fb header {
     padding: 0 5px; }
     #follow-fb header span {
@@ -309,14 +307,6 @@ footer .only-next .next {
     margin-bottom: 15px; }
 
 #ranking {
-  border: solid 1px #eaeaea;
-  width: 298px !important;
-  -webkit-border-radius: 7px;
-  -moz-border-radius: 7px;
-  border-radius: 7px;
-  -moz-background-clip: padding;
-  -webkit-background-clip: padding-box;
-  background-clip: padding-box;
   padding-bottom: 10px; }
   #ranking header {
     color: black;
@@ -540,6 +530,13 @@ footer .only-next .next {
     height: auto; }
 
 .sidebar .block {
+  border: solid 1px #eaeaea;
+  -webkit-border-radius: 7px;
+  -moz-border-radius: 7px;
+  border-radius: 7px;
+  -moz-background-clip: padding;
+  -webkit-background-clip: padding-box;
+  background-clip: padding-box;
   margin-bottom: 20px; }
   .sidebar .block header,
   .sidebar .block h2 {

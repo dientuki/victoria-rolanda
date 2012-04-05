@@ -1,14 +1,24 @@
-@mixin border_radius($radius: 10px, $border: false) {
-	@if $border == false {
-		-webkit-border-radius: $radius;
-		-moz-border-radius: $radius;
-		border-radius: $radius;
-		
-		-moz-background-clip: padding;
-		-webkit-background-clip: padding-box;
-		background-clip: padding-box;
-		
-	}
+@mixin border_radius($radius: 10px) {
+	-webkit-border-radius: $radius;
+	-moz-border-radius: $radius;
+	border-radius: $radius;
+	
+	-moz-background-clip: padding;
+	-webkit-background-clip: padding-box;
+	background-clip: padding-box;
+}
+
+@mixin border_radius_bottom($radius: 10px) {
+    -webkit-border-bottom-left-radius: $radius;
+    -webkit-border-bottom-right-radius: $radius;
+    -moz-border-radius-bottomleft: $radius;
+    -moz-border-radius-bottomright: $radius;
+    border-bottom-left-radius: $radius;
+    border-bottom-right-radius: $radius;
+  
+  -moz-background-clip: padding;
+  -webkit-background-clip: padding-box;
+  background-clip: padding-box;
 }
 
 @mixin border_radius_top($radius: 10px) {
