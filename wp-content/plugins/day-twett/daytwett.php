@@ -1,6 +1,6 @@
 <?php
 /*
-Plugin Name: Day Tweet
+Plugin Name: Day Twett
 Plugin URI: 
 Description: 
 Author: 
@@ -39,12 +39,12 @@ function daytwett_deactivate(){
 function daytwett_menu() {
 	
 	if (function_exists('add_menu_page')) {
-		add_menu_page('Day Twett', 'Day Twett', 'manage_day_twetts', 'day-tweet/admin/list-twetts.php', '', plugin_dir_url(__FILE__) . 'icon-16.png');
+		add_menu_page('Day Twett', 'Day Twett', 'manage_day_twetts', 'day-twett/admin/list-twetts.php', '', plugin_dir_url(__FILE__) . 'icon-16.png');
 	}
 	if (function_exists('add_submenu_page')) {
-		add_submenu_page('day-tweet/admin/list-twetts.php', 'List Tweet', 'List Tweet', 'manage_day_twetts', 'day-tweet/admin/list-twetts.php');
-		add_submenu_page('day-tweet/admin/list-twetts.php', 'Add Tweet', 'Add Tweet', 'manage_day_twetts', 'day-tweet/admin/add-twetts.php');
-		add_submenu_page('day-tweet/admin/list-twetts.php', 'Settings', 'Settings', 'manage_day_twetts', 'day-tweet/admin/settings.php');
+		add_submenu_page('day-twett/admin/list-twetts.php', 'List Tweet', 'List Tweet', 'manage_day_twetts', 'day-twett/admin/list-twetts.php');
+		add_submenu_page('day-twett/admin/list-twetts.php', 'Add Tweet', 'Add Tweet', 'manage_day_twetts', 'day-twett/admin/add-twetts.php');
+		add_submenu_page('day-twett/admin/list-twetts.php', 'Settings', 'Settings', 'manage_day_twetts', 'day-twett/admin/settings.php');
 	}	
 }
 
@@ -53,7 +53,7 @@ function daytwett_menu() {
  */
 if (is_admin()) {
 	add_action('admin_menu', 'daytwett_menu');
-	//wp_enqueue_style( 'banner-aquit', plugin_dir_url(__FILE__).'admin/admin.css', null, null);
+	wp_enqueue_style( 'daytwett', plugin_dir_url(__FILE__).'admin/admin.css', null, null);
 
 }
 

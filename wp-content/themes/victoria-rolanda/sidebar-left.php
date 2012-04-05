@@ -4,7 +4,7 @@
 	<?php if (function_exists('get_twett')): ?>
 		<?php $twett = get_twett(); ?>
 		<?php if ($twett->has_twett != false): ?>
-			<section id="day-tweet" class="block">
+			<section id="day-twett" class="block">
 			  <header><h2><span>Twett</span> del día</h2></header>
 				<div class="content">
 					<img src="<?php echo $twett->get_picture()?>" />
