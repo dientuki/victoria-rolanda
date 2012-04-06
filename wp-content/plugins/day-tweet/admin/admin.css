@@ -1,0 +1,14 @@
+.icon32 {
+	width:32px;
+	height:32px;
+	background: transparent url(../icon-32.png) no-repeat;
+}
+
+#manage_tweets img {
+	float:left;
+	margin: 0 5px 5px 0;
+}
+
+#manage_tweets.widefat td {
+	vertical-align: inherit;
+}
