@@ -53,7 +53,7 @@ if ( (isset($_GET)) && (isset($_GET['action']))){
 						$class = $class . 'alternate';
 					}
 					if ($today == $tw->date) {
-						$class = $class . 'highlight';
+						$class = $class . ' highlight';
 					}
 				?>
 				<tr <?php if ($class!=''): ?>class="<?php echo $class; ?>"<?php endif; ?>>
