@@ -31,6 +31,54 @@ class twett {
 		}
 	}
 	
+	public function add_twett($values){
+		
+		$twett = $this->get_twett_from_twitter($values['url']);
+		if ($twett == false) {
+			return false;
+		}		
+		
+		$values['user'] = $twett->user->screen_name;
+		$values['picture'] = $twett->user->profile_image_url;
+		$values['text'] = $twett->text;
+		
+		$sql = 'INSERT INTO ' . $this->wp_table . ' (id,url,user,picture,text,date_show) VALUES (NULL,';
+		$sql .= '\'' . $values['url'] . '\', ';
+		$sql .= '\'' . $values['user'] . '\', ';
+		$sql .= '\'' . $values['picture'] . '\', ';
+		$sql .= '\'' . $values['text'] . '\', ';
+		$sql .= '\'' . $values['date_show'] . '\')';
+		
+		return $this->wpdb->query($sql);
+	}
+	
+	public function edit_twett($id, $values){
+		
+		$twett = $this->get_twett_from_twitter($values['url']);
+		if ($twett == false) {
+			return false;
+		}
+		
+		$values['user'] = $twett->user->screen_name;
+		$values['picture'] = $twett->user->profile_image_url;
+		$values['text'] = $twett->text;
+		
+		
+		$tmp = array();
+		
+		foreach ($values as $k => $v){
+			$tmp[] = $k . ' = \'' . $v . '\'';
+		}
+		$sql = 'UPDATE ' . $this->wp_table . ' SET ' . implode(', ', $tmp) . ' WHERE id = ' . $id;
+		
+		return $this->wpdb->query($sql);
+	}
+	
+	public function delete_twett($id){
+		return $this->wpdb->query('DELETE FROM ' . $this->wp_table . ' WHERE id = \''. $id . '\' LIMIT 1');
+	}	
+	
+	
 	private function retrieve_twett(){
 		// @todo: tal ves haya problema con la fecha
 		$sql = 'SELECT user, picture, text FROM ' . $this->wp_table . ' WHERE date_show = \'' . date('Y-m-d', time()) . '\' LIMIT 1';
@@ -56,49 +104,25 @@ class twett {
 	}
 	
 	public function get_all_twetts(){
-		$sql = 'SELECT id, date_format(date_show, \'%d/%m/%Y\') as date, user, picture, text, url FROM ' . $this->wp_table . ' ORDER BY date, id';
+		$sql = 'SELECT id, date_format(date_show, \'%d/%m/%Y\') as date, user, picture, text, url FROM ' . $this->wp_table . ' ORDER BY date_show ASC';
 		$result = $this->wpdb->get_results($sql);
-	
+
 		if (count($result) == 0){
 			return false;
 		}
 		return $result;
 	}
 	
-	public function delete_twett($id){
-		$this->wpdb->query('DELETE FROM ' . $this->wp_table . ' WHERE id = \''. $id . '\' LIMIT 1');
-		$result = $this->wpdb->get_results('SELECT id FROM ' . $this->wp_table . ' WHERE id = \''. $id . '\' LIMIT 1');
-		
-		if (count($result) == 0){
-			return true;
-		} else {
-			return false;
-		}
-	}
-	
 	public function clean_table(){
-		$this->wpdb->query('TRUNCATE ' . $this->wp_table);
-		$result = $this->wpdb->get_results('SELECT id FROM ' . $this->wp_table);
-	
-		if (count($result) == 0){
-			return true;
-		} else {
-			return false;
-		}
+		return $this->wpdb->query('TRUNCATE ' . $this->wp_table);
 	}	
 	
 	public function clear_twetts(){
 		
 		$date = date('Y-m-d', mktime(0, 0, 0, date("m"), date("d")-7, date("Y")));
 		
-		$this->wpdb->query('DELETE FROM ' . $this->wp_table . ' WHERE date_show <= \''. $date . '\'');
-		$result = $this->wpdb->get_results('SELECT id FROM ' . $this->wp_table . ' WHERE date_show <= \''. $date . '\'');
-	
-		if (count($result) == 0){
-			return true;
-		} else {
-			return false;
-		}
+		return $this->wpdb->query('DELETE FROM ' . $this->wp_table . ' WHERE date_show <= \''. $date . '\'');
+
 	}	
 	
 	public function get_twett_from_twitter($url){
