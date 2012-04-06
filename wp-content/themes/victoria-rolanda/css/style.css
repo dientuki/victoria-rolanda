@@ -70,6 +70,42 @@ footer .only-next .next {
 
 #container {
   margin-bottom: 20px; }
+  #container .section {
+    border-bottom: solid 1px #eaeaea;
+    padding-bottom: 5px;
+    margin: 5px 0 25px 0; }
+    #container .section .category {
+      color: white;
+      background: #ff58b0;
+      font-family: 'KGSkinnyLatteRegular', Arial;
+      text-transform: uppercase;
+      padding: 0 5px;
+      font-size: 18px; }
+
+#day-tweet header,
+#day-tweet .content {
+  padding: 0 10px; }
+#day-tweet header span {
+  color: #1DCAFF; }
+#day-tweet footer {
+  background: #E2E1E2;
+  height: 35px;
+  text-align: center;
+  margin-top: 5px; }
+  #day-tweet footer iframe {
+    margin-top: 8px; }
+#day-tweet .avatar {
+  height: 48px;
+  width: 48px;
+  float: left;
+  margin: 0 5px 0 0; }
+#day-tweet .content {
+  font-size: 12px;
+  line-height: 16px; }
+#day-tweet .user {
+  display: block;
+  position: relative;
+  top: -3px; }
 
 #header-975x75 {
   width: 975px;
@@ -537,7 +573,8 @@ footer .only-next .next {
   -moz-background-clip: padding;
   -webkit-background-clip: padding-box;
   background-clip: padding-box;
-  margin-bottom: 20px; }
+  margin-bottom: 20px;
+  overflow: hidden; }
   .sidebar .block header,
   .sidebar .block h2 {
     height: 40px;

@@ -1,14 +1,15 @@
 <aside class="sidebar" id="sidebar-left">
 <?php if ( !function_exists('dynamic_sidebar') || !dynamic_sidebar() ) : ?>
 	
-	<?php if (function_exists('get_twett')): ?>
-		<?php $twett = get_twett(); ?>
-		<?php if ($twett->has_twett != false): ?>
-			<section id="day-twett" class="block">
+	<?php if (function_exists('get_tweet')): ?>
+		<?php $tweet = get_tweet(); ?>
+		<?php if ($tweet->has_tweet != false): ?>
+			<section id="day-tweet" class="block">
 			  <header><h2><span>Twett</span> del día</h2></header>
 				<div class="content">
-					<img src="<?php echo $twett->get_picture()?>"  width="48" height="48" alt="<?php echo $twett->get_user();?>" />
-					<?php echo $twett->get_user(); ?> <?php echo $twett->get_text(); ?>
+					<img class="avatar" src="<?php echo $tweet->get_picture()?>"  width="48" height="48" alt="<?php echo $tweet->get_user();?>" />
+					<a class="user" rel="nofollow" target="_blank" href="http://twitter.com/<?php echo $tweet->get_user(); ?>"><?php echo $tweet->get_user(); ?></a>
+					<?php echo $tweet->get_text(); ?>
 				</div>
 			  <footer>
 			    <a href="https://twitter.com/victoriarolanda" class="twitter-follow-button" data-show-count="false" data-lang="es" data-size="small"  data-show-screen-name="true">Seguir a @victoriarolanda</a>

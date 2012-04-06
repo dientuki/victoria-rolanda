@@ -6,8 +6,8 @@
     <?php get_template_part('featured-carousel');?>
 
     <?php if (is_category() || is_tag()):?>
-    <header>
-    	<div class="category"><?php single_cat_title(); ?></div>
+    <header class="section">
+    	<span class="category"><?php single_cat_title(); ?></span>
     </header>
     <?php endif; ?>
     	    

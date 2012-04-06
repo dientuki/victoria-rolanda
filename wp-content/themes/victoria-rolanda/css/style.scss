@@ -61,6 +61,68 @@ footer .only-next .next {
 
 #container {
 	margin-bottom: 20px;
+	
+	.section {
+	  border-bottom:solid 1px $border-color;
+	  padding-bottom:5px;
+	  margin:5px 0 25px 0;
+	  
+	  .category {
+	    color:white;
+	    background: $pink;
+	    font-family: 'KGSkinnyLatteRegular', Arial;
+	    text-transform: uppercase;
+	    padding: 0 5px;
+	    font-size: 18px;
+	  }
+	}
+}
+
+#day-tweet {
+	
+	header,
+	.content {
+	  padding:0 10px;
+	}
+	
+	header {
+	  span {
+	    color:#1DCAFF;
+	  }
+	}
+	
+	footer {
+	  background: #E2E1E2;
+	  height: 35px;
+	  text-align: center;
+	  margin-top: 5px;
+	  
+	  iframe {
+	    margin-top: 8px;
+	  }
+	}
+	
+	
+	
+	.avatar {
+	  height: 48px;
+	  width: 48px;
+	  float:left;
+	  margin: 0 5px 0 0;
+	}
+	
+	.content {
+	  font-size: 12px;
+	  line-height: 16px;
+	}
+	
+	.user {
+	  display: block;
+	  position: relative;
+	  top:-3px;
+	}
+	
+	
 }
 
 #header-975x75 {
@@ -620,6 +682,7 @@ footer .only-next .next {
     border:solid 1px $border-color;
     @include border_radius(7px);  	
 	  margin-bottom:20px;
+	  overflow:hidden;
 	  
     header,
     h2 {
