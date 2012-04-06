@@ -2,10 +2,6 @@
 if(!current_user_can('manage_polls')) {
 	die('Access Denied');
 }
-$base_name = plugin_basename('day-twett/admin/add-twetts.php');
-$base_page = 'admin.php?page='.$base_name;
-$list_name = plugin_basename('day-twett/admin/list-twetts.php');
-$list_page = 'admin.php?page='.$list_name;
 
 function twett_time($twett_time = FALSE, $fieldname = 'date') {
 	global $month;
@@ -52,22 +48,66 @@ function twett_time($twett_time = FALSE, $fieldname = 'date') {
 	
 	echo '</div>'."\n";
 }
-?>
-<div class="wrap" id="setting">
-	<div class="icon32"></div>
-	<h2>Add twett</h2>
 
-	<table class="form-table">
-		<tr>
-			<th width="20%" scope="row" valign="top">Twett</th>
-			<td width="80%"><input type="text" size="70" value="" /></td>
-		</tr>
-		<tr>
-			<th width="20%" scope="row" valign="top">Day</th>
-			<td width="80%"><?php twett_time(); ?></td>
-		</tr>		
-	</table>	
-	<p style="text-align: center;">
-	  <input type="submit" value="Add"  class="button-primary" /> &nbsp; <a href="<?php echo $list_page ?>" class="button">Cancel</a>
-	</p>
-</div>
+$base_name = plugin_basename('day-twett/admin/add-twetts.php');
+$base_page = 'admin.php?page='.$base_name;
+$list_name = plugin_basename('day-twett/admin/list-twetts.php');
+$list_page = 'admin.php?page='.$list_name;
+include_once dirname(dirname(__FILE__)) . '/class/twett.php';
+$twett = new twett(false);
+
+
+$action = 'adding';
+
+if ( (isset($_GET)) && (isset($_GET['action']))){
+	$action = $_GET['action'];
+}
+
+
+?>
+<form method="post" action="<?php echo admin_url('admin.php?page='.plugin_basename(__FILE__)); ?>&amp;action=<?php echo $action; ?>?>">
+	<div class="wrap">
+		<div class="icon32"></div>
+		<h2><?php echo $edit == true? 'Edit':'Add'?> twett</h2>
+	
+		<?php if ( (isset($_GET)) && (isset($_GET['action']))):?>
+		
+			<?php switch ($action) {
+							case 'editing': ?>
+			
+							<?php break;?>
+							
+							<?php case 'adding'?>
+							
+							
+							<?php break;?>
+			<?php }?>
+		
+		
+		
+		<?php endif; ?>
+		
+		<?php if ($is_deleting == true): ?>
+			<?php if ($is_deleted == true):?>
+				<div class="updated fade"><p>Twett <strong>deleted</strong> sucefull</p></div>
+			<?php else:?>
+				<div class="error fade"><p>I <strong>can't</strong> delete the twett, try again</p></div>
+			<?php endif; ?>
+		<?php endif; ?>	
+	
+		<table class="form-table">
+			<tr>
+				<th width="20%" scope="row" valign="top">Twett url:</th>
+				<td width="80%"><input type="text" size="70" value="" /></td>
+			</tr>
+			<tr>
+				<th width="20%" scope="row" valign="top">Day:</th>
+				<td width="80%"><?php twett_time(); ?></td>
+			</tr>		
+		</table>	
+		<p style="text-align: center;">
+		  <input type="submit" value="Add"  class="button-primary" /> &nbsp; <a href="<?php echo $list_page ?>" class="button">Cancel</a>
+		</p>
+		
+	</div>
+</form>

@@ -21,11 +21,6 @@ class daytwettInstall{
 				
 		$this->wpdb = $wpdb;
 		$this->wp_table = $this->wpdb->prefix . $this->wp_table;
-
-		$role = get_role('administrator');
-		if(!$role->has_cap('manage_day_twetts')) {
-			$role->add_cap('manage_day_twetts');
-		}		
 	}
 
 	/**
@@ -34,6 +29,10 @@ class daytwettInstall{
 	 * @return void
 	 */		
 	public function activate(){
+			$role = get_role('administrator');
+			if(!$role->has_cap('manage_day_twetts')) {
+				$role->add_cap('manage_day_twetts');
+			}		
 			$this->create_table();
 	}
 	
@@ -43,6 +42,10 @@ class daytwettInstall{
 	 * @return void
 	 */		
 	public function deactivate(){
+			$role = get_role('administrator');
+			if(!$role->has_cap('manage_day_twetts')) {
+				$role->remove_cap('manage_day_twetts');
+			}		
 			$this->drop_table();
 	}
 
@@ -54,8 +57,8 @@ class daytwettInstall{
 	private function create_table(){
 		$sql = 'CREATE TABLE ' . $this->wp_table . ' (
 				id INT NOT NULL AUTO_INCREMENT,
-				url VARCHAR( 50 ) NOT NULL,
-				user VARCHAR( 50 ) NOT NULL,
+				url VARCHAR( 100 ) NOT NULL,
+				user VARCHAR( 100 ) NOT NULL,
 				picture VARCHAR( 150 ) NOT NULL,
 				text VARCHAR( 140 ) NOT NULL,
 				date_show DATE NOT NULL,

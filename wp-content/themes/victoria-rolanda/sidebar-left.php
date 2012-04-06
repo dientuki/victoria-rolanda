@@ -7,7 +7,7 @@
 			<section id="day-twett" class="block">
 			  <header><h2><span>Twett</span> del día</h2></header>
 				<div class="content">
-					<img src="<?php echo $twett->get_picture()?>" />
+					<img src="<?php echo $twett->get_picture()?>"  width="48" height="48" alt="<?php echo $twett->get_user();?>" />
 					<?php echo $twett->get_user(); ?> <?php echo $twett->get_text(); ?>
 				</div>
 			  <footer>
