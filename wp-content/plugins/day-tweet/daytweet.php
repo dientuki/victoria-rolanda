@@ -14,6 +14,7 @@ Version: 0.10
  * @return void
  */
 function daytweet_activate(){
+	include_once dirname(__FILE__) . '/class/common.php';
 	include_once dirname(__FILE__) . '/class/daytweetInstall.php';
 	$install = new daytweetInstall();
 	$install->activate();
@@ -26,6 +27,7 @@ function daytweet_activate(){
  * @return void
  */
 function daytweet_deactivate(){
+	include_once dirname(__FILE__) . '/class/common.php';
 	include_once dirname(__FILE__) . '/class/daytweetInstall.php';
 	$install = new daytweetInstall();
 	$install->deactivate();
@@ -54,7 +56,6 @@ function daytweet_menu() {
 if (is_admin()) {
 	add_action('admin_menu', 'daytweet_menu');
 	wp_enqueue_style( 'daytweet', plugin_dir_url(__FILE__).'admin/admin.css', null, null);
-
 }
 
 /**
@@ -63,8 +64,9 @@ if (is_admin()) {
  * @return void
  */
 function get_tweet(){
+	include_once dirname(__FILE__) . '/class/common.php';
 	include_once dirname(__FILE__) . '/class/tweet.php';
-	return new tweet();
+	return new dt_tweet();
 }
 
 register_activation_hook(__FILE__ , 'daytweet_activate' );

@@ -5,7 +5,9 @@ if(!current_user_can('manage_polls')) {
 
 $base_name = plugin_basename('day-tweet/admin/settings.php');
 $base_page = 'admin.php?page='.$base_name;
-include_once dirname(dirname(__FILE__)) . '/class/tweet.php';
+
+include_once dirname(dirname(__FILE__)) . '/class/common.php';
+include_once dirname(dirname(__FILE__)) . '/class/backend.php';
 
 $is_clear = null;
 $is_clean = null;
@@ -15,7 +17,7 @@ $is_action = false;
 if ( (isset($_GET)) && (isset($_GET['action']))){
 	$is_action = true;
 	
-	$tweet = new tweet(false);	
+	$tweet = new dt_backend();	
 	
 	switch ($_GET['action']){
 		case 'cleartweet':

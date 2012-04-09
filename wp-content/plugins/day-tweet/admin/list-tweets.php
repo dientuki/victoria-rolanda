@@ -7,8 +7,11 @@ $base_name = plugin_basename('day-tweet/admin/list-tweets.php');
 $base_page = 'admin.php?page='.$base_name;
 $edit_name = plugin_basename('day-tweet/admin/add-tweets.php');
 $edit_page = 'admin.php?page='.$edit_name;
-include_once dirname(dirname(__FILE__)) . '/class/tweet.php';
-$tweet = new tweet(false);
+
+include_once dirname(dirname(__FILE__)) . '/class/common.php';
+include_once dirname(dirname(__FILE__)) . '/class/backend.php';
+
+$tweet = new dt_backend();
 $today = date('d/m/Y', time());
 
 $is_deleted = false;

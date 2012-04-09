@@ -62,8 +62,11 @@ $base_name = plugin_basename('day-tweet/admin/add-tweets.php');
 $base_page = 'admin.php?page='.$base_name;
 $list_name = plugin_basename('day-tweet/admin/list-tweets.php');
 $list_page = 'admin.php?page='.$list_name;
-include_once dirname(dirname(__FILE__)) . '/class/tweet.php';
-$tweet = new tweet(false);
+
+include_once dirname(dirname(__FILE__)) . '/class/common.php';
+include_once dirname(dirname(__FILE__)) . '/class/backend.php';
+
+$tweet = new dt_backend();
 
 $action = 'add';
 if ( (isset($_GET)) && (isset($_GET['action']))){

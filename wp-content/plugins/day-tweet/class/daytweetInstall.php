@@ -1,15 +1,5 @@
 <?php
-class daytweetInstall{	
-	
-	/**
-	 * The wpdb object
-	 */		
-	private $wpdb = null;
-	
-	/**
-	 * Table name
-	 */
-	private $wp_table = 'day_tweet';	
+class daytweetInstall extends dt_common{	
 	
 	/**
 	 * The constructor
