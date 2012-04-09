@@ -12,3 +12,8 @@
 #manage_tweets.widefat td {
 	vertical-align: inherit;
 }
+
+#manage_tweets .content s,
+#manage_tweets .content a:hover s{
+	text-decoration: none;
+}

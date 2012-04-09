@@ -102,10 +102,21 @@ footer .only-next .next {
 #day-tweet .content {
   font-size: 12px;
   line-height: 16px; }
-#day-tweet .user {
-  display: block;
-  position: relative;
-  top: -3px; }
+  #day-tweet .content p {
+    margin: 0; }
+  #day-tweet .content .twett-hashtag:hover,
+  #day-tweet .content .twett-hashtag:hover s,
+  #day-tweet .content .twett-users:hover,
+  #day-tweet .content .twett-users:hover s,
+  #day-tweet .content s {
+    text-decoration: none; }
+  #day-tweet .content a:hover b,
+  #day-tweet .content .twett-url:hover {
+    text-decoration: underline; }
+  #day-tweet .content b {
+    font-weight: normal; }
+#day-tweet .user:hover {
+  text-decoration: underline; }
 
 #header-975x75 {
   width: 975px;

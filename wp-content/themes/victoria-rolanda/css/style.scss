@@ -114,12 +114,30 @@ footer .only-next .next {
 	.content {
 	  font-size: 12px;
 	  line-height: 16px;
+	  
+	  p {
+	    margin:0;
+	  }
+	  
+    .twett-hashtag:hover,
+    .twett-hashtag:hover s,
+    .twett-users:hover,
+    .twett-users:hover s,    	  
+	  s {
+	    text-decoration: none;
+	  }
+	  
+	  a:hover b,
+	  .twett-url:hover {
+	    text-decoration: underline;
+	  }
+	  
+	  b {font-weight: normal;}
+	  
 	}
 	
-	.user {
-	  display: block;
-	  position: relative;
-	  top:-3px;
+	.user:hover {
+	    text-decoration: underline;
 	}
 	
 	

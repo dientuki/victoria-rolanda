@@ -8,7 +8,7 @@
 			  <header><h2><span>Twett</span> del día</h2></header>
 				<div class="content">
 					<img class="avatar" src="<?php echo $tweet->get_picture()?>"  width="48" height="48" alt="<?php echo $tweet->get_user();?>" />
-					<a class="user" rel="nofollow" target="_blank" href="http://twitter.com/<?php echo $tweet->get_user(); ?>"><?php echo $tweet->get_user(); ?></a>
+					<p><a class="user" rel="nofollow" target="_blank" href="http://twitter.com/<?php echo $tweet->get_user(); ?>"><?php echo $tweet->get_user(); ?></a></p>
 					<?php echo $tweet->get_text(); ?>
 				</div>
 			  <footer>

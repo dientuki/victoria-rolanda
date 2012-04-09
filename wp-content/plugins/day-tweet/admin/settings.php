@@ -33,7 +33,7 @@ if ( (isset($_GET)) && (isset($_GET['action']))){
 }
 
 ?>
-<div class="wrap tool-box" id="setting">
+<div class="wrap tool-box">
 	<div class="icon32"></div>
 	<h2>Settings</h2>
 	

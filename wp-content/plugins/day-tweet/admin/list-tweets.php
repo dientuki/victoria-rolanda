@@ -25,7 +25,7 @@ if ( (isset($_GET)) && (isset($_GET['action']))){
 }
 
 ?>
-<div class="wrap" id="setting">
+<div class="wrap">
 	<div class="icon32"></div>
 	<h2>Twetts</h2>
 	
@@ -61,7 +61,7 @@ if ( (isset($_GET)) && (isset($_GET['action']))){
 				?>
 				<tr <?php if ($class!=''): ?>class="<?php echo $class; ?>"<?php endif; ?>>
 					<td align="center"><?php echo $tw->date;?></td>
-					<td>
+					<td class="content">
 						<img src="<?php echo $tw->picture;?>" width="48" height="48" alt="<?php echo $tw->user;?>" />
 						<div><?php echo $tw->user;?></div>
 						<?php echo $tweet->sanitize_tweet($tw->text);?>
