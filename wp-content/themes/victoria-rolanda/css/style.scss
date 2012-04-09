@@ -631,6 +631,7 @@ footer .only-next .next {
   header {
     position:relative;
     padding-top:48px;
+    margin-bottom:15px;
     
     h1 {
       font-family: 'KGSkinnyLatteRegular', Arial;
@@ -664,24 +665,64 @@ footer .only-next .next {
   
   }
   
+  figure {
+    margin-bottom: 15px;
+    @include border_radius(7px);
+    overflow: hidden;
+  }  
+  
+  .dropline {
+    line-height: 1.3em;
+  }
+  
+  .entry-content {
+    p {
+      margin-bottom:15px;
+    }
+  }
+  
   .share {
     border: 1px solid #EAEAEA;
     border-left: none;
     border-right: none;
     height: 20px;
     padding: 10px 0;
+    margin-bottom:20px;
     
     h3 {
       font-family: 'KGSkinnyLatteRegular',Arial;
       font-size: 28px;
       line-height:24px;
-      text-transform: uppercase;    
+      text-transform: uppercase; 
+      color:#c2c2c2;   
     }
     
     .item {
       float:left;
       margin: 0 20px 0 0;;
     }
+  }
+  
+  .tag-list {
+    margin-bottom:15px;
+  
+    h3 {
+      color:black;
+      float:left;
+      font-size: 16px;
+      margin-right: 5px;
+    }
+    
+    ul {
+      float:left;
+    }
+    
+    .tag {
+      float:left;
+      margin: 0 5px 5px 0;
+    }
+    
+    a {}
   }
 
 

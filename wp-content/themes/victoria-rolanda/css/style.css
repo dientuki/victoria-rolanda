@@ -504,7 +504,8 @@ footer .only-next .next {
 
 .new header {
   position: relative;
-  padding-top: 48px; }
+  padding-top: 48px;
+  margin-bottom: 15px; }
   .new header h1 {
     font-family: 'KGSkinnyLatteRegular', Arial;
     font-size: 26px;
@@ -528,20 +529,47 @@ footer .only-next .next {
     font-size: 18px;
     padding: 0 5px;
     text-transform: uppercase; }
+.new figure {
+  margin-bottom: 15px;
+  -webkit-border-radius: 7px;
+  -moz-border-radius: 7px;
+  border-radius: 7px;
+  -moz-background-clip: padding;
+  -webkit-background-clip: padding-box;
+  background-clip: padding-box;
+  overflow: hidden; }
+.new .dropline {
+  line-height: 1.3em; }
+.new .entry-content p {
+  margin-bottom: 15px; }
 .new .share {
   border: 1px solid #EAEAEA;
   border-left: none;
   border-right: none;
   height: 20px;
-  padding: 10px 0; }
+  padding: 10px 0;
+  margin-bottom: 20px; }
   .new .share h3 {
     font-family: 'KGSkinnyLatteRegular',Arial;
     font-size: 28px;
     line-height: 24px;
-    text-transform: uppercase; }
+    text-transform: uppercase;
+    color: #c2c2c2; }
   .new .share .item {
     float: left;
     margin: 0 20px 0 0; }
+.new .tag-list {
+  margin-bottom: 15px; }
+  .new .tag-list h3 {
+    color: black;
+    float: left;
+    font-size: 16px;
+    margin-right: 5px; }
+  .new .tag-list ul {
+    float: left; }
+  .new .tag-list .tag {
+    float: left;
+    margin: 0 5px 5px 0; }
 
 .pager {
   margin-bottom: 30px; }

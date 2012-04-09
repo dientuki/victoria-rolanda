@@ -18,16 +18,8 @@
 				<p class="nopassword"><?php _e( 'This post is password protected. Enter the password to view any comments.', 'twentyten' ); ?></p>
 			</section><!-- #comments -->
 <?php
-		/* Stop the rest of comments.php from being processed,
-		 * but don't kill the script entirely -- we still have
-		 * to fully load the template.
-		 */
 		return;
 	endif;
-?>
-
-<?php
-	// You can start editing here -- including this comment!
 ?>
 
 <?php if ( have_comments() ) : ?>
@@ -44,7 +36,7 @@
 					 * define twentyten_comment() and that will be used instead.
 					 * See twentyten_comment() in twentyten/functions.php for more.
 					 */
-					wp_list_comments( array( 'callback' => 'twentyten_comment' ) );
+					wp_list_comments( );
 				?>
 			</ul>
 

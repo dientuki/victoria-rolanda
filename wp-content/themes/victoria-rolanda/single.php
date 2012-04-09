@@ -28,9 +28,9 @@
     	</div>
     	
     	<footer>
-    		<div class="tag-list">
+    		<div class="tag-list clearfix">
     		  <h3>Tags:</h3>
-    		  <?php the_tags( '<ul><li class="tag">', '</li><li class="tag">', '</li></ul>')?>
+    		  <?php the_tags( '', ', ', '.')?>
     		</div>
     	  <?php get_template_part('share', 'single'); ?>
     	</footer>
