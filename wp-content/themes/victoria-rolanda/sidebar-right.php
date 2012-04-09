@@ -16,7 +16,7 @@
 			  <?php $query = new WP_Query(array('posts_per_page'=>1, 'cat' => $category->cat_ID)); ?>
 			  <?php while ( $query->have_posts() ): ?>
 				  <?php $query->the_post(); ?>
-					<li class="<?php is_new(get_the_ID()); ?>"><a href="<?php the_permalink() ?>" title="<?php echo the_title(); ?>"><?php echo $category->cat_name; ?></a></li>
+					<li class="<?php echo is_new(get_the_ID()); ?>"><a href="<?php the_permalink() ?>" title="<?php echo the_title(); ?>"><?php echo $category->cat_name; ?></a></li>
 				<?php endwhile; ?>
 			<?php endforeach;?>
 		</ul>

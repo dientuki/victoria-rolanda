@@ -3,12 +3,13 @@
 
 <section id="container" class="wrapper clearfix">
   <div class="container clearfix">
-    <article class="hnews new">
+    <article class="hnews new" id="post-<?php the_ID(); ?>">
     	
     	<header>
-    		<h1><?php the_title(); ?></h1>
+    		<h1><a href="<?php the_permalink(); ?>" title="<?php the_title(); ?>"><?php the_title(); ?></a></h1>
     		<div class="meta">
-    		  <div class="category"><?php the_category(); ?></div>
+					<?php	$category = get_the_category(); $category = $category[0];	?>    		    		
+   		  	<a class="category" rel="category" title="Ver todas las entradas en <?php echo $category->cat_name; ?>" href="<?php echo get_category_link($category->term_id ) ?>"><?php echo $category->cat_name; ?></a>
     		  <time><?php the_date(); ?></time>
     		</div>
     		<?php get_template_part('share', 'single'); ?>
