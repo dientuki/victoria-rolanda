@@ -7,7 +7,7 @@ class dt_backend extends dt_common {
 	 * @var string $api 
 	 */
 	private $api = 'http://api.twitter.com/1/statuses/show.json?id=';
-	
+
 	/**
 	 * Constructor
 	 * 
