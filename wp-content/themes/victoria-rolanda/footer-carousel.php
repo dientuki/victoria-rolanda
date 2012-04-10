@@ -15,7 +15,7 @@
 				<?php $query->the_post(); ?>
 					<article>
 						<header>
-							<h1><a href="<?php the_permalink() ?>" title="<?php echo the_title(); ?>"><?php echo the_title(); ?></a></h1>
+							<h1><a href="<?php the_permalink() ?>" title="<?php the_title_attribute(); ?>"><?php echo the_title(); ?></a></h1>
 						</header>
 						<?php if (has_post_thumbnail()) : ?>
 							<figure>

@@ -6,7 +6,7 @@
     <article class="hnews new" id="post-<?php the_ID(); ?>">
     	
     	<header>
-    		<h1><a href="<?php the_permalink(); ?>" title="<?php the_title(); ?>"><?php the_title(); ?></a></h1>
+    		<h1><a href="<?php the_permalink(); ?>" title="<?php the_title_attribute(); ?>"><?php the_title(); ?></a></h1>
     		<div class="meta">
 					<?php	$category = get_the_category(); $category = $category[0];	?>    		    		
    		  	<a class="category" rel="category" title="Ver todas las entradas en <?php echo $category->cat_name; ?>" href="<?php echo get_category_link($category->term_id ) ?>"><?php echo $category->cat_name; ?></a>
@@ -37,7 +37,7 @@
     	
     </article>
     
-    <?php get_template_part('comments'); ?>
+    <?php comments_template( '', true ); ?>
     <?php get_template_part( 'single', 'related' ); ?>
   </div> 
   <?php get_sidebar('right'); ?>
