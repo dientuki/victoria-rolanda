@@ -53,8 +53,8 @@
 				$args = array();
 				$x = 1;
 				$args['posts_per_page'] = 2;
-				$args['order'] = 'ASC';
-				$args['orderby'] = 'comment_count';
+				//$args['order'] = 'ASC';
+				//$args['orderby'] = 'comment_count';
 				$query = new WP_Query($args);
 				?>
 				<?php while ( $query->have_posts() ): ?>

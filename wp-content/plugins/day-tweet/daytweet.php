@@ -1,11 +1,11 @@
 <?php
 /*
 Plugin Name: Day Twett
-Plugin URI: 
-Description: 
-Author: 
-Author URI: 
-Version: 0.10
+Plugin URI: www.mateclass.com/resources/daytweet
+Description:  Permite poner en tu web tweets programados
+Author: Juan Farias
+Author URI: www.mateclass.com
+Version: 0.5
 */
 
 /**

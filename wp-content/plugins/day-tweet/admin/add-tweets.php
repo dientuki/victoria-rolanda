@@ -122,7 +122,7 @@ if (  (isset($_POST)) && (count($_POST) > 0) ) {
 		  <?php if ($tweet->has_error()): ?>	  
 		    <div class="error fade"><?php echo $tweet->get_error() ?></div>  
 		  <?php else: ?>
-		    <div class="updated fade"><p>Twett <strong>edited</strong> sucefull</p></div>
+		    <div class="updated fade"><p>Twett <strong><?php echo $action == 'add'? 'added':'edited'; ?></strong> sucefull</p></div>
 		  <?php endif; ?>
 		
 		<?php endif; ?>							

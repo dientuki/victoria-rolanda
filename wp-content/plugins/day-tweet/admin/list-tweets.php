@@ -58,7 +58,7 @@ if ( (isset($_GET)) && (isset($_GET['action']))){
 					if ($today == $tw->date) {
 						$class = $class . ' highlight';
 					}
-					if ($tw->has_tweet == false) {
+					if ($tw->has_tweet == '0') {
 						$class='error';
 					}
 				?>

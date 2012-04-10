@@ -157,7 +157,7 @@ class dt_backend extends dt_common {
 	}
 	
 	public function get_all_tweets(){
-		$sql = 'SELECT id, date_format(date_show, \'%d/%m/%Y\') as date, user, picture, text, url FROM ' . $this->wp_table . ' ORDER BY date_show ASC';
+		$sql = 'SELECT id, date_format(date_show, \'%d/%m/%Y\') as date, user, picture, text, url, has_tweet FROM ' . $this->wp_table . ' ORDER BY date_show ASC';
 		$result = $this->wpdb->get_results($sql);
 
 		if (count($result) == 0){
