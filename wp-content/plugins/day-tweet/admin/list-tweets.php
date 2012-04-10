@@ -42,7 +42,7 @@ if ( (isset($_GET)) && (isset($_GET['action']))){
 			<tr>
 				<th width="70px">Day</th>
 				<th>Twett</th>				
-				<th width="100px" colspan="2" style="text-align: center;">Actions</th>
+				<th width="100px" colspan="3" style="text-align: center;">Actions</th>
 			</tr>
 		</thead>
 		<tbody >
@@ -58,6 +58,9 @@ if ( (isset($_GET)) && (isset($_GET['action']))){
 					if ($today == $tw->date) {
 						$class = $class . ' highlight';
 					}
+					if ($tw->has_tweet == false) {
+						$class='error';
+					}
 				?>
 				<tr <?php if ($class!=''): ?>class="<?php echo $class; ?>"<?php endif; ?>>
 					<td align="center"><?php echo $tw->date;?></td>
@@ -68,6 +71,7 @@ if ( (isset($_GET)) && (isset($_GET['action']))){
 					</td>
 					<td width="50px" align="center" valign="middle"><a href="<?php echo $edit_page ?>&amp;action=edit&amp;id=<?php echo $tw->id;?>" class="edit">Edit</a></td>
 					<td width="50px" align="center" valign="middle"><a href="<?php echo $base_page ?>&amp;action=delete&amp;id=<?php echo $tw->id;?>" class="edit">Delete</a></td>
+					<td width="50px" align="center" valign="middle"><a href="<?php echo $base_page ?>&amp;action=check&amp;id=<?php echo $tw->id;?>" class="edit">Check</a></td>
 				</tr>
 				<?php $i++; ?>
 			<?php endforeach; ?>

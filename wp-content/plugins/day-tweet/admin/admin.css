@@ -17,3 +17,7 @@
 #manage_tweets .content a:hover s{
 	text-decoration: none;
 }
+
+#manage_tweets.widefat .error {
+	background: #FFEBE8;
+}

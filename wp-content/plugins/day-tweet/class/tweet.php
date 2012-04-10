@@ -39,7 +39,7 @@ class dt_tweet extends dt_common {
 	 */
 	private function retrieve_tweet(){
 		// @todo: tal ves haya problema con la fecha
-		$sql = 'SELECT user, picture, text FROM ' . $this->wp_table . ' WHERE date_show = \'' . date('Y-m-d', time()) . '\' LIMIT 1';
+		$sql = 'SELECT user, picture, text FROM ' . $this->wp_table . ' WHERE has_tweet = 1 AND date_show = \'' . date('Y-m-d', time()) . '\' LIMIT 1';
 		$result = $this->wpdb->get_results($sql);
 		if (count($result) == 0){
 			return false;

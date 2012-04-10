@@ -13,11 +13,10 @@ $is_clear = null;
 $is_clean = null;
 $is_action = false;
 
+$tweet = new dt_backend();
 
 if ( (isset($_GET)) && (isset($_GET['action']))){
 	$is_action = true;
-	
-	$tweet = new dt_backend();	
 	
 	switch ($_GET['action']){
 		case 'cleartweet':
@@ -25,6 +24,9 @@ if ( (isset($_GET)) && (isset($_GET['action']))){
 			break;
 		case 'cleardatabase':
 			$is_clean = $tweet->clean_table();
+			break;
+		case 'check':
+			$tweet->check_tweets();
 			break;
 		default:
 			$is_action = false;
@@ -65,7 +67,11 @@ if ( (isset($_GET)) && (isset($_GET['action']))){
 		<tr>
 			<th width="20%" scope="row" valign="top"><a href="<?php echo $base_page ?>&amp;action=cleardatabase" class="button">Clear database</a></th>
 			<td width="80%">Clean all the database</td>
-		</tr>		
+		</tr>	
+		<tr>
+			<th width="20%" scope="row" valign="top"><a href="<?php echo $base_page ?>&amp;action=check" class="button<?php if ($tweet->has_to_check() == true) {echo '-primary';} ?>">Check tweets</a></th>
+			<td width="80%">Check the tweet with errors</td>
+		</tr>				
 	</table>	
 
 </div>

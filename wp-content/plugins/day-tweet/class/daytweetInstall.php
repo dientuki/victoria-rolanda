@@ -48,10 +48,11 @@ class daytweetInstall extends dt_common{
 		$sql = 'CREATE TABLE ' . $this->wp_table . ' (
 				id INT NOT NULL AUTO_INCREMENT,
 				url VARCHAR( 100 ) NOT NULL,
-				user VARCHAR( 100 ) NOT NULL,
-				picture VARCHAR( 150 ) NOT NULL,
-				text VARCHAR( 140 ) NOT NULL,
+				user VARCHAR( 50 ),
+				picture VARCHAR( 150 ),
+				text VARCHAR( 140 ),
 				date_show DATE NOT NULL,
+				has_tweet BOOLEAN NOT NULL DEFAULT 0,
 			PRIMARY KEY (id)
 		)';
 		$this->wpdb->query($sql);		
