@@ -14,28 +14,28 @@ include_once dirname(dirname(__FILE__)) . '/class/backend.php';
 $tweet = new dt_backend();
 $today = date('d/m/Y', time());
 
-$is_deleted = false;
 $is_deleting = false;
 
 if ( (isset($_GET)) && (isset($_GET['action']))){
 	if ($_GET['action'] == 'delete'){
 		$is_deleting = true;
-		$is_deleted = $tweet->delete_tweet($_GET['id']);
+		$tweet->delete_tweet($_GET['id']);
 	}
 }
 
 ?>
+
 <div class="wrap">
 	<div class="icon32"></div>
 	<h2>Twetts</h2>
 	
 	<?php if ($is_deleting == true): ?>
-		<?php if ($is_deleted == true):?>
-			<div class="updated fade"><p>Twett <strong>deleted</strong> sucefull</p></div>
-		<?php else:?>
-			<div class="error fade"><p>I <strong>can't</strong> delete the tweet, try again</p></div>
+		<?php if ($tweet->has_error() == true):?>
+			<div class="error fade"><?php echo $tweet->get_error(); ?></div>
+		<?php else: ?>
+		  <div class="updated fade"><p>Twett <strong>deleted</strong> sucefull</p></div>
 		<?php endif; ?>
-	<?php endif; ?>
+	<?php endif; ?>	
 	
 	<table class="widefat" id="manage_tweets">
 		<thead>

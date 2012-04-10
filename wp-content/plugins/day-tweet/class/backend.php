@@ -23,6 +23,21 @@ class dt_backend extends dt_common {
 		$this->wp_table = $this->wpdb->prefix . $this->wp_table;
 	}
 	
+	public function has_error($value = false){
+	  if ($value == true){
+	    $this->has_error = true;
+	  }
+		return $this->has_error;
+	}
+	
+	public function get_error(){
+		return $this->error_message;
+	}
+	
+  public function set_error($value){
+    return $this->error_message = $value;
+  }	
+	
 	/**
 	 * Add a twett to the db
 	 * 
@@ -38,6 +53,9 @@ class dt_backend extends dt_common {
 			$values['user'] = $tweet->user->screen_name;
 			$values['picture'] = $tweet->user->profile_image_url;
 			$values['text'] = $tweet->text;
+		} else {
+		  $this->has_error = true;
+		  $this->error_message = '<p>This IP have maked a lot of query to twitter\'s api, the url was saved but not the tweet.</p>';
 		}
 		
 		$sql = 'INSERT INTO ' . $this->wp_table . ' (id,url,user,picture,text,date_show,has_tweet) VALUES (NULL,';
@@ -52,7 +70,12 @@ class dt_backend extends dt_common {
 		$sql .= '\'' . $values['date_show'] . '\',';
 		$sql .= '\'' . $values['has_tweet'] . '\')';
 		
-		return $this->wpdb->query($sql);
+		$status = $this->wpdb->query($sql);
+		
+    if ($status == false) {
+      $this->has_error = true;
+      $this->error_message = '<p>I <strong>can\'t</strong> edit the tweet, try again</p>';
+    }
 	}
 	
 	/**
@@ -78,7 +101,10 @@ class dt_backend extends dt_common {
 					$values['user'] = $tweet->user->screen_name;
 					$values['picture'] = $tweet->user->profile_image_url;
 					$values['text'] = $tweet->text;
-				}
+				} else {
+          $this->has_error = true;
+          $this->error_message = '<p>This IP have maked a lot of query to twitter\'s api, the url was saved but not the tweet.</p>';
+        }
 				
 			} else {
 				unset($values['url']);
@@ -98,7 +124,12 @@ class dt_backend extends dt_common {
 		}
 		$sql .= ' WHERE id = ' . $id;
 
-		return $this->wpdb->query($sql);
+		$status = $this->wpdb->query($sql);
+		
+    if ($status == false) {
+      $this->has_error = true;
+      $this->error_message = '<p>I <strong>can\'t</strong> edit the tweet, try again</p>';
+    }		
 	}
 	
 	/**
@@ -107,7 +138,12 @@ class dt_backend extends dt_common {
 	* @param integer $id
 	*/	
 	public function delete_tweet($id){
-		return $this->wpdb->query('DELETE FROM ' . $this->wp_table . ' WHERE id = \''. $id . '\' LIMIT 1');
+	  $status = $this->wpdb->query('DELETE FROM ' . $this->wp_table . ' WHERE id = \''. $id . '\' LIMIT 1');
+	  
+	  if ($status == false) {
+	    $this->has_error = true;
+	    $this->error_message = '<p>I <strong>can\'t</strong> delete the tweet, try again</p>';
+	  } 
 	}	
 	
 	public function get_tweet($id){

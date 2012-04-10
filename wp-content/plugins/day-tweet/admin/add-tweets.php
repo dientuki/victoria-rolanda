@@ -87,16 +87,22 @@ if (  (isset($_POST)) && (count($_POST) > 0) ) {
 		$values['url'] = $_POST['url'];
 		$values['date_show'] = $_POST['date_year'] . '-' . $_POST['date_month'] . '-' . $_POST['date_day'];
 		if ( (validate_url($values['url']) == true) && ( checkdate($_POST['date_month'],$_POST['date_day'],$_POST['date_year']) == true)){
-			$action_status = $tweet->edit_tweet($_POST['id'], $values);
-		}		
+			 $tweet->edit_tweet($_POST['id'], $values);
+		} else {
+      $tweet->has_error(true);
+      $tweet->set_error('<p>Check the values</p>');
+    }	
 	} else {
 		//add
 		$values = array();
 		$values['url'] = $_POST['url'];
 		$values['date_show'] = $_POST['date_year'] . '-' . $_POST['date_month'] . '-' . $_POST['date_day'];
 		if ( (validate_url($values['url']) == true) && ( checkdate($_POST['date_month'],$_POST['date_day'],$_POST['date_year']) == true) ){
-			$action_status = $tweet->add_tweet($values);
-		} 
+			$tweet->add_tweet($values);
+		} else {
+		  $tweet->has_error(true);
+		  $tweet->set_error('<p>Check the values</p>');
+		}
 		
 	}
 	
@@ -112,22 +118,13 @@ if (  (isset($_POST)) && (count($_POST) > 0) ) {
 		<h2><?php echo $action == 'add'? 'Add':'Edit'; ?> tweet</h2>
 	
 		<?php if (  (isset($_POST)) && (count($_POST) > 0) ) :?>
-
-			<?php if (isset($_POST['id'])): ?>
-				<?php if ($action_status == true):?>
-					<div class="updated fade"><p>Twett <strong>edited</strong> sucefull</p></div>
-				<?php else:?>
-					<div class="error fade"><p>I <strong>can't</strong> edit the tweet, check the values</p></div>
-				<?php endif; ?>	
-			
-			<?php else : ?>						
-							
-				<?php if ($action_status == true):?>
-					<div class="updated fade"><p>Twett <strong>added</strong> sucefull</p></div>
-				<?php else:?>
-					<div class="error fade"><p>I <strong>can't</strong> add the tweet, check the values</p></div>
-				<?php endif; ?>
-			<?php endif; ?>								
+		
+		  <?php if ($tweet->has_error()): ?>	  
+		    <div class="error fade"><?php echo $tweet->get_error() ?></div>  
+		  <?php else: ?>
+		    <div class="updated fade"><p>Twett <strong>edited</strong> sucefull</p></div>
+		  <?php endif; ?>
+		
 		<?php endif; ?>							
 
 		<?php if ($action == 'edit'):?>
