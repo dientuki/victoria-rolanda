@@ -9,7 +9,6 @@ $args['post__not_in'] = array($post->ID);
 $args['post_per_page'] = 4;
 $args['ignore_sticky_posts'] = 1;
 $query = new WP_Query($args);
-
 ?>
 <?php if( $query->have_posts() ): ?>
 
