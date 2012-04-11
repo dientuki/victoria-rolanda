@@ -267,6 +267,7 @@ footer .only-next .next {
     height: $fh;
     position:absolute;
     top: 0;
+    background-color:white;
     
     img {
       width: $w;
@@ -349,7 +350,8 @@ footer .only-next .next {
 	    background: rgba(0,0,0,.4);
 	    z-index: 20;
 	    width: 100%;
-	    overflow:hidden;  
+	    overflow:hidden;
+	    @include border_radius_bottom($br);
 	    
 	    h1 {
         padding: 4px 10px 4px 85px;
@@ -372,13 +374,12 @@ footer .only-next .next {
     position: absolute;
     bottom:0;
     z-index: 10;
+    background-color:white;
     
     img {
       @include border_radius($br);
     }
 	}
-	
-	
   
   .carousel-header {
     position:absolute;
@@ -487,6 +488,27 @@ footer .only-next .next {
     }
   }
 	
+}
+
+#related {
+  padding:5px;
+  margin:0;
+  
+  .content {
+    margin-left:1px;
+  }
+  
+  .item {
+    width:160px;
+    float:left;
+    margin-right:2px;
+  }
+  
+  .item-4 {
+    margin-right:0;
+  }
+  
+  
 }
 
 #river-news {
@@ -621,6 +643,50 @@ footer .only-next .next {
 	background: grey;
 }
 
+.block {
+  border:solid 1px $border-color;
+  @include border_radius(7px);  	
+  margin-bottom:20px;
+  overflow:hidden;
+  
+  header,
+  h2 {
+    $h:40px;
+    height:$h;
+    line-height:$h;
+    font-size:25px;
+    text-transform:uppercase;	    
+    font-family: 'KGSkinnyLatteRegular', Arial;
+    text-transform: uppercase;  
+  }
+}
+
+.block-black {
+  background: $black80;
+  @include border_radius(7px);
+  
+  header {
+    height: 20px;
+    margin-bottom: 10px;
+  }
+  
+  h2 {
+      color: $pink;
+      font-size: 20px;
+      line-height: 20px;
+      height: 20px;
+  }
+  
+  h3 {
+    font-family: 'KGSkinnyLatteRegular', Arial;
+    color:white;
+    font-size: 26px;
+    line-height: 33px;
+    text-transform: uppercase;
+    margin-bottom: 5px;
+  }
+}
+
 .container {
   width: 660px;
   float:left;
@@ -712,7 +778,7 @@ footer .only-next .next {
   .tag-list {
     margin-bottom:15px;
   
-    h3 {
+    h2 {
       color:black;
       float:left;
       font-size: 16px;
@@ -801,54 +867,7 @@ footer .only-next .next {
   }
 	.tw {}
 	.gplus {}
-}
-
-.sidebar {
-	
-	.block {
-    border:solid 1px $border-color;
-    @include border_radius(7px);  	
-	  margin-bottom:20px;
-	  overflow:hidden;
-	  
-    header,
-    h2 {
-      $h:40px;
-	    height:$h;
-	    line-height:$h;
-	    font-size:25px;
-	    text-transform:uppercase;	    
-	    font-family: 'KGSkinnyLatteRegular', Arial;
-	    text-transform: uppercase;  
-	  }
-	}
-	
-	.block-black {
-	  background: $black80;
-	  @include border_radius(7px);
-	  
-	  header {
-	    height: 20px;
-	    margin-bottom: 10px;
-	  }
-	  
-	  h2 {
-	      color: $pink;
-	      font-size: 20px;
-	      line-height: 20px;
-	      height: 20px;
-	  }
-	  
-	  h3 {
-	    font-family: 'KGSkinnyLatteRegular', Arial;
-	    color:white;
-	    font-size: 26px;
-	    line-height: 33px;
-	    text-transform: uppercase;
-	    margin-bottom: 5px;
-	  }
-	}  
-}
+}  
 
 .wrapper {
 	width: 990px;

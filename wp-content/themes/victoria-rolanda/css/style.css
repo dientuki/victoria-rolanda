@@ -221,7 +221,8 @@ footer .only-next .next {
     width: 660px;
     height: 371px;
     position: absolute;
-    top: 0; }
+    top: 0;
+    background-color: white; }
     #featured-carousel figure img {
       width: 660px;
       height: 371px;
@@ -288,7 +289,16 @@ footer .only-next .next {
       background: rgba(0, 0, 0, 0.4);
       z-index: 20;
       width: 100%;
-      overflow: hidden; }
+      overflow: hidden;
+      -webkit-border-bottom-left-radius: 5px;
+      -webkit-border-bottom-right-radius: 5px;
+      -moz-border-radius-bottomleft: 5px;
+      -moz-border-radius-bottomright: 5px;
+      border-bottom-left-radius: 5px;
+      border-bottom-right-radius: 5px;
+      -moz-background-clip: padding;
+      -webkit-background-clip: padding-box;
+      background-clip: padding-box; }
       #footer-carousel article header h1 {
         padding: 4px 10px 4px 85px;
         height: 34px;
@@ -303,7 +313,8 @@ footer .only-next .next {
     height: 251px;
     position: absolute;
     bottom: 0;
-    z-index: 10; }
+    z-index: 10;
+    background-color: white; }
     #footer-carousel figure img {
       -webkit-border-radius: 5px;
       -moz-border-radius: 5px;
@@ -395,6 +406,18 @@ footer .only-next .next {
     width: 298px; }
     #ranking ul.first {
       display: block; }
+
+#related {
+  padding: 5px;
+  margin: 0; }
+  #related .content {
+    margin-left: 1px; }
+  #related .item {
+    width: 160px;
+    float: left;
+    margin-right: 2px; }
+  #related .item-4 {
+    margin-right: 0; }
 
 #river-news {
   width: 450px;
@@ -498,6 +521,49 @@ footer .only-next .next {
   margin: 0 auto;
   background: grey; }
 
+.block {
+  border: solid 1px #eaeaea;
+  -webkit-border-radius: 7px;
+  -moz-border-radius: 7px;
+  border-radius: 7px;
+  -moz-background-clip: padding;
+  -webkit-background-clip: padding-box;
+  background-clip: padding-box;
+  margin-bottom: 20px;
+  overflow: hidden; }
+  .block header,
+  .block h2 {
+    height: 40px;
+    line-height: 40px;
+    font-size: 25px;
+    text-transform: uppercase;
+    font-family: 'KGSkinnyLatteRegular', Arial;
+    text-transform: uppercase; }
+
+.block-black {
+  background: #333333;
+  -webkit-border-radius: 7px;
+  -moz-border-radius: 7px;
+  border-radius: 7px;
+  -moz-background-clip: padding;
+  -webkit-background-clip: padding-box;
+  background-clip: padding-box; }
+  .block-black header {
+    height: 20px;
+    margin-bottom: 10px; }
+  .block-black h2 {
+    color: #ff58b0;
+    font-size: 20px;
+    line-height: 20px;
+    height: 20px; }
+  .block-black h3 {
+    font-family: 'KGSkinnyLatteRegular', Arial;
+    color: white;
+    font-size: 26px;
+    line-height: 33px;
+    text-transform: uppercase;
+    margin-bottom: 5px; }
+
 .container {
   width: 660px;
   float: left; }
@@ -515,6 +581,10 @@ footer .only-next .next {
     margin-bottom: 15px; }
     .new header h1 a {
       color: black; }
+  .new header time {
+    float: right;
+    color: #c2c2c2;
+    font-size: 14px; }
   .new header .meta {
     border-bottom: 1px solid #EAEAEA;
     margin: 5px 0 25px;
@@ -560,7 +630,7 @@ footer .only-next .next {
     margin: 0 20px 0 0; }
 .new .tag-list {
   margin-bottom: 15px; }
-  .new .tag-list h3 {
+  .new .tag-list h2 {
     color: black;
     float: left;
     font-size: 16px;
@@ -644,48 +714,6 @@ footer .only-next .next {
   .share .fb span.fb_edge_comment_widget.fb_iframe_widget {
     width: auto;
     height: auto; }
-
-.sidebar .block {
-  border: solid 1px #eaeaea;
-  -webkit-border-radius: 7px;
-  -moz-border-radius: 7px;
-  border-radius: 7px;
-  -moz-background-clip: padding;
-  -webkit-background-clip: padding-box;
-  background-clip: padding-box;
-  margin-bottom: 20px;
-  overflow: hidden; }
-  .sidebar .block header,
-  .sidebar .block h2 {
-    height: 40px;
-    line-height: 40px;
-    font-size: 25px;
-    text-transform: uppercase;
-    font-family: 'KGSkinnyLatteRegular', Arial;
-    text-transform: uppercase; }
-.sidebar .block-black {
-  background: #333333;
-  -webkit-border-radius: 7px;
-  -moz-border-radius: 7px;
-  border-radius: 7px;
-  -moz-background-clip: padding;
-  -webkit-background-clip: padding-box;
-  background-clip: padding-box; }
-  .sidebar .block-black header {
-    height: 20px;
-    margin-bottom: 10px; }
-  .sidebar .block-black h2 {
-    color: #ff58b0;
-    font-size: 20px;
-    line-height: 20px;
-    height: 20px; }
-  .sidebar .block-black h3 {
-    font-family: 'KGSkinnyLatteRegular', Arial;
-    color: white;
-    font-size: 26px;
-    line-height: 33px;
-    text-transform: uppercase;
-    margin-bottom: 5px; }
 
 .wrapper {
   width: 990px;

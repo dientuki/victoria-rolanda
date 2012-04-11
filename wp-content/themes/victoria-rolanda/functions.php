@@ -22,8 +22,9 @@ if ( ! function_exists( 'victoriarolanda_setup' ) ) {
 		}
 		
 		if (function_exists('add_image_size')){
-			add_image_size('featured_carousel', '660', '290', true);
+			//add_image_size('featured_carousel', '660', '290', true);
 			add_image_size('footer_carousel', '450', '253', true);
+			add_image_size('related', '160', '90', true);
 		}		
 		
 		add_custom_image_header( '', 'victoriarolanda_admin_header_style' );

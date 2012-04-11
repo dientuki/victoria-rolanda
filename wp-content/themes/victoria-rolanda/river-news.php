@@ -23,12 +23,12 @@
 		    <div class="hmedia">
 		    	<figure>
 			    <?php if (has_post_thumbnail()): ?>	      
-			        <a href="<?php the_permalink(); ?>" title="<?php the_title(); ?>">
+			        <a href="<?php the_permalink(); ?>" title="<?php the_title_attribute(); ?>">
 			          <?php the_post_thumbnail('thumbnail'); ?>
 			        </a>
 			    <?php else:?>
-			    	<a href="<?php the_permalink(); ?>" title="<?php the_title(); ?>">
-			    		<img src="<?php bloginfo( 'template_url' ); ?>/images/post-default.jpg" width="100" height="100" title="<?php the_title(); ?>" alt="<?php the_title(); ?>" />
+			    	<a href="<?php the_permalink(); ?>" title="<?php the_title_attribute(); ?>">
+			    		<img src="<?php bloginfo( 'template_url' ); ?>/images/post-default.jpg" width="100" height="100" title="<?php the_title_attribute(); ?>" alt="<?php the_title_attribute(); ?>" />
 			    	</a>	    
 			    <?php endif; ?>
 			    	<figcaption class="hidden"><?php the_title(); ?></figcaption>

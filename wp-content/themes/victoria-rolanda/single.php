@@ -29,7 +29,7 @@
     	
     	<footer>
     		<div class="tag-list clearfix">
-    		  <h3>Tags:</h3>
+    		  <h2>Tags:</h2>
     		  <?php the_tags( '', ', ', '.')?>
     		</div>
     	  <?php get_template_part('share', 'single'); ?>

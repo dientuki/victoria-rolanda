@@ -14,12 +14,12 @@
 				<?php $query->the_post(); ?>
 					<article>
 						<header>
-							<h1><a href="<?php the_permalink() ?>" title="<?php the_title_attribute(); ?>"><?php echo the_title(); ?></a></h1>
+							<h1><a rel="bookmark" href="<?php the_permalink() ?>" title="<?php the_title_attribute(); ?>"><?php echo the_title(); ?></a></h1>
 							<div class="dropline"><?php the_excerpt(); ?></div>
 						</header>
 						<?php if (has_post_thumbnail()): ?>
 							<figure>
-								<a href="<?php the_permalink() ?>" title="<?php echo the_title(); ?>"><?php the_post_thumbnail('featured_thumbnail'); ?></a>
+								<a href="<?php the_permalink() ?>" title="<?php the_title_attribute(); ?>"><?php the_post_thumbnail('featured_thumbnail'); ?></a>
 								<figcaption class="hidden"><?php echo the_title(); ?></figcaption>
 							</figure>
 						<?php endif; ?>
