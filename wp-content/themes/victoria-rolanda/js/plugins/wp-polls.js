@@ -63,24 +63,6 @@ $('.wp-polls form').submit(function(){
 	return false;
 });
 
-
-// Process Poll
-WPOLL.poll_process = function() {
-	if(WPOLL.pollsL10n.show_fading) {
-		$('#polls-' + WPOLL.poll_id).fadeTo('def', 0, function () {
-			if(WPOLL.pollsL10n.show_loading) {
-				$('#polls-' + WPOLL.poll_id + '-loading').show();
-			}
-			$.ajax({type: 'POST', url: WPOLL.pollsL10n.ajax_url, data: 'vote=true&poll_id=' + WPOLL.poll_id + '&poll_' + WPOLL.poll_id + '=' + WPOLL.poll_answer_id, cache: false, success: WPOLL.poll_process_success});
-		});
-	} else {
-		if(WPOLL.pollsL10n.show_loading) {
-			$('#polls-' + WPOLL.poll_id + '-loading').show();
-		}
-		$.ajax({type: 'POST', url: WPOLL.pollsL10n.ajax_url, data: 'vote=true&poll_id=' + WPOLL.poll_id + '&poll_' + WPOLL.poll_id + '=' + WPOLL.poll_answer_id, cache: false, success: WPOLL.poll_process_success});
-	}
-}
-
 //Poll's Result (User Click "View Results" Link)
 $('.wp-polls .see-results').click(function(){
 
@@ -129,6 +111,23 @@ function poll_booth(current_poll_id) {
 		}
 	} else {
 		alert(WPOLL.pollsL10n.text_wait);
+	}
+}
+
+//Process Poll
+WPOLL.poll_process = function() {
+	if(WPOLL.pollsL10n.show_fading) {
+		$('#polls-' + WPOLL.poll_id).fadeTo('def', 0, function () {
+			if(WPOLL.pollsL10n.show_loading) {
+				$('#polls-' + WPOLL.poll_id + '-loading').show();
+			}
+			$.ajax({type: 'POST', url: WPOLL.pollsL10n.ajax_url, data: 'vote=true&poll_id=' + WPOLL.poll_id + '&poll_' + WPOLL.poll_id + '=' + WPOLL.poll_answer_id, cache: false, success: WPOLL.poll_process_success});
+		});
+	} else {
+		if(WPOLL.pollsL10n.show_loading) {
+			$('#polls-' + WPOLL.poll_id + '-loading').show();
+		}
+		$.ajax({type: 'POST', url: WPOLL.pollsL10n.ajax_url, data: 'vote=true&poll_id=' + WPOLL.poll_id + '&poll_' + WPOLL.poll_id + '=' + WPOLL.poll_answer_id, cache: false, success: WPOLL.poll_process_success});
 	}
 }
 
