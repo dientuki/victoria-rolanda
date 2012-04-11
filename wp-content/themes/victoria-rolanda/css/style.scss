@@ -617,6 +617,16 @@ footer .only-next .next {
 	     height: 14px;
 	     display: block;
 	     width: 85px;
+	     position: relative;
+	    }
+	    
+	    .arrow {
+	      position: absolute;
+	      top:-5px;
+	      width: 11px;
+	      height: 5px;
+	      left: 10px;
+	      background: url(../images/arrow.png);
 	    }
 	  }
 	  

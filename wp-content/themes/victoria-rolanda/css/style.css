@@ -408,7 +408,7 @@ footer .only-next .next {
       display: block; }
 
 #related {
-  padding: 5px 5px 1px 5px;
+  padding: 5px 5px 10px 5px;
   margin: 0; }
   #related header {
     padding-left: 10px;
@@ -502,7 +502,15 @@ footer .only-next .next {
         line-height: 14px;
         height: 14px;
         display: block;
-        width: 85px; }
+        width: 85px;
+        position: relative; }
+      #river-news article .hmedia .arrow {
+        position: absolute;
+        top: -5px;
+        width: 11px;
+        height: 5px;
+        left: 10px;
+        background: url(../images/arrow.png); }
     #river-news article .share {
       position: absolute;
       left: 0;
