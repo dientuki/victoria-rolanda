@@ -618,7 +618,7 @@ footer .only-next .next {
 	     line-height: 14px;
 	     height: 14px;
 	     display: block;
-	     width: 85px;
+	     width: 90px;
 	     position: relative;
 	    }
 	    
@@ -643,13 +643,19 @@ footer .only-next .next {
 
 #poll {
 	padding: 10px 10px 5px 10px;
+	position: relative;
 	
 	header {
 	  margin-bottom: 5px;
 	}
 	
-	form {
-	  color:white;
+	.wp-polls-ul {
+	  color:white
+	}
+	
+	.pollbar {
+	  @include gradient_cross(#FF58B0,#FF3C95);
+	  height: 15px;
 	}
 	
 	.see-results {

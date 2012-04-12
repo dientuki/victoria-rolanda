@@ -512,7 +512,7 @@ footer .only-next .next {
         line-height: 14px;
         height: 14px;
         display: block;
-        width: 85px;
+        width: 90px;
         position: relative; }
       #river-news article .hmedia .arrow {
         position: absolute;
@@ -528,11 +528,28 @@ footer .only-next .next {
       width: 100px; }
 
 #poll {
-  padding: 10px 10px 5px 10px; }
+  padding: 10px 10px 5px 10px;
+  position: relative; }
   #poll header {
     margin-bottom: 5px; }
-  #poll form {
+  #poll .wp-polls-ul {
     color: white; }
+  #poll .pollbar {
+    background: #ff58b0;
+    /* Old browsers */
+    background: -moz-linear-gradient(top, #ff58b0 0%, #ff3c95 100%);
+    /* FF3.6+ */
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #ff58b0), color-stop(100%, #ff3c95));
+    /* Chrome,Safari4+ */
+    background: -webkit-linear-gradient(top, #ff58b0 0%, #ff3c95 100%);
+    /* Chrome10+,Safari5.1+ */
+    background: -o-linear-gradient(top, #ff58b0 0%, #ff3c95 100%);
+    /* Opera 11.10+ */
+    background: -ms-linear-gradient(top, #ff58b0 0%, #ff3c95 100%);
+    /* IE10+ */
+    background: linear-gradient(top, #ff58b0 0%, #ff3c95 100%);
+    /* W3C */
+    height: 15px; }
   #poll .see-results {
     text-align: center;
     display: block;

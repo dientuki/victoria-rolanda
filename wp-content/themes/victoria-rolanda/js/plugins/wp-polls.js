@@ -13,8 +13,19 @@ WPOLL.pollsL10n.text_wait = 'Your last request is still being processed. Please 
 WPOLL.pollsL10n.text_valid = 'Please choose a valid poll answer.';
 WPOLL.pollsL10n.text_multiple = 'Maximum number of choices allowed: ';
 
+WPOLL.fixloading = function($e, loading){
+	var $poll = $e.parents('.wp-polls').parent();
+	var $loading = $poll.find(loading);
+	if ( ($poll.length == 1) && ($loading.length == 1) ){
+		var h = $poll.find('.wp-polls').height() + 'px';
+		$loading.height(h).css('line-height', h);
+	}
+}
+
 //When User Vote For Poll 
 $('.wp-polls form').submit(function(){
+	
+	WPOLL.fixloading($(this), '.wp-polls-loading');
 	
 	if(!WPOLL.is_being_voted) {
 		WPOLL.set_is_being_voted(true);
@@ -66,6 +77,8 @@ $('.wp-polls form').submit(function(){
 //Poll's Result (User Click "View Results" Link)
 $('.wp-polls .see-results').click(function(){
 
+	WPOLL.fixloading($(this), '.wp-polls-loading');
+	
 	if(!WPOLL.is_being_voted) {
 		WPOLL.set_is_being_voted(true);
 		WPOLL.poll_id = $(this).data('poll');
@@ -92,6 +105,7 @@ $('.wp-polls .see-results').click(function(){
 
 // Poll's Voting Booth  (User Click "Vote" Link)
 // @todo: fix this
+/*
 function poll_booth(current_poll_id) {
 	if(!WPOLL.is_being_voted) {
 		WPOLL.set_is_being_voted(true);
@@ -113,6 +127,7 @@ function poll_booth(current_poll_id) {
 		alert(WPOLL.pollsL10n.text_wait);
 	}
 }
+*/
 
 //Process Poll
 WPOLL.poll_process = function() {
