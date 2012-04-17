@@ -82,6 +82,39 @@ footer .only-next .next {
       padding: 0 5px;
       font-size: 18px; }
 
+#comments .comments-title {
+  height: 40px;
+  line-height: 40px;
+  font-size: 25px;
+  text-transform: uppercase;
+  font-family: 'KGSkinnyLatteRegular', Arial;
+  text-transform: uppercase; }
+
+#commentlist .comment {
+  border: solid 1px #eaeaea;
+  -webkit-border-radius: 7px;
+  -moz-border-radius: 7px;
+  border-radius: 7px;
+  -moz-background-clip: padding;
+  -webkit-background-clip: padding-box;
+  background-clip: padding-box;
+  margin-bottom: 10px;
+  overflow: hidden;
+  padding: 10px; }
+#commentlist .comment-content {
+  font-size: 14px; }
+#commentlist .avatar {
+  border: solid 1px #eaeaea;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  border-radius: 5px;
+  -moz-background-clip: padding;
+  -webkit-background-clip: padding-box;
+  background-clip: padding-box;
+  overflow: hidden;
+  width: 48px;
+  height: 48px; }
+
 #day-tweet header,
 #day-tweet .content {
   padding: 0 10px; }
@@ -626,7 +659,7 @@ footer .only-next .next {
     text-transform: uppercase;
     font-size: 48px;
     line-height: 48px;
-    margin-bottom: 15px; }
+    margin: 15px 0; }
     .new header h1 a {
       color: black; }
   .new header time {

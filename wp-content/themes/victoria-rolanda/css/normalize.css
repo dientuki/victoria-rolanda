@@ -91,7 +91,7 @@ q:before, q:after { content: ""; content: none; }
 small { font-size: 85%; }
 
 /* Position subscript and superscript content without affecting line-height: h5bp.com/k */
-sub, sup { font-size: 75%; line-height: 0; position: relative; vertical-align: baseline; }
+sub, sup { font-size: 60%; line-height: 0; position: relative; vertical-align: baseline; }
 sup { top: -0.5em; }
 sub { bottom: -0.25em; }
 

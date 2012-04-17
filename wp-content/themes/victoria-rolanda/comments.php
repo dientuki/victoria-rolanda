@@ -10,15 +10,13 @@
 <section id="comments">
 	
 	<header>
-		<h3 class="comments-title"><?php
-		printf( _n( 'One Response to %2$s', '%1$s Responses to %2$s', get_comments_number(), 'twentyten' ),
-		number_format_i18n( get_comments_number() ), '<em>' . get_the_title() . '</em>' );
-		?></h3>
+		<h2 class="comments-title">Comentarios <sup>(<?php echo get_comments_number(); ?>)</sup></h2>
 	</header>
 
 	<div class="content">
 		<?php if ( have_comments() ) : ?>
-			<ul class="commentlist">
+			<ul id="commentlist">
+				<?php $aut = get_the_author_email(); ?>			
 				<?php foreach($comments as $comment):?>
 					<?php switch ( $comment->comment_type ) :
 						case 'pingback' :
@@ -30,38 +28,25 @@
 							break;
 						default :
 					?>
-					<li <?php comment_class(); ?> id="li-comment-<?php comment_ID(); ?>">
-						<article id="comment-<?php comment_ID(); ?>" class="comment">
-							<footer class="comment-meta">
-								<div class="comment-author vcard">
-									<?php
-										$avatar_size = 68;
-										if ( '0' != $comment->comment_parent )
-											$avatar_size = 39;
-				
-										echo get_avatar( $comment, $avatar_size );
-				
-										/* translators: 1: comment author, 2: date and time */
-										printf( __( '%1$s on %2$s <span class="says">said:</span>', 'twentyeleven' ),
-											sprintf( '<span class="fn">%s</span>', get_comment_author_link() ),
-											sprintf( '<a href="%1$s"><time pubdate datetime="%2$s">%3$s</time></a>',
-												esc_url( get_comment_link( $comment->comment_ID ) ),
-												get_comment_time( 'c' ),
-												/* translators: 1: date, 2: time */
-												sprintf( __( '%1$s at %2$s', 'twentyeleven' ), get_comment_date(), get_comment_time() )
-											)
-										);
-									?>
-				
-									<?php edit_comment_link( __( 'Edit', 'twentyeleven' ), '<span class="edit-link">', '</span>' ); ?>
-								</div><!-- .comment-author .vcard -->
+					<?php ?>
+					<li <?php echo $comment->comment_author_email == $aut ? comment_class('author-comment'): comment_class(); ?> id="li-comment-<?php comment_ID(); ?>">
+						<article id="comment-<?php comment_ID(); ?>">
+							<header class="comment-meta">
+								<?php
+									$avatar_size = 48;
+		
+									echo get_avatar( $comment, $avatar_size );
+								?>
+								<span class="fn"><?php comment_author_link(); ?></span> &middot; <a href="<?php comment_link( $comment->comment_ID ); ?>"><time pubdate datetime="<?php comment_time( 'c' )?>"><?php echo time_ago()?></time></a>
+								
+								<?php edit_comment_link( 'Edit', '<span class="edit-link">', '</span>' ); ?>
 				
 								<?php if ( $comment->comment_approved == '0' ) : ?>
-									<em class="comment-awaiting-moderation"><?php _e( 'Your comment is awaiting moderation.', 'twentyeleven' ); ?></em>
+									<em class="comment-awaiting-moderation">Tu comentario esta esperando moderacion</em>
 									<br />
 								<?php endif; ?>
 				
-							</footer>
+							</header>
 				
 							<div class="comment-content"><?php comment_text(); ?></div>
 				
