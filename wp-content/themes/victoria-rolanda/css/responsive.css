@@ -1,0 +1,36 @@
+@media only screen and (orientation:portrait) {
+  
+  #river-news {
+    float:none;
+    width: 100%;
+  }
+  
+  #sidebar-left,
+  #sidebar-right {
+    float:none;
+    width: 100%;
+  }
+  
+  #sidebar-left .block {
+    float:left;
+    width: 158px;
+    margin-right: 10px;
+    margin-bottom: 10px;
+  }
+  
+  #sidebar-right .block {
+    float:left;
+    width: 298px;
+    margin-right: 10px;
+    margin-bottom: 10px;    
+  }
+  
+  #pov {
+    width: 268px;
+  }  
+  
+  .container {
+    float:none;
+    width: 100%;
+  }
+}

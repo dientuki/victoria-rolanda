@@ -32,3 +32,13 @@ form {
     }
   }
 }
+
+.ie6 {
+  #commentlist {
+    .comment {
+			min-height: 50px;
+			height:auto !important;
+			height: 50px;
+    }
+  }
+}

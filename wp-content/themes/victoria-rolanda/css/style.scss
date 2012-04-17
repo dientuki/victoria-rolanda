@@ -94,16 +94,41 @@ footer .only-next .next {
 
 #commentlist {
 	
+	$p:58px;
+	
 	.comment {
 	  border:solid 1px $border-color;
 	  @include border_radius(7px);    
 	  margin-bottom:10px;
 	  overflow:hidden;
 	  padding: 10px;
+	  font-size: 14px;
+	  min-height: 50px;
   }
   
   .comment-content {
     font-size: 14px;
+    padding-left: $p;
+    
+    p {
+      margin:0; 
+    }
+    
+  }
+  
+  .comment-meta {
+    position: relative;
+    margin-bottom:10px;
+    padding-left: $p;
+    
+    .user a {
+      color:black;
+    }
+    
+    .time {
+      color:#c2c2c2;
+      font-size: 12px;
+    }    
   }
   
   .avatar {
@@ -112,6 +137,8 @@ footer .only-next .next {
     overflow: hidden;
     width: 48px;
     height: 48px;
+    position: absolute;
+    left:0;
   } 
 	
 }

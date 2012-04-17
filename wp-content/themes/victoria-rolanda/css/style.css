@@ -100,9 +100,23 @@ footer .only-next .next {
   background-clip: padding-box;
   margin-bottom: 10px;
   overflow: hidden;
-  padding: 10px; }
+  padding: 10px;
+  font-size: 14px;
+  min-height: 50px; }
 #commentlist .comment-content {
-  font-size: 14px; }
+  font-size: 14px;
+  padding-left: 58px; }
+  #commentlist .comment-content p {
+    margin: 0; }
+#commentlist .comment-meta {
+  position: relative;
+  margin-bottom: 10px;
+  padding-left: 58px; }
+  #commentlist .comment-meta .user a {
+    color: black; }
+  #commentlist .comment-meta .time {
+    color: #c2c2c2;
+    font-size: 12px; }
 #commentlist .avatar {
   border: solid 1px #eaeaea;
   -webkit-border-radius: 5px;
@@ -113,7 +127,9 @@ footer .only-next .next {
   background-clip: padding-box;
   overflow: hidden;
   width: 48px;
-  height: 48px; }
+  height: 48px;
+  position: absolute;
+  left: 0; }
 
 #day-tweet header,
 #day-tweet .content {

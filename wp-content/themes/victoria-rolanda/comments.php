@@ -37,7 +37,7 @@
 		
 									echo get_avatar( $comment, $avatar_size );
 								?>
-								<span class="fn"><?php comment_author_link(); ?></span> &middot; <a href="<?php comment_link( $comment->comment_ID ); ?>"><time pubdate datetime="<?php comment_time( 'c' )?>"><?php echo time_ago()?></time></a>
+								<span class="user fn"><?php comment_author_link(); ?></span> &middot; <a class="time" href="<?php comment_link( $comment->comment_ID ); ?>"><time pubdate datetime="<?php comment_time( 'c' )?>"><?php echo time_ago()?></time></a>
 								
 								<?php edit_comment_link( 'Edit', '<span class="edit-link">', '</span>' ); ?>
 				
