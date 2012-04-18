@@ -15,8 +15,7 @@
 
 	<div class="content">
 		<?php if ( have_comments() ) : ?>
-			<ul id="commentlist">
-				<?php $aut = get_the_author_email(); ?>			
+			<ul id="commentlist">	
 				<?php foreach($comments as $comment):?>
 					<?php switch ( $comment->comment_type ) :
 						case 'pingback' :
@@ -29,7 +28,7 @@
 						default :
 					?>
 					<?php ?>
-					<li <?php echo $comment->comment_author_email == $aut ? comment_class('author-comment'): comment_class(); ?> id="li-comment-<?php comment_ID(); ?>">
+					<li <?php comment_class(); ?> id="li-comment-<?php comment_ID(); ?>">
 						<article id="comment-<?php comment_ID(); ?>">
 							<header class="comment-meta">
 								<?php
@@ -37,9 +36,11 @@
 		
 									echo get_avatar( $comment, $avatar_size );
 								?>
-								<span class="user fn"><?php comment_author_link(); ?></span> &middot; <a class="time" href="<?php comment_link( $comment->comment_ID ); ?>"><time pubdate datetime="<?php comment_time( 'c' )?>"><?php echo time_ago()?></time></a>
+								<div class="user-info">
+									<span class="user fn"><?php comment_author_link(); ?></span> &middot; <a class="time" href="<?php comment_link( $comment->comment_ID ); ?>"><time pubdate datetime="<?php comment_time( 'c' )?>"><?php echo time_ago()?></time></a>
+								</div>
 								
-								<?php edit_comment_link( 'Edit', '<span class="edit-link">', '</span>' ); ?>
+								<span class="edit-link"><?php edit_comment_link( 'Editar' ); ?></span>
 				
 								<?php if ( $comment->comment_approved == '0' ) : ?>
 									<em class="comment-awaiting-moderation">Tu comentario esta esperando moderacion</em>

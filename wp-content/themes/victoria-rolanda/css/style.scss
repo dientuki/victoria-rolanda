@@ -96,6 +96,36 @@ footer .only-next .next {
 	
 	$p:58px;
 	
+	.bypostauthor {
+
+    background: $lpink;
+    color:white;
+      
+	  .avatar {
+	    left:auto;
+	    right: 0;
+	    border:none;
+	  }
+	
+		.comment-meta,
+		.comment-content {
+		  padding:0 $p 0 0;
+		}
+		
+		.user-info {
+		  float: right;
+		}
+		
+		.comment-meta,
+		.time {
+			  color: black !important;
+    }		
+		.edit-link {
+		  float: left;
+		}
+	
+	}
+	
 	.comment {
 	  border:solid 1px $border-color;
 	  @include border_radius(7px);    
@@ -103,7 +133,7 @@ footer .only-next .next {
 	  overflow:hidden;
 	  padding: 10px;
 	  font-size: 14px;
-	  min-height: 50px;
+	  min-height: 48px;
   }
   
   .comment-content {
@@ -120,6 +150,7 @@ footer .only-next .next {
     position: relative;
     margin-bottom:10px;
     padding-left: $p;
+    height: 17px;
     
     .user a {
       color:black;
@@ -132,7 +163,6 @@ footer .only-next .next {
   }
   
   .avatar {
-    border:solid 1px $border-color;
     @include border_radius(5px);
     overflow: hidden;
     width: 48px;
@@ -140,7 +170,14 @@ footer .only-next .next {
     position: absolute;
     left:0;
   } 
-	
+  
+  .edit-link {
+    font-size: 14px;
+    float: right;
+  }
+  
+  .user-info {display: inline;}
+  	
 }
 
 #day-tweet {
@@ -525,15 +562,21 @@ footer .only-next .next {
 	    color:black;
 	    background: white;
 	    cursor:auto;
+	    -moz-box-shadow: none !important;
+	    -webkit-box-shadow: none !important;
 	  }
 	  
 	  .prev {
 	    float:left;
 	    width: 123px;
+	    -moz-box-shadow: inset -2px -2px 8px -4px black;
+	    -webkit-box-shadow: inset -2px -2px 8px -4px black;
 	  }
 	  .next {
 	    float:right;
 	    width: $w - $wl;
+	    -moz-box-shadow: inset 2px -2px 8px -4px black;
+	    -webkit-box-shadow: inset 2px -2px 8px -4px black;
 	  }
 	}
 	

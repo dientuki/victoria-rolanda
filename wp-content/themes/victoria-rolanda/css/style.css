@@ -10,9 +10,11 @@ form .submit {
   -webkit-border-radius: 7px;
   -moz-border-radius: 7px;
   border-radius: 7px;
+  /*
   -moz-background-clip: padding;
   -webkit-background-clip: padding-box;
   background-clip: padding-box;
+  */
   background: #ff58b0;
   /* Old browsers */
   background: -moz-linear-gradient(top, #ff58b0 0%, #ff3c95 100%);
@@ -64,9 +66,11 @@ footer .only-next .next {
   -webkit-border-radius: 0px;
   -moz-border-radius: 0px;
   border-radius: 0px;
+  /*
   -moz-background-clip: padding;
   -webkit-background-clip: padding-box;
-  background-clip: padding-box; }
+  background-clip: padding-box;
+  */ }
 
 #container {
   margin-bottom: 20px; }
@@ -90,19 +94,38 @@ footer .only-next .next {
   font-family: 'KGSkinnyLatteRegular', Arial;
   text-transform: uppercase; }
 
+#commentlist .bypostauthor {
+  background: #f9adce;
+  color: white; }
+  #commentlist .bypostauthor .avatar {
+    left: auto;
+    right: 0;
+    border: none; }
+  #commentlist .bypostauthor .comment-meta,
+  #commentlist .bypostauthor .comment-content {
+    padding: 0 58px 0 0; }
+  #commentlist .bypostauthor .user-info {
+    float: right; }
+  #commentlist .bypostauthor .comment-meta,
+  #commentlist .bypostauthor .time {
+    color: black !important; }
+  #commentlist .bypostauthor .edit-link {
+    float: left; }
 #commentlist .comment {
   border: solid 1px #eaeaea;
   -webkit-border-radius: 7px;
   -moz-border-radius: 7px;
   border-radius: 7px;
+  /*
   -moz-background-clip: padding;
   -webkit-background-clip: padding-box;
   background-clip: padding-box;
+  */
   margin-bottom: 10px;
   overflow: hidden;
   padding: 10px;
   font-size: 14px;
-  min-height: 50px; }
+  min-height: 48px; }
 #commentlist .comment-content {
   font-size: 14px;
   padding-left: 58px; }
@@ -111,25 +134,32 @@ footer .only-next .next {
 #commentlist .comment-meta {
   position: relative;
   margin-bottom: 10px;
-  padding-left: 58px; }
+  padding-left: 58px;
+  height: 17px; }
   #commentlist .comment-meta .user a {
     color: black; }
   #commentlist .comment-meta .time {
     color: #c2c2c2;
     font-size: 12px; }
 #commentlist .avatar {
-  border: solid 1px #eaeaea;
   -webkit-border-radius: 5px;
   -moz-border-radius: 5px;
   border-radius: 5px;
+  /*
   -moz-background-clip: padding;
   -webkit-background-clip: padding-box;
   background-clip: padding-box;
+  */
   overflow: hidden;
   width: 48px;
   height: 48px;
   position: absolute;
   left: 0; }
+#commentlist .edit-link {
+  font-size: 14px;
+  float: right; }
+#commentlist .user-info {
+  display: inline; }
 
 #day-tweet header,
 #day-tweet .content {
@@ -230,9 +260,11 @@ footer .only-next .next {
   -webkit-border-radius: 8px;
   -moz-border-radius: 8px;
   border-radius: 8px;
+  /*
   -moz-background-clip: padding;
   -webkit-background-clip: padding-box;
-  background-clip: padding-box; }
+  background-clip: padding-box;
+  */ }
   #featured-carousel article {
     width: 660px;
     height: 451px;
@@ -323,9 +355,11 @@ footer .only-next .next {
   -webkit-border-radius: 5px;
   -moz-border-radius: 5px;
   border-radius: 5px;
+  /*
   -moz-background-clip: padding;
   -webkit-background-clip: padding-box;
-  background-clip: padding-box; }
+  background-clip: padding-box;
+  */ }
   #footer-carousel article {
     width: 450px;
     height: 251px;
@@ -368,9 +402,11 @@ footer .only-next .next {
       -webkit-border-radius: 5px;
       -moz-border-radius: 5px;
       border-radius: 5px;
+      /*
       -moz-background-clip: padding;
       -webkit-background-clip: padding-box;
-      background-clip: padding-box; }
+      background-clip: padding-box;
+      */ }
   #footer-carousel .carousel-header {
     position: absolute;
     left: 0;
@@ -448,13 +484,19 @@ footer .only-next .next {
     #ranking header .selected {
       color: black;
       background: white;
-      cursor: auto; }
+      cursor: auto;
+      -moz-box-shadow: none !important;
+      -webkit-box-shadow: none !important; }
     #ranking header .prev {
       float: left;
-      width: 123px; }
+      width: 123px;
+      -moz-box-shadow: inset -2px -2px 8px -4px black;
+      -webkit-box-shadow: inset -2px -2px 8px -4px black; }
     #ranking header .next {
       float: right;
-      width: 175px; }
+      width: 175px;
+      -moz-box-shadow: inset 2px -2px 8px -4px black;
+      -webkit-box-shadow: inset 2px -2px 8px -4px black; }
   #ranking .item {
     padding: 10px 15px; }
   #ranking .carousel-wrapper {
@@ -537,9 +579,11 @@ footer .only-next .next {
         -webkit-border-radius: 5px;
         -moz-border-radius: 5px;
         border-radius: 5px;
+        /*
         -moz-background-clip: padding;
         -webkit-background-clip: padding-box;
-        background-clip: padding-box; }
+        background-clip: padding-box;
+        */ }
       #river-news article .hmedia figure {
         margin-bottom: 10px; }
         #river-news article .hmedia figure a {
@@ -555,9 +599,11 @@ footer .only-next .next {
         -webkit-border-radius: 3px;
         -moz-border-radius: 3px;
         border-radius: 3px;
+        /*
         -moz-background-clip: padding;
         -webkit-background-clip: padding-box;
         background-clip: padding-box;
+        */
         line-height: 14px;
         height: 14px;
         display: block;
@@ -623,9 +669,11 @@ footer .only-next .next {
   -webkit-border-radius: 7px;
   -moz-border-radius: 7px;
   border-radius: 7px;
+  /*
   -moz-background-clip: padding;
   -webkit-background-clip: padding-box;
   background-clip: padding-box;
+  */
   margin-bottom: 20px;
   overflow: hidden; }
   .block header,
@@ -642,9 +690,11 @@ footer .only-next .next {
   -webkit-border-radius: 7px;
   -moz-border-radius: 7px;
   border-radius: 7px;
+  /*
   -moz-background-clip: padding;
   -webkit-background-clip: padding-box;
-  background-clip: padding-box; }
+  background-clip: padding-box;
+  */ }
   .block-black header {
     height: 20px;
     margin-bottom: 10px; }
@@ -701,9 +751,11 @@ footer .only-next .next {
   -webkit-border-radius: 7px;
   -moz-border-radius: 7px;
   border-radius: 7px;
+  /*
   -moz-background-clip: padding;
   -webkit-background-clip: padding-box;
   background-clip: padding-box;
+  */
   overflow: hidden; }
 .new .dropline {
   line-height: 1.3em; }
@@ -771,9 +823,11 @@ footer .only-next .next {
       -webkit-border-radius: 6px;
       -moz-border-radius: 6px;
       border-radius: 6px;
+      /*
       -moz-background-clip: padding;
       -webkit-background-clip: padding-box;
-      background-clip: padding-box; }
+      background-clip: padding-box;
+      */ }
       .pager .button a:hover {
         text-decoration: none;
         background: #1f1f1f;
