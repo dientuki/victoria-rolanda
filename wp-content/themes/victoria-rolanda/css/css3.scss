@@ -35,10 +35,22 @@
    background-clip: padding-box;
 }
 
-@mixin box_shadow($x: 0px, $y: 0px, $blur: 0px, $color: #fff, $alpha: 1) {
-	-webkit-box-shadow: $x $y $blur rgba($color, $alpha);
-	-moz-box-shadow: $x $y $blur rgba($color, $alpha);
-	box-shadow: $x $y $blur rgba($color, $alpha);
+@mixin box_shadow($x: 0px, $y: 0px, $blur: 0px, $e: 0px, $color: #fff, $alpha: 1) {
+	-webkit-box-shadow: $x $y $blur $e rgba($color, $alpha);
+	-moz-box-shadow: $x $y $blur $e rgba($color, $alpha);
+	box-shadow: $x $y $blur $e rgba($color, $alpha);
+}
+
+@mixin inset_box_shadow($x: 0px, $y: 0px, $blur: 0px, $e: 0px, $color: #fff, $alpha: 1) {
+  -webkit-box-shadow: inset $x $y $blur $e rgba($color, $alpha);
+  -moz-box-shadow: inset $x $y $blur $e rgba($color, $alpha);
+  box-shadow: inset $x $y $blur $e rgba($color, $alpha);
+}
+
+@mixin reset_box_shadow() {
+  -webkit-box-shadow: none !important;
+  -moz-box-shadow: none !important;
+  box-shadow: none !important;
 }
 
 @mixin gradient_cross($top: black, $bottom: white) {	

@@ -485,18 +485,26 @@ footer .only-next .next {
       color: black;
       background: white;
       cursor: auto;
+      -webkit-box-shadow: none !important;
       -moz-box-shadow: none !important;
-      -webkit-box-shadow: none !important; }
+      box-shadow: none !important;
+      /*
+      -moz-box-shadow: none !important;
+      -webkit-box-shadow: none !important;
+      box-shadow: none !important;
+      */ }
     #ranking header .prev {
       float: left;
       width: 123px;
+      -webkit-box-shadow: inset -2px -2px 8px -4px black;
       -moz-box-shadow: inset -2px -2px 8px -4px black;
-      -webkit-box-shadow: inset -2px -2px 8px -4px black; }
+      box-shadow: inset -2px -2px 8px -4px black; }
     #ranking header .next {
       float: right;
       width: 175px;
+      -webkit-box-shadow: inset 2px -2px 8px -4px black;
       -moz-box-shadow: inset 2px -2px 8px -4px black;
-      -webkit-box-shadow: inset 2px -2px 8px -4px black; }
+      box-shadow: inset 2px -2px 8px -4px black; }
   #ranking .item {
     padding: 10px 15px; }
   #ranking .carousel-wrapper {

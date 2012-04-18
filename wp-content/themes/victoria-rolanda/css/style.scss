@@ -562,21 +562,23 @@ footer .only-next .next {
 	    color:black;
 	    background: white;
 	    cursor:auto;
+	    @include reset_box_shadow();
+	    /*
 	    -moz-box-shadow: none !important;
 	    -webkit-box-shadow: none !important;
+	    box-shadow: none !important;
+	    */
 	  }
 	  
 	  .prev {
 	    float:left;
 	    width: 123px;
-	    -moz-box-shadow: inset -2px -2px 8px -4px black;
-	    -webkit-box-shadow: inset -2px -2px 8px -4px black;
+	    @include inset_box_shadow(-2px, -2px, 8px, -4px, black);
 	  }
 	  .next {
 	    float:right;
 	    width: $w - $wl;
-	    -moz-box-shadow: inset 2px -2px 8px -4px black;
-	    -webkit-box-shadow: inset 2px -2px 8px -4px black;
+      @include inset_box_shadow(2px, -2px, 8px, -4px, black);
 	  }
 	}
 	
