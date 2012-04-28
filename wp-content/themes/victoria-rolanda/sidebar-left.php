@@ -5,7 +5,7 @@
 		<?php $tweet = get_tweet(); ?>
 		<?php if ($tweet->has_tweet != false): ?>
 			<section id="day-tweet" class="block">
-			  <header><h2><span>Twett</span> del día</h2></header>
+			  <header><h2><span>Twett</span> destacado</h2></header>
 				<div class="content">
 					<img class="avatar" src="<?php echo $tweet->get_picture()?>"  width="48" height="48" alt="<?php echo $tweet->get_user();?>" />
 					<p><a class="user" rel="nofollow" target="_blank" href="http://twitter.com/<?php echo $tweet->get_user(); ?>"><?php echo $tweet->get_user(); ?></a></p>
