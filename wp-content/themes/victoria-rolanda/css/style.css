@@ -3,6 +3,9 @@ article .entry-content p {
   font-size: 16px;
   line-height: 1.3em;
   color: #333333; }
+article .entry-content img {
+  max-width: 660px;
+  height: auto !important; }
 article .entry-content p {
   margin: 0; }
 
@@ -768,7 +771,9 @@ footer .only-next .next {
   -webkit-background-clip: padding-box;
   background-clip: padding-box;
   */
-  overflow: hidden; }
+  overflow: hidden;
+  width: 660px;
+  height: 371px; }
 .new .dropline {
   line-height: 1.3em; }
 .new .entry-content p {

@@ -234,6 +234,16 @@ td { vertical-align: top; }
 /* Hide visually and from screenreaders, but maintain layout */
 .invisible { visibility: hidden; }
 
+.alignleft {float:left}
+img.alignleft {margin: 0 5px 5px 0}
+.alignright {float:right;}
+img.alignright {margin: 0 0 5px 5px}
+.aligncenter {
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+}
+
 /* Contain floats: h5bp.com/q */
 .clearfix:before, .clearfix:after { content: ""; display: table; }
 .clearfix:after { clear: both; }

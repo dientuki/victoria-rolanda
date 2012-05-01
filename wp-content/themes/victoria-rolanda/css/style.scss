@@ -19,9 +19,16 @@ article {
 	  color:$black80;
 	}
 	
-	.entry-content p {
-	  margin:0;
-	}
+	.entry-content {
+	  img {
+	    max-width: 660px;
+	    height: auto !important;
+	  }
+	  
+		p {
+		  margin:0;
+		}
+  }
 }
 
 form {
@@ -894,6 +901,8 @@ footer .only-next .next {
     margin-bottom: 15px;
     @include border_radius(7px);
     overflow: hidden;
+    width: 660px;
+    height: 371px;
   }  
   
   .dropline {
