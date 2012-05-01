@@ -652,7 +652,7 @@ footer .only-next .next {
 	  margin-bottom:20px;
 	  border-bottom:solid 1px $border-color;
 	  position: relative;
-    padding-left: 110px;
+    padding-left: 120px;
 	  
 	  header {
 	    padding-top:1px;
@@ -703,10 +703,12 @@ footer .only-next .next {
 	    position:absolute;
 	    left:0;
 	    top:0;
-	    width: 100px;
+	    width: 110px;
 	    
 	    img {
 	      @include border_radius(5px);
+	      width: 110px;
+	      height: 110px;
 	    }
 	    
 	    figure {
@@ -719,17 +721,17 @@ footer .only-next .next {
 	    }
 	    
 	    .comments {
-	     background: $lpink;
-	     color:white;
-	     font-size: 11px;
-	     font-style: italic;
-	     padding: 2px 5px;
-	     @include border_radius(3px);
-	     line-height: 14px;
-	     height: 14px;
-	     display: block;
-	     width: 90px;
-	     position: relative;
+				background: $lpink;
+				color:white;
+				font-size: 11px;
+				font-style: italic;
+				padding: 2px 5px;
+				@include border_radius(3px);
+				line-height: 14px;
+				height: 14px;
+				display: block;
+				width: 100px;
+				position: relative;
 	    }
 	    
 	    .arrow {
@@ -745,8 +747,8 @@ footer .only-next .next {
 	  .share {
 	    position: absolute;
 	    left:0;
-	    top: 135px;
-	    width: 100px;
+	    top: 145px;
+	    width: 110px;
 	    overflow: hidden;
 	  }
 	}

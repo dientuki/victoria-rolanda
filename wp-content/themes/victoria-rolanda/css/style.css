@@ -548,7 +548,7 @@ footer .only-next .next {
     margin-bottom: 20px;
     border-bottom: solid 1px #eaeaea;
     position: relative;
-    padding-left: 110px; }
+    padding-left: 120px; }
     #river-news article header {
       padding-top: 1px;
       margin-bottom: 5px; }
@@ -582,7 +582,7 @@ footer .only-next .next {
       position: absolute;
       left: 0;
       top: 0;
-      width: 100px; }
+      width: 110px; }
       #river-news article .hmedia img {
         -webkit-border-radius: 5px;
         -moz-border-radius: 5px;
@@ -591,7 +591,9 @@ footer .only-next .next {
         -moz-background-clip: padding;
         -webkit-background-clip: padding-box;
         background-clip: padding-box;
-        */ }
+        */
+        width: 110px;
+        height: 110px; }
       #river-news article .hmedia figure {
         margin-bottom: 10px; }
         #river-news article .hmedia figure a {
@@ -615,7 +617,7 @@ footer .only-next .next {
         line-height: 14px;
         height: 14px;
         display: block;
-        width: 90px;
+        width: 100px;
         position: relative; }
       #river-news article .hmedia .arrow {
         position: absolute;
@@ -627,8 +629,8 @@ footer .only-next .next {
     #river-news article .share {
       position: absolute;
       left: 0;
-      top: 135px;
-      width: 100px;
+      top: 145px;
+      width: 110px;
       overflow: hidden; }
 
 #poll {
