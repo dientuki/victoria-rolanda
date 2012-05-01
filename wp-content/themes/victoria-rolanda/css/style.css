@@ -548,7 +548,8 @@ footer .only-next .next {
     margin-bottom: 20px;
     border-bottom: solid 1px #eaeaea;
     position: relative;
-    padding-left: 120px; }
+    padding-left: 120px;
+    min-height: 198px; }
     #river-news article header {
       padding-top: 1px;
       margin-bottom: 5px; }
@@ -863,7 +864,7 @@ footer .only-next .next {
 .share .item {
   display: block; }
 .share .fb {
-  width: 90px;
+  width: 110px;
   height: 20px;
   position: relative;
   z-index: 50;

@@ -653,6 +653,7 @@ footer .only-next .next {
 	  border-bottom:solid 1px $border-color;
 	  position: relative;
     padding-left: 120px;
+    min-height:198px;
 	  
 	  header {
 	    padding-top:1px;
@@ -997,7 +998,7 @@ footer .only-next .next {
 	}
 	
 	.fb {
-	  width: 90px;
+	  width: 110px;
 	  height: 20px;
 	  position:relative;
 	  z-index:50;
