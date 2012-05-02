@@ -75,6 +75,8 @@
 	</div>
 	
 	<footer>
+<?php if(function_exists('twit_connect')){twit_connect();} ?>
+
 		<?php if ('open' == $post->comment_status) : ?>
 
 			<section id="respond">
