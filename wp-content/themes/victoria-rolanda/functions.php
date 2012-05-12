@@ -40,7 +40,12 @@ if ( ! function_exists( 'victoriarolanda_setup' ) ) {
   
 }
 
-function victoriarolanda_admin_header_style() {}
+function victoriarolanda_admin_header_style() {
+	define( 'HEADER_TEXTCOLOR', '' );
+	define( 'HEADER_IMAGE', '%s/images/header-vr.jpg' );
+	define( 'HEADER_IMAGE_WIDTH', 990 );
+	define( 'HEADER_IMAGE_HEIGHT', 190 );	
+}
 
 add_filter('next_posts_link_attributes', 'get_next_posts_link_attributes');
 add_filter('previous_posts_link_attributes', 'get_previous_posts_link_attributes');

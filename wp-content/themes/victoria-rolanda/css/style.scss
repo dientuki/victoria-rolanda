@@ -228,16 +228,16 @@ footer .only-next .next {
 	    margin:0;
 	  }
 	  
-    .twett-hashtag:hover,
-    .twett-hashtag:hover s,
-    .twett-users:hover,
-    .twett-users:hover s,    	  
+    .tweet-hashtag:hover,
+    .tweet-hashtag:hover s,
+    .tweet-users:hover,
+    .tweet-users:hover s,    	  
 	  s {
 	    text-decoration: none;
 	  }
 	  
 	  a:hover b,
-	  .twett-url:hover {
+	  .tweet-url:hover {
 	    text-decoration: underline;
 	  }
 	  
@@ -260,21 +260,29 @@ footer .only-next .next {
 
 #header {
 	margin-bottom:10px;
+	position:relative;
 	
+	/*
 	&.default {
 	  background: url(../images/header-vr.jpg) left top no-repeat;
 	}
+	*/
 	
 	#logo {
 	  height: 190px;
 	  display:block;
 	  text-indent:-999em;
-	  
-	  img {
-	    width: 990px;
-	    height: 190px;
-	    display:block;
-	  }
+	  position: relative;
+	  z-index: 50;
+	}
+	
+	.header-image {
+	  position: absolute;
+	  left: 0;
+	  top:0;
+    width: 990px;
+    height: 190px;
+    display:block;	  
 	}
 }
 

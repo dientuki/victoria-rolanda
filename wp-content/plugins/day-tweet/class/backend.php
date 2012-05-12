@@ -39,7 +39,7 @@ class dt_backend extends dt_common {
   }	
 	
 	/**
-	 * Add a twett to the db
+	 * Add a tweet to the db
 	 * 
 	 * @param array $values
 	 */
@@ -79,7 +79,7 @@ class dt_backend extends dt_common {
 	}
 	
 	/**
-	* Edit a twett
+	* Edit a tweet
 	*
 	* @param integer $id
 	* @param array $values
@@ -133,7 +133,7 @@ class dt_backend extends dt_common {
 	}
 	
 	/**
-	* Delete a twett
+	* Delete a tweet
 	*
 	* @param integer $id
 	*/	

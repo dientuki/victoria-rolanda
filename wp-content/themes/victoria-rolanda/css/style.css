@@ -186,14 +186,14 @@ footer .only-next .next {
   line-height: 16px; }
   #day-tweet .content p {
     margin: 0; }
-  #day-tweet .content .twett-hashtag:hover,
-  #day-tweet .content .twett-hashtag:hover s,
-  #day-tweet .content .twett-users:hover,
-  #day-tweet .content .twett-users:hover s,
+  #day-tweet .content .tweet-hashtag:hover,
+  #day-tweet .content .tweet-hashtag:hover s,
+  #day-tweet .content .tweet-users:hover,
+  #day-tweet .content .tweet-users:hover s,
   #day-tweet .content s {
     text-decoration: none; }
   #day-tweet .content a:hover b,
-  #day-tweet .content .twett-url:hover {
+  #day-tweet .content .tweet-url:hover {
     text-decoration: underline; }
   #day-tweet .content b {
     font-weight: normal; }
@@ -206,17 +206,26 @@ footer .only-next .next {
   margin-bottom: 2px; }
 
 #header {
-  margin-bottom: 10px; }
-  #header.default {
-    background: url(../images/header-vr.jpg) left top no-repeat; }
+  margin-bottom: 10px;
+  position: relative;
+  /*
+  &.default {
+    background: url(../images/header-vr.jpg) left top no-repeat;
+  }
+  */ }
   #header #logo {
     height: 190px;
     display: block;
-    text-indent: -999em; }
-    #header #logo img {
-      width: 990px;
-      height: 190px;
-      display: block; }
+    text-indent: -999em;
+    position: relative;
+    z-index: 50; }
+  #header .header-image {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 990px;
+    height: 190px;
+    display: block; }
 
 #header-menu {
   height: 45px;

@@ -75,56 +75,9 @@
 	</div>
 	
 	<footer>
-<?php if(function_exists('twit_connect')){twit_connect();} ?>
+	
+	<?php comment_form(); ?>
 
-		<?php if ('open' == $post->comment_status) : ?>
-
-			<section id="respond">
-			
-				<header>
-					<h2><?php comment_form_title( 'Dejar un comentario', 'Dejar un comentario a %s' ); ?></h3>
-					<div class="cancel-comment-reply"><small><?php cancel_comment_reply_link(); ?></small></div>
-				</header>
-				
-				<form action="<?php echo get_option('siteurl'); ?>/wp-comments-post.php" method="post" id="commentform">
-					<fieldset>
-						<?php if ( $user_ID ) : ?>
-						
-							<p>Logged in as <a href="<?php echo get_option('siteurl'); ?>/wp-admin/profile.php"><?php echo $user_identity; ?></a>. <a href="<?php echo wp_logout_url(get_permalink()); ?>" title="Log out of this account">Log out &raquo;</a></p>
-						
-						<?php else : ?>
-						
-							<p>
-								<label for="author">Nombre: <sup>*</sup></label>
-								<input type="text" name="author" id="author" value="<?php echo $comment_author; ?>" tabindex="1" />
-							</p>
-							
-							<p>
-								<label for="email">E-Mail: <sup>*</sup></label>
-								<input type="text" name="email" id="email" value="<?php echo $comment_author_email; ?>" tabindex="2" />
-							</p>
-							
-							<p>
-								<label for="url">Website:</label>
-								<input type="text" name="url" id="url" value="<?php echo $comment_author_url; ?>" tabindex="3" />
-							</p>
-						
-						<?php endif; ?>
-						
-						<!--<p><small><strong>XHTML:</strong> You can use these tags: <code><?php echo allowed_tags(); ?></code></small></p>-->
-						
-						<p>
-						<label for="comment">Comentario:</label>
-						<textarea name="comment" id="comment" tabindex="4" value="Comentar"></textarea>
-						</p>
-					</fieldset>
-				
-				<p><input name="submit" type="submit" id="submit" tabindex="5" value="Submit Comment" /></p>
-				<?php comment_id_fields(); ?>			
-				</form>
-			
-			</section>
-		<?php endif; // if you delete this the sky will fall on your head ?>
 	</footer>
 
 </section>

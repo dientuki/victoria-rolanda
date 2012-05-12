@@ -41,15 +41,15 @@
 <![endif]-->
 <link rel="pingback" href="<?php bloginfo( 'pingback_url' ); ?>" />
 
-<?php //wp_head(); ?>
+<?php wp_head(); ?>
 
 </head>
 
 <body <?php body_class(); ?> data-page="home">
 	<div id="header-975x75" class="banner" role="banner"></div>
-	<header id="header" class="wrapper <?php if (get_header_image() == false ):?>default<?php endif;?>">
+	<header id="header" class="wrapper">
 		<?php if ( get_header_image() ):?>
-			<img src="<?php header_image(); ?>" width="<?php echo HEADER_IMAGE_WIDTH; ?>" height="<?php echo HEADER_IMAGE_HEIGHT; ?>" alt="<?php bloginfo( 'name' ); ?>" />
+			<img class="header-image" src="<?php header_image(); ?>" width="990" height="190" alt="<?php bloginfo( 'name' ); ?>" />
 		<?php endif; ?>
 		<a id="logo" href="<?php echo home_url( '/' ); ?>" title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a>
 		<div class="tagline hidden"><?php bloginfo( 'description' ); ?></div>

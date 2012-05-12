@@ -17,7 +17,7 @@ class dt_tweet extends dt_common {
 	private $user = '';
 	
 	/**
-	* Has a twett?
+	* Has a tweet?
 	*/	
 	public $has_tweet = false;
 	
@@ -35,7 +35,7 @@ class dt_tweet extends dt_common {
 	}
 	
 	/**
-	 * Retrieve a twett to show in the theme 
+	 * Retrieve a tweet to show in the theme 
 	 */
 	private function retrieve_tweet(){
 		// @todo: tal ves haya problema con la fecha
@@ -61,7 +61,7 @@ class dt_tweet extends dt_common {
 	}
 	
 	/**
-	* Get the twett
+	* Get the tweet
 	*
 	* @return string
 	*/	
