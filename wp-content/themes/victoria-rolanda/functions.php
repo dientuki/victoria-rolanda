@@ -42,7 +42,7 @@ if ( ! function_exists( 'victoriarolanda_setup' ) ) {
 
 function victoriarolanda_admin_header_style() {
 	define( 'HEADER_TEXTCOLOR', '' );
-	define( 'HEADER_IMAGE', '%s/images/header-vr.jpg' );
+	define( 'HEADER_IMAGE', bloginfo( 'template_url' ) . '/images/header-vr.jpg' );
 	define( 'HEADER_IMAGE_WIDTH', 990 );
 	define( 'HEADER_IMAGE_HEIGHT', 190 );	
 }

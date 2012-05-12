@@ -202,8 +202,7 @@ footer .only-next .next {
 
 #header-975x75 {
   width: 975px;
-  height: 75px;
-  margin-bottom: 2px; }
+  height: 75px; }
 
 #header {
   margin-bottom: 10px;
@@ -226,6 +225,77 @@ footer .only-next .next {
     width: 990px;
     height: 190px;
     display: block; }
+
+#header-box {
+  margin-top: 3px;
+  margin-bottom: 3px;
+  height: 25px; }
+  #header-box form {
+    width: 225px;
+    position: relative;
+    float: right; }
+  #header-box .fb-like {
+    height: 25px;
+    width: 580px;
+    float: left; }
+  #header-box .follow-us {
+    float: left;
+    height: 25px;
+    margin-right: 10px; }
+    #header-box .follow-us .title {
+      width: auto;
+      line-height: 25px; }
+    #header-box .follow-us .fb {
+      background-position: left -53px; }
+      #header-box .follow-us .fb:hover {
+        background-position: left -79px; }
+    #header-box .follow-us .tw {
+      background-position: -26px -53px; }
+      #header-box .follow-us .tw:hover {
+        background-position: -26px -79px; }
+    #header-box .follow-us .rss {
+      background-position: -52px -53px; }
+      #header-box .follow-us .rss:hover {
+        background-position: -52px -79px; }
+    #header-box .follow-us li {
+      float: left;
+      width: 25px;
+      height: 25px;
+      overflow: hidden;
+      margin-right: 5px; }
+    #header-box .follow-us .item {
+      width: 100%;
+      height: 100%;
+      display: block;
+      background-image: url(../images/sprite.png);
+      text-indent: -999em; }
+  #header-box .field {
+    padding: 1px 25px 1px 3px;
+    -webkit-border-radius: 7px;
+    -moz-border-radius: 7px;
+    border-radius: 7px;
+    /*
+    -moz-background-clip: padding;
+    -webkit-background-clip: padding-box;
+    background-clip: padding-box;
+    */
+    border: solid 2px #ff58b0;
+    width: 193px; }
+  #header-box .submit {
+    /*
+	  height: 24px;
+	  line-height: 24px;
+	  */
+    width: 13px;
+    height: 15px;
+    background: red;
+    text-indent: -999em;
+    position: absolute;
+    right: 5px;
+    top: 5px; }
+  #header-box label {
+    display: none;
+    visibility: hidden; }
 
 #header-menu {
   height: 45px;

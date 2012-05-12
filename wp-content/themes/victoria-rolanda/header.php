@@ -47,9 +47,21 @@
 
 <body <?php body_class(); ?> data-page="home">
 	<div id="header-975x75" class="banner" role="banner"></div>
+	<section id="header-box" class="wrapper">
+		<ul class="follow-us clearfix">
+			<li class="title">Seguinos:</li>
+			<li><a class="item fb" href="http://www.facebook.com/RevistaVictoriaRolanda" target="_blank" title="Seguinos en Facebook">facebook</a></li>
+			<li><a class="item tw" href="http://www.twitter.com/VictoriaRolanda" target="_blank" title="Seguinos en Twitter">twitter</a></li>
+			<li><a class="item rss" href="<?php bloginfo('rss2_url'); ?>" target="_blank" title="Suscribirse a este sitio usando RSS">rss</a></li>
+		</ul>
+		<div class="fb-like" data-send="false" data-width="580" data-show-faces="false" data-action="recommend" data-href="http://tn.com.ar"></div>
+		<?php get_search_form(); ?>
+	</section>
 	<header id="header" class="wrapper">
 		<?php if ( get_header_image() ):?>
 			<img class="header-image" src="<?php header_image(); ?>" width="990" height="190" alt="<?php bloginfo( 'name' ); ?>" />
+		<?php else: ?>
+		  <img class="header-image" src="<?php echo bloginfo( 'template_url' ) . '/images/header-vr.jpg' ?>" width="990" height="190" alt="<?php bloginfo( 'name' ); ?>" />
 		<?php endif; ?>
 		<a id="logo" href="<?php echo home_url( '/' ); ?>" title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a>
 		<div class="tagline hidden"><?php bloginfo( 'description' ); ?></div>

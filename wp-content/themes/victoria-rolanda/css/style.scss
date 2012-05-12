@@ -255,7 +255,6 @@ footer .only-next .next {
 #header-975x75 {
 	width: 975px;
 	height: 75px;
-	margin-bottom: 2px;
 }
 
 #header {
@@ -283,6 +282,99 @@ footer .only-next .next {
     width: 990px;
     height: 190px;
     display:block;	  
+	}
+}
+
+#header-box {
+	$h: 25px;
+	margin-top: 3px;
+	margin-bottom: 3px;
+	height: $h;
+	
+	form {
+	  width: 225px;
+	  position: relative;
+	  float: right;
+	}
+	
+	.fb-like {
+	  height: $h;
+	  width: 580px;
+	  float: left;
+	}
+	
+	.follow-us {
+	 float:left;
+	 height: $h;
+	 margin-right:10px;
+	 
+	 .title {
+	   width: auto;
+	   line-height: $h;
+	 }
+	 
+	 .fb {
+	   background-position: left -53px;
+	   &:hover {
+	     background-position: left -79px; 
+	   }
+	 }
+	 
+   .tw {
+     background-position: -26px -53px;
+     &:hover {
+       background-position: -26px -79px;
+     }
+   }
+   
+   .rss {
+     background-position: -52px -53px;
+     &:hover {
+       background-position: -52px -79px;  
+     }
+   }   	 
+	 
+	 li {
+	   float:left;
+	   width: $h;
+	   height: $h;
+	   overflow: hidden;
+	   margin-right: 5px;
+	 }
+	 
+	 .item {
+	   width: 100%;
+	   height: 100%;
+	   display: block;
+	   background-image: url(../images/sprite.png);
+	   text-indent: -999em;
+	 }
+	}
+	
+	.field {
+	  padding:1px 25px 1px 3px;
+	  @include border_radius(7px);
+	  border:solid 2px $pink;
+	  width: 193px;
+	}
+	
+	.submit {
+    /*
+	  height: 24px;
+	  line-height: 24px;
+	  */
+	  width: 13px;
+	  height: 15px;
+	  background: red;
+	  text-indent: -999em;
+	  position: absolute;
+	  right: 5px;
+	  top:5px;
+	}
+	
+	label {
+	  display:none;
+	  visibility: hidden;
 	}
 }
 
