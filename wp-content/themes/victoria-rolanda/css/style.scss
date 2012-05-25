@@ -20,6 +20,8 @@ article {
 	}
 	
 	.entry-content {
+	  margin-bottom:15px;
+	  
 	  img {
 	    max-width: 660px;
 	    height: auto !important;
@@ -524,11 +526,13 @@ footer .only-next .next {
     height:$h;
     line-height:$h;
     float:left;
+    margin: 0 10px;
   }
 
-	ul,
 	#footer-menu {
 	  height:$h;
+    margin: 0 auto;
+    width: 540px;	  
 	}
 	
 }

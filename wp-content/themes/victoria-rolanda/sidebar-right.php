@@ -5,7 +5,7 @@
 		<header><h2>Puntos de vista</h2></header>
 		<?php 
 		$args = array();
-		$args['parent'] = 3;
+		$args['parent'] = 47;
 		$args['hierarchical'] = false;
 		$args['hide_empty'] = 0;
 		$categories = get_categories( $args );
@@ -63,7 +63,7 @@
 	
 	<section id="follow-fb" class="block">
 	  <header><h2><span>Seguinos</span> en facebook</h2></header>
-		<div class="fb-like-box" data-href="http://www.facebook.com/platform" height="258" data-border-color="#ffffff" data-width="288" data-show-faces="true" data-stream="false" data-header="false"></div>	
+		<div class="fb-like-box" data-href="http://www.facebook.com/RevistaVictoriaRolanda" height="258" data-border-color="#ffffff" data-width="288" data-show-faces="true" data-stream="false" data-header="false"></div>	
 	</section>
 	
 </aside>

@@ -1,0 +1,12 @@
+<IfModule mod_rewrite.c>
+
+redirectMatch 301 /2009/10/editorial.html /editorial
+
+RewriteEngine On
+RewriteBase /mateclass/victoria-rolanda/
+RewriteRule ^index\.php$ - [L]
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule . /mateclass/victoria-rolanda/index.php [L]
+
+</IfModule>

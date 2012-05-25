@@ -2,7 +2,7 @@
     <?php
       $args = array();
       $args['posts_per_page'] = 5;
-      $args['cat'] = 25;
+      $args['cat'] = 23;
       $query = new WP_Query($args);
     ?>
     <section id="footer-carousel" class="carousel">

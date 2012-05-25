@@ -3,11 +3,13 @@ article .entry-content p {
   font-size: 16px;
   line-height: 1.3em;
   color: #333333; }
-article .entry-content img {
-  max-width: 660px;
-  height: auto !important; }
-article .entry-content p {
-  margin: 0; }
+article .entry-content {
+  margin-bottom: 15px; }
+  article .entry-content img {
+    max-width: 660px;
+    height: auto !important; }
+  article .entry-content p {
+    margin: 0; }
 
 form .submit {
   -webkit-border-radius: 7px;
@@ -423,10 +425,12 @@ footer .only-next .next {
   #footer li {
     height: 47px;
     line-height: 47px;
-    float: left; }
-  #footer ul,
+    float: left;
+    margin: 0 10px; }
   #footer #footer-menu {
-    height: 47px; }
+    height: 47px;
+    margin: 0 auto;
+    width: 540px; }
 
 #footer-carousel {
   width: 450px;
