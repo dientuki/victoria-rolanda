@@ -177,9 +177,15 @@ class dt_backend extends dt_common {
 		return $this->wpdb->query('DELETE FROM ' . $this->wp_table . ' WHERE date_show <= \''. $date . '\'');
 	}
 
-	public function check_tweets(){
+	public function check_tweets($id = null){
 
-		$sql = 'SELECT id, url FROM ' . $this->wp_table . ' WHERE has_tweet = 0';
+		$sql = 'SELECT id, url FROM ' . $this->wp_table . ' WHERE ';
+		
+		if ($id == null){
+			$sql .= 'has_tweet = 0';
+		} else {
+			$sql .= 'id = ' . $id;
+		}
 		
 		$result = $this->wpdb->get_results($sql);		
 
