@@ -60,10 +60,10 @@
 	<!-- <link rel="stylesheet" type="text/css" media="all" href="<?php bloginfo( 'template_url' ); ?>/css/responsive.css" /> -->
 	<link rel="stylesheet" type="text/css" media="all" href="<?php bloginfo( 'template_url' ); ?>/css/wp-polls.css" />
 	<!--[if IE]>
-	<link rel="stylesheet" type="text/css" media="all" href="<?php bloginfo( 'template_url' ); ?>/css/ie.css" />
+	<link rel="stylesheet" type="text/css" media="all" href="<?php bloginfo( 'template_url' ); ?>/css/ie-min.css" />
 	<![endif]-->
 	<link rel="pingback" href="<?php bloginfo( 'pingback_url' ); ?>" />
-	<script src="<?php bloginfo( 'template_url' ); ?>/js/libs/mordernizr.js"></script>
+	<script src="<?php bloginfo( 'template_url' ); ?>/js/libs/modernizr.js"></script>
 	
 	<?php wp_head(); ?>
 

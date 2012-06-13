@@ -5,7 +5,7 @@
 	</footer>
 	<div id="fb-root"></div>
 
-	<script type="text/javascript">
+	<script type="text/javascript" charset="utf-8">
 	var _gaq = _gaq || [];
 	_gaq.push(['_setAccount', 'UA-9399238-5']);
 	_gaq.push(['_trackPageview']);
@@ -17,10 +17,12 @@
 	})();
 	</script>		
 	
-	<script src="<?php bloginfo( 'template_url' ); ?>/js/libs/jquery-1.7.1.min.js"></script>
-	<script src="<?php bloginfo( 'template_url' ); ?>/js/plugins/jcarousellite-1-0-1.js"></script>
-	<script src="<?php bloginfo( 'template_url' ); ?>/js/plugins/wp-polls.js"></script>
-	<script src="<?php bloginfo( 'template_url' ); ?>/js/init.js"></script>
+    <script type="text/javascript" charset="utf-8">
+      var VR = {};
+      VR.BASE_PATH='<?php bloginfo( 'template_url' ); ?>';
+    </script>	
+	
+	<script src="<?php bloginfo( 'template_url' ); ?>/js/load-dev.js"></script>
 	
 </body>
 </html>
