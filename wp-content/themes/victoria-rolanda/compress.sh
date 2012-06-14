@@ -18,7 +18,8 @@ echo 'css compresed...'
 echo 'compresing js...'
 mkdir -p tmp/js
 
-cp js/plugins/jcarousellite-1-0-1-min.js tmp/js/10_jcarousel.js 
+#java -jar /usr/share/yui/yuicompressor-2.4.7.jar --type js --line-break 200 -o tmp/js/10_jcarousellite.js  js/plugins/jcarousellite-1-0-1.js
+cp js/plugins/jcarousellite-1-0-1-min.js tmp/js/10_jcarousellite.js
 java -jar /usr/share/yui/yuicompressor-2.4.7.jar --type js --line-break 200 -o tmp/js/20_wp-polls.js  js/plugins/wp-polls.js
 java -jar /usr/share/yui/yuicompressor-2.4.7.jar --type js --line-break 200 -o tmp/js/30_init.js      js/init.js
 java -jar /usr/share/yui/yuicompressor-2.4.7.jar --type js --line-break 200 -o js/load-min.js      js/load-prod.js

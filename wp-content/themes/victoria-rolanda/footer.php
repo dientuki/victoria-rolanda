@@ -22,7 +22,7 @@
       VR.BASE_PATH='<?php bloginfo( 'template_url' ); ?>';
     </script>	
 	
-	<script src="<?php bloginfo( 'template_url' ); ?>/js/load-dev.js"></script>
+	<script src="<?php bloginfo( 'template_url' ); ?>/js/load-min.js"></script>
 	
 </body>
 </html>
