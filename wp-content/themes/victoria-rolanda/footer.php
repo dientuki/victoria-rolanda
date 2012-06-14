@@ -17,12 +17,13 @@
 	})();
 	</script>		
 	
-    <script type="text/javascript" charset="utf-8">
-      var VR = {};
-      VR.BASE_PATH='<?php bloginfo( 'template_url' ); ?>';
-    </script>	
+	<script type="text/javascript" charset="utf-8">
+		var VR = {};
+		VR.BASE_PATH='<?php bloginfo( 'template_url' ); ?>';
+	</script>	
 	
-	<script src="<?php bloginfo( 'template_url' ); ?>/js/load-min.js"></script>
+	<script src="<?php bloginfo( 'template_url' ); ?>/js/libs/LAB-min.js"></script>
+	<script src="<?php bloginfo( 'template_url' ); ?>/js/lab-prod.js"></script>
 	
 </body>
 </html>

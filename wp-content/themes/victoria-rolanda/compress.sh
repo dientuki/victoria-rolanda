@@ -22,10 +22,10 @@ mkdir -p tmp/js
 cp js/plugins/jcarousellite-1-0-1-min.js tmp/js/10_jcarousellite.js
 java -jar /usr/share/yui/yuicompressor-2.4.7.jar --type js --line-break 200 -o tmp/js/20_wp-polls.js  js/plugins/wp-polls.js
 java -jar /usr/share/yui/yuicompressor-2.4.7.jar --type js --line-break 200 -o tmp/js/30_init.js      js/init.js
-java -jar /usr/share/yui/yuicompressor-2.4.7.jar --type js --line-break 200 -o js/load-min.js      js/load-prod.js
+java -jar /usr/share/yui/yuicompressor-2.4.7.jar --type js --line-break 200 -o js/lab-min.js      js/lab-prod.js
 
 cat tmp/js/* > js/vr-min.js
 
-#rm -rf tmp/css
+rm -rf tmp/css
 
 echo 'Ta dan!'
