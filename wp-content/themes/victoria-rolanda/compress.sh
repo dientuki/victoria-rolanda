@@ -26,6 +26,6 @@ java -jar /usr/share/yui/yuicompressor-2.4.7.jar --type js --line-break 200 -o j
 
 cat tmp/js/* > js/vr-min.js
 
-rm -rf tmp/css
+rm -rf tmp
 
 echo 'Ta dan!'

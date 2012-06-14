@@ -673,7 +673,18 @@ footer .only-next .next {
       position: absolute;
       left: 0;
       top: 0;
-      width: 110px; }
+      width: 110px;
+      /*
+      .arrow {
+        position: absolute;
+        top:-5px;
+        width: 11px;
+        height: 5px;
+        left: 10px;
+        background: url(../images/arrow.png);
+        display:none;
+      }
+      */ }
       #river-news article .hmedia img {
         -webkit-border-radius: 5px;
         -moz-border-radius: 5px;
@@ -725,14 +736,6 @@ footer .only-next .next {
           border-width: 5px;
           left: 15%;
           margin-left: -5px; }
-      #river-news article .hmedia .arrow {
-        position: absolute;
-        top: -5px;
-        width: 11px;
-        height: 5px;
-        left: 10px;
-        background: url(../images/arrow.png);
-        display: none; }
     #river-news article .share {
       position: absolute;
       left: 0;
