@@ -238,7 +238,7 @@ footer .only-next .next {
     float: right; }
   #header-box .fb-like {
     height: 25px;
-    width: 580px;
+    width: 550px;
     float: left; }
   #header-box .follow-us {
     float: left;
@@ -255,6 +255,10 @@ footer .only-next .next {
       background-position: -26px -53px; }
       #header-box .follow-us .tw:hover {
         background-position: -26px -79px; }
+    #header-box .follow-us .pi {
+      background-position: -78px -53px; }
+      #header-box .follow-us .pi:hover {
+        background-position: -78px -79px; }
     #header-box .follow-us .rss {
       background-position: -52px -53px; }
       #header-box .follow-us .rss:hover {
@@ -680,13 +684,16 @@ footer .only-next .next {
         background-clip: padding-box;
         */
         width: 110px;
-        height: 110px; }
+        height: 110px;
+        display: block; }
       #river-news article .hmedia figure {
         margin-bottom: 10px; }
         #river-news article .hmedia figure a {
+          color: black;
           display: block;
           width: 100%;
-          height: 100%; }
+          height: 100%;
+          word-wrap: break-word; }
       #river-news article .hmedia .comments {
         background: #f9adce;
         color: white;
