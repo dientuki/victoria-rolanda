@@ -70,7 +70,6 @@ $tweet = new dt_backend();
 
 $action = 'add';
 if ( (isset($_GET)) && (isset($_GET['action']))){
-	
 	if ($_GET['action'] == 'edit') {
 		$action = 'edit';
 		$tw = $tweet->get_tweet($_GET['id']);

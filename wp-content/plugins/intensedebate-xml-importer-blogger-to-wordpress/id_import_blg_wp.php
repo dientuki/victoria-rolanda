@@ -69,7 +69,7 @@ function id_xml_importer_import_comment() {
 			if( 1 == $_POST['id_xml_sim'] ) {
 				echo '<div class="error fade">' . sprintf( __( 'Simulation mode is on. No comments have actually been imported. Click <a href="">HERE</a> to start again', 'id-xml-importer' ), '' ) . '</div>';
 			}
-			echo '<h3>' . __( 'Import Result', 'id-xml-importer' ) . '</h3><pre style="height: 400px; overflow: scroll; border: 1px dotted #333; padding: 10px">';
+			echo '<h3>' . __( 'Import Result', 'id-xml-importer' ) . '</h3>';
 			
 			/** Initialize the variables */
 			$post_count = $comment_count = $per_post_comment_count = $per_post_total_comment = $total_post = $total_comment = 0;
@@ -79,11 +79,15 @@ function id_xml_importer_import_comment() {
 			$search_op = (int) $_POST['id_xml_op'];
 			if( $search_op != 1 && $search_op != 2 )
 				$search_op = 2;
-			
+			$c = array();
 			// loop through each blogpost
+			
 			foreach( $comments as $post ) {
 				/* Increment the $total_post */
 				$total_post++;
+				$wpdb->flush();
+				// esperar 2 segundos	usleep(2000000);
+				//usleep(2000);
 				
 				/** Unset comment_postID */
 				if( isset( $comment_postID ) )
@@ -92,33 +96,26 @@ function id_xml_importer_import_comment() {
 				
 				/* Make this post comment and valid comments 0 and find post title */
 				$per_post_comment_count = $per_post_total_comment = 0;
+				
 				$post_title = trim($post->title);
-				
-				echo "\n\n\n" . sprintf( __( 'Trying to import for title %s', 'id-import-xml' ), "<strong><big>$post_title</big></strong>" ) . "\n";
-				
-				/**
-				 * Count the total comments in the loop
-				 */
+				$post_title = str_replace("&amp;", "&", $post->title);	
+				$post_title = html_entity_decode($post->title, ENT_COMPAT, 'UTF-8');
+				$post_title = str_replace("\\", "", $post_title);
+				$post_title = str_replace("  ", " ", $post_title);
+								
+				// Count the total comments in the loop
 				$per_post_total_comment = count( $post->comments->comment );
 				
 				$total_comment = $total_comment + $per_post_total_comment;
 				
-				/* Look ahead and get the date of the first comment */
-				$date_of_first_comment = strtotime( $post->comments->comment->gmt );
+				//Look ahead and get the date of the first comment
+				//$date_of_first_comment = strtotime( $post->comments->comment->gmt );
 				
-				/**
-				 Lookup the post ID using the title of the blogpost
-				 if there are multiple blog posts with the same title
-				 choose the one with the date closest to the first comment
-				 Also we will perform the query according to the user
-				 */
+				//Lookup the post ID using the title of the blogpost if there are multiple blog posts with the same title choose the one with the date closest to the first comment Also we will perform the query according to the user
+				/*
 				switch( $search_op ) {
 					default :
 					case 2 :
-						/** For smart query
-						* ID lefts a space for special characters like +
-						* So replace double space with a single
-						*/
 					       $query_post_title = str_ireplace( '  ', ' ', $post_title );
 					       
 						$query = $wpdb->prepare( "SELECT ID, ABS(%s - UNIX_TIMESTAMP(post_date_gmt)) AS nearest_date FROM $wpdb->posts WHERE post_title LIKE %s AND post_status = 'publish' AND post_type = 'post' ORDER BY nearest_date LIMIT 1", $date_of_first_comment, $query_post_title . '%' );
@@ -127,27 +124,26 @@ function id_xml_importer_import_comment() {
 						$query = $wpdb->prepare( "SELECT ID, ABS(%s - UNIX_TIMESTAMP(post_date_gmt)) AS nearest_date FROM $wpdb->posts WHERE post_title = %s AND post_status = 'publish' AND post_type = 'post' ORDER BY nearest_date LIMIT 1", $date_of_first_comment, $post_title );
 						break;
 				}
-				
+				*/
 				//$query = $wpdb->prepare( "SELECT ID FROM $wpdb->posts WHERE post_title = %s AND post_status = 'publish' AND post_type = 'post' ORDER BY post_date LIMIT 1", $post_title );
 				
-				if( $results = $wpdb->get_results( $query ) )
-					$comment_postID = $results[0]->ID;
+				$query = 'SELECT ID FROM ' . $wpdb->posts . ' WHERE post_title = \'' . $post_title . '\' AND post_status = \'publish\'';
+				$results = $wpdb->get_results( $query );
+				$comment_postID = $results[0]->ID;
 				
-				/* Don't store the comment unless we can match it with a post */
+				
+				//Don't store the comment unless we can match it with a post
 				if ( $comment_postID ) {
 					
-					/**
-					 * Tell the user that we have got a post
-					 * We will use the get_permalink
-					 */
-					$post_permalink = get_permalink( $comment_postID );
+					// Tell the user that we have got a post  We will use the get_permalink
+					//$post_permalink = get_permalink( $comment_postID );
 					
-					echo "\n\t<small>" . sprintf( __( 'Found the post on your blog <a href="%1$s" title="%2$s">Link to post</a>', 'id-import-xml' ), $post_permalink, $post_title ) . "</small>\n";
-					/* Loop through all comments for each blogpost */
+					//echo "\n\t<small>" . sprintf( __( 'Found the post on your blog <a href="%1$s" title="%2$s">Link to post</a>', 'id-import-xml' ), $post_permalink, $post_title ) . "</small>\n";
+					//Loop through all comments for each blogpost
 					foreach ( $post->comments->comment as $comment ) {
 						
 						
-						/* Actually insert the comment into WordPress */
+						//Actually insert the comment into WordPress
 						$commentdata['user_id']			= 0;
 						$commentdata['comment_agent']		= '';
 						$commentdata['comment_author']		= addslashes( $comment->name );
@@ -162,17 +158,11 @@ function id_xml_importer_import_comment() {
 						$commentdata				= wp_filter_comment( $commentdata );
 						$commentdata['comment_approved']	= 1;
 						
-						/**
-						 * Don't add duplicate comments
-						 * We will check on the basis of comment_name, comment_text and comment_url for the current post
-						 */
+						//					 * Don't add duplicate comments						 * We will check on the basis of comment_name, comment_text and comment_url for the current post
 						
 						if ( !id_xml_importer_dup_comment($commentdata['comment_author'], $commentdata['comment_content'], $commentdata['comment_author_email'], $comment_postID ) ) {
 							if( 1 != $_POST['id_xml_sim'] ) {
-								/**
-								 * Actually insert the comment to WP database
-								 * If simulation is off
-								 */
+								// Actually insert the comment to WP database
 								$comment_ID = wp_insert_comment( $commentdata ); 
 								do_action( 'comment_post', $comment_ID, $commentdata['comment_approved'] );
 							}
@@ -187,11 +177,11 @@ function id_xml_importer_import_comment() {
 					echo "\n\t<small>" . __( 'Sorry... Could not find a post for this title', 'id-xml-import' ) . "</small>\n";
 				}
 				
-				echo "\t" . sprintf( __ngettext( 'Imported %1$d/%2$d comment for this post', 'Imported %1$d/%2$d comments for this post', $per_post_comment_count, 'id-xml-import' ), $per_post_comment_count, $per_post_total_comment );
+				//echo "\t" . sprintf( __ngettext( 'Imported %1$d/%2$d comment for this post', 'Imported %1$d/%2$d comments for this post', $per_post_comment_count, 'id-xml-import' ), $per_post_comment_count, $per_post_total_comment );
 			}
 			
-			echo '</pre>';
-			
+			//echo '</pre>';
+			//die(count($c).'a');
 			if ( $comment_count == 0 )
 				echo '<div class="error fade">' . __( 'There were no new comments found to import!', 'id-xml-import' ) . '</div>';
 			else
