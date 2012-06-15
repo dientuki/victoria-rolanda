@@ -11,7 +11,7 @@
     z-index: 50;
     cursor: pointer;
     display: none;
-    background: url(../images/carousel.png) no-repeat;
+    background: url(../images/sprite.png);
     text-indent: -999em; }
   .carousel .prev {
     left: 0;

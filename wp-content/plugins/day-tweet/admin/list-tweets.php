@@ -17,9 +17,15 @@ $today = date('d/m/Y', time());
 $is_deleting = false;
 
 if ( (isset($_GET)) && (isset($_GET['action']))){
-	if ($_GET['action'] == 'delete'){
-		$is_deleting = true;
-		$tweet->delete_tweet($_GET['id']);
+	
+	switch ($_GET['action']){
+		case 'delete':
+			$is_deleting = true;
+			$tweet->delete_tweet($_GET['id']);
+			break;
+		case 'check':
+			$tweet->check_tweets($_GET['id']);
+			break;
 	}
 }
 

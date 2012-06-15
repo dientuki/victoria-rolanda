@@ -60,10 +60,10 @@
 	<!-- <link rel="stylesheet" type="text/css" media="all" href="<?php bloginfo( 'template_url' ); ?>/css/responsive.css" /> -->
 	<link rel="stylesheet" type="text/css" media="all" href="<?php bloginfo( 'template_url' ); ?>/css/wp-polls.css" />
 	<!--[if IE]>
-	<link rel="stylesheet" type="text/css" media="all" href="<?php bloginfo( 'template_url' ); ?>/css/ie.css" />
+	<link rel="stylesheet" type="text/css" media="all" href="<?php bloginfo( 'template_url' ); ?>/css/ie-min.css" />
 	<![endif]-->
 	<link rel="pingback" href="<?php bloginfo( 'pingback_url' ); ?>" />
-	<script src="<?php bloginfo( 'template_url' ); ?>/js/libs/mordernizr.js"></script>
+	<script src="<?php bloginfo( 'template_url' ); ?>/js/libs/modernizr.js"></script>
 	
 	<?php wp_head(); ?>
 
@@ -75,6 +75,7 @@
 			<li class="title">Seguinos:</li>
 			<li><a class="item fb" href="http://www.facebook.com/RevistaVictoriaRolanda" target="_blank" title="Seguinos en Facebook">facebook</a></li>
 			<li><a class="item tw" href="http://www.twitter.com/VictoriaRolanda" target="_blank" title="Seguinos en Twitter">twitter</a></li>
+			<li><a class="item pi" href="http://pinterest.com/victoriarolanda" target="_blank" title="Seguinos en Pinterest">pinterest</a></li>
 			<li><a class="item rss" href="<?php bloginfo('rss2_url'); ?>" target="_blank" title="Suscribirse a este sitio usando RSS">rss</a></li>
 		</ul>
 		<div class="fb-like" data-send="false" data-width="580" data-show-faces="false" data-action="recommend" data-href="http://victoriarolanda.com.ar"></div>
