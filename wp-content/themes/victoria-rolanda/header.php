@@ -33,19 +33,17 @@
 	<meta property="og:title" content="<?php echo $title; ?>" />
 	
 	<?php if (is_single() || is_page()): ?>
+	<meta property="og:type" content="article" />
 	<meta property="og:description" content="<?php the_excerpt_rss(); ?>" />
 	<meta property="description" content="<?php the_excerpt_rss(); ?>" />
-	<?php else: ?>
-	<meta property="og:description" content="<?php bloginfo( 'description'); ?>" />
-	<meta property="description" content="<?php bloginfo( 'description'); ?>" />
-	<?php endif;?>
-	
-	<?php if (is_single() || is_page()): ?>
-	<meta property="og:type" content="article" />
+	<meta property="og:url" content="<?php the_permalink(); ?>" />
 	<?php else: ?>
 	<meta property="og:type" content="website" />
+	<meta property="og:description" content="<?php bloginfo( 'description'); ?>" />
+	<meta property="description" content="<?php bloginfo( 'description'); ?>" />
+	<meta property="og:url" content="http://<?php echo $_SERVER["SERVER_NAME"] .$_SERVER["REQUEST_URI"] ?>" />
 	<?php endif;?>
-	<meta property="og:url" content="<?php the_guid(); ?>" />
+	
 	<meta property="og:image" content="<?php bloginfo( 'template_url' ); ?>/images/logo.png" />
 	<meta property="og:site_name" content="Victoria Rolanda" />
 	<meta property="og:region" content="Buenos Aires" />
