@@ -276,7 +276,7 @@ footer .only-next .next {
       background-image: url(../images/sprite.png);
       text-indent: -999em; }
   #header-box .field {
-    padding: 1px 25px 1px 3px;
+    padding: 1px 22px 1px 3px;
     -webkit-border-radius: 7px;
     -moz-border-radius: 7px;
     border-radius: 7px;
@@ -286,19 +286,20 @@ footer .only-next .next {
     background-clip: padding-box;
     */
     border: solid 2px #ff58b0;
-    width: 193px; }
+    width: 196px; }
   #header-box .submit {
     /*
 	  height: 24px;
 	  line-height: 24px;
 	  */
-    width: 13px;
-    height: 15px;
-    background: red;
+    width: 19px;
+    height: 19px;
+    background: url(../images/sprite.png) no-repeat 0 -105px;
     text-indent: -999em;
     position: absolute;
-    right: 5px;
-    top: 5px; }
+    right: 3px;
+    top: 3px;
+    padding: 0; }
   #header-box label {
     display: none;
     visibility: hidden; }

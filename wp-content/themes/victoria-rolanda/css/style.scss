@@ -352,10 +352,10 @@ footer .only-next .next {
 	}
 	
 	.field {
-	  padding:1px 25px 1px 3px;
+	  padding:1px 22px 1px 3px;
 	  @include border_radius(7px);
 	  border:solid 2px $pink;
-	  width: 193px;
+	  width: 196px;
 	}
 	
 	.submit {
@@ -363,13 +363,14 @@ footer .only-next .next {
 	  height: 24px;
 	  line-height: 24px;
 	  */
-	  width: 13px;
-	  height: 15px;
-	  background: red;
+	  width: 19px;
+	  height: 19px;
+	  background: $main-sprite no-repeat 0 -105px;
 	  text-indent: -999em;
 	  position: absolute;
-	  right: 5px;
-	  top:5px;
+	  right: 3px;
+	  top:3px;
+	  padding: 0;
 	}
 	
 	label {
