@@ -2,6 +2,10 @@
 <section id="river-news">
   
 	<?php query_posts($query_string . '&ignore_sticky_posts=1') ?>
+	
+	<?php if (is_search()):?>
+		<?php get_search_form(); ?>
+	<?php endif; ?>
 
 	<div class="content">
 		<?php while ( have_posts() ) : ?>
