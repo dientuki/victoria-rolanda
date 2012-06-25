@@ -1,25 +1,26 @@
 form {
   
   .submit {
-    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#FF58B0', endColorstr='#FF3C95',GradientType=0 );
+    filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#FF58B0',endColorstr='#FF3C95',GradientType=0);
     
     &:hover {
-      filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#FF3C95', endColorstr='#FF58B0',GradientType=0 );
+      filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#FF3C95',endColorstr='#FF58B0',GradientType=0);
     }
+  }
 }
 
 #header .logo {
-	background-color: transparent;
+	background: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAAC0lEQVQIW2NkAAIAAAoAAggA9GkAAAAASUVORK5CYII=) repeat;
 }
 
 #header-menu {
-	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#333333', endColorstr='#1f1f1f',GradientType=0 );
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#333333', endColorstr='#1f1f1f', GradientType=0 );
 }
 
 #ranking {
   
   header {
-    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#F960B2', endColorstr='#F64398',GradientType=0 );  
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#F960B2', endColorstr='#F64398', GradientType=0 );  
   }
 }
 
@@ -28,10 +29,10 @@ form {
   .button {
 
     a {
-      filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#333333', endColorstr='#1f1f1f',GradientType=0 );
+      filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#333333', endColorstr='#1f1f1f', GradientType=0 );
       
       &:hover {
-        filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#1f1f1f', endColorstr='#333333',GradientType=0 );
+        filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#1f1f1f', endColorstr='#333333', GradientType=0 );
       }
     }
   }
@@ -46,6 +47,10 @@ form {
     }
   }
   
+	#header .logo {
+	  background: url(../images/ie6-header-fix.gif) repeat;
+	}  
+  
   #river-news {
     article {
       min-height: 198px;
@@ -53,4 +58,5 @@ form {
       height: 198px;    
     }  
   }
+   
 }

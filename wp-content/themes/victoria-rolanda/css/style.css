@@ -216,16 +216,19 @@ footer .only-next .next {
   */ }
   #header #logo {
     height: 190px;
+    width:990px;
     display: block;
     text-indent: -999em;
     position: relative;
-    z-index: 50; }
+    z-index: 50;
+    }
   #header .header-image {
     position: absolute;
     left: 0;
     top: 0;
     width: 990px;
     height: 190px;
+    z-index:49;
     display: block; }
 
 #header-box {

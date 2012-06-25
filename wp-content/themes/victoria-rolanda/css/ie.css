@@ -1,0 +1,29 @@
+form .submit {
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#FF58B0',endColorstr='#FF3C95',GradientType=0); }
+  form .submit:hover {
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#FF3C95',endColorstr='#FF58B0',GradientType=0); }
+
+#header .logo {
+  background: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAAC0lEQVQIW2NkAAIAAAoAAggA9GkAAAAASUVORK5CYII=) repeat; }
+
+#header-menu {
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#333333', endColorstr='#1f1f1f', GradientType=0 ); }
+
+#ranking header {
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#F960B2', endColorstr='#F64398', GradientType=0 ); }
+
+.pager .button a {
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#333333', endColorstr='#1f1f1f', GradientType=0 ); }
+  .pager .button a:hover {
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#1f1f1f', endColorstr='#333333', GradientType=0 ); }
+
+.ie6 #commentlist .comment {
+  min-height: 48px;
+  height: auto !important;
+  height: 48px; }
+.ie6 #header .logo {
+  background: url(../images/ie6-header-fix.gif) repeat; }
+.ie6 #river-news article {
+  min-height: 198px;
+  height: auto !important;
+  height: 198px; }
