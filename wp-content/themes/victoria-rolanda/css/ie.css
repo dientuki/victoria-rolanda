@@ -12,6 +12,11 @@ form .submit {
 #ranking header {
   filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#F960B2', endColorstr='#F64398', GradientType=0 ); }
 
+.search-box .submit {
+  filter: none; }
+  .search-box .submit:hover {
+    filter: none; }
+
 .pager .button a {
   filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#333333', endColorstr='#1f1f1f', GradientType=0 ); }
   .pager .button a:hover {

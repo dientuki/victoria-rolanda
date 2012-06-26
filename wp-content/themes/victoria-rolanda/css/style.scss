@@ -350,33 +350,6 @@ footer .only-next .next {
 	   text-indent: -999em;
 	 }
 	}
-	
-	.field {
-	  padding:1px 22px 1px 3px;
-	  @include border_radius(7px);
-	  border:solid 2px $pink;
-	  width: 196px;
-	}
-	
-	.submit {
-    /*
-	  height: 24px;
-	  line-height: 24px;
-	  */
-	  width: 19px;
-	  height: 19px;
-	  background: $main-sprite no-repeat 0 -105px;
-	  text-indent: -999em;
-	  position: absolute;
-	  right: 3px;
-	  top:3px;
-	  padding: 0;
-	}
-	
-	label {
-	  display:none;
-	  visibility: hidden;
-	}
 }
 
 #header-menu {
@@ -1118,6 +1091,33 @@ footer .only-next .next {
 	.next {
 	  float:right;
 	}
+}
+
+.search-form {
+	
+  .field {
+    padding:1px 22px 1px 3px;
+    @include border_radius(7px);
+    border:solid 2px $pink;
+    width: 196px;
+  }
+  
+  .submit {
+    width: 19px;
+    height: 19px;
+    background: $main-sprite no-repeat 0 -105px;
+    text-indent: -999em;
+    position: absolute;
+    right: 3px;
+    top:3px;
+    padding: 0;
+  }
+  
+  label {
+    display:none;
+    visibility: hidden;
+  }	
+	
 }
 
 

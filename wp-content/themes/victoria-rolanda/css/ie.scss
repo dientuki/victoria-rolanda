@@ -24,6 +24,17 @@ form {
   }
 }
 
+.search-box {
+
+  .submit {
+    filter:none;
+    
+    &:hover {
+      filter:none;
+    }
+  }	
+}
+
 .pager {
   
   .button {
