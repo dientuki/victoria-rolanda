@@ -20,20 +20,6 @@ form .submit {
   -webkit-background-clip: padding-box;
   background-clip: padding-box;
   */
-  background: #ff58b0;
-  /* Old browsers */
-  background: -moz-linear-gradient(top, #ff58b0 0%, #ff3c95 100%);
-  /* FF3.6+ */
-  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #ff58b0), color-stop(100%, #ff3c95));
-  /* Chrome,Safari4+ */
-  background: -webkit-linear-gradient(top, #ff58b0 0%, #ff3c95 100%);
-  /* Chrome10+,Safari5.1+ */
-  background: -o-linear-gradient(top, #ff58b0 0%, #ff3c95 100%);
-  /* Opera 11.10+ */
-  background: -ms-linear-gradient(top, #ff58b0 0%, #ff3c95 100%);
-  /* IE10+ */
-  background: linear-gradient(top, #ff58b0 0%, #ff3c95 100%);
-  /* W3C */
   color: white;
   font-family: 'KGSkinnyLatteRegular', Arial;
   text-align: center;
@@ -45,21 +31,6 @@ form .submit {
   height: 25px;
   width: 100px;
   text-transform: uppercase; }
-  form .submit:hover {
-    background: #ff3c95;
-    /* Old browsers */
-    background: -moz-linear-gradient(top, #ff3c95 0%, #ff58b0 100%);
-    /* FF3.6+ */
-    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #ff3c95), color-stop(100%, #ff58b0));
-    /* Chrome,Safari4+ */
-    background: -webkit-linear-gradient(top, #ff3c95 0%, #ff58b0 100%);
-    /* Chrome10+,Safari5.1+ */
-    background: -o-linear-gradient(top, #ff3c95 0%, #ff58b0 100%);
-    /* Opera 11.10+ */
-    background: -ms-linear-gradient(top, #ff3c95 0%, #ff58b0 100%);
-    /* IE10+ */
-    background: linear-gradient(top, #ff3c95 0%, #ff58b0 100%);
-    /* W3C */ }
 
 footer .only-next .next {
   width: 100%; }
@@ -98,6 +69,39 @@ footer .only-next .next {
   text-transform: uppercase;
   font-family: 'KGSkinnyLatteRegular', Arial;
   text-transform: uppercase; }
+
+#comment-form .submit,
+.wp-polls-ans .submit {
+  background: #ff58b0;
+  /* Old browsers */
+  background: -moz-linear-gradient(top, #ff58b0 0%, #ff3c95 100%);
+  /* FF3.6+ */
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #ff58b0), color-stop(100%, #ff3c95));
+  /* Chrome,Safari4+ */
+  background: -webkit-linear-gradient(top, #ff58b0 0%, #ff3c95 100%);
+  /* Chrome10+,Safari5.1+ */
+  background: -o-linear-gradient(top, #ff58b0 0%, #ff3c95 100%);
+  /* Opera 11.10+ */
+  background: -ms-linear-gradient(top, #ff58b0 0%, #ff3c95 100%);
+  /* IE10+ */
+  background: linear-gradient(top, #ff58b0 0%, #ff3c95 100%);
+  /* W3C */ }
+  #comment-form .submit:hover,
+  .wp-polls-ans .submit:hover {
+    background: #ff3c95;
+    /* Old browsers */
+    background: -moz-linear-gradient(top, #ff3c95 0%, #ff58b0 100%);
+    /* FF3.6+ */
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #ff3c95), color-stop(100%, #ff58b0));
+    /* Chrome,Safari4+ */
+    background: -webkit-linear-gradient(top, #ff3c95 0%, #ff58b0 100%);
+    /* Chrome10+,Safari5.1+ */
+    background: -o-linear-gradient(top, #ff3c95 0%, #ff58b0 100%);
+    /* Opera 11.10+ */
+    background: -ms-linear-gradient(top, #ff3c95 0%, #ff58b0 100%);
+    /* IE10+ */
+    background: linear-gradient(top, #ff3c95 0%, #ff58b0 100%);
+    /* W3C */ }
 
 #commentlist .bypostauthor {
   background: #f9adce;
@@ -219,7 +223,8 @@ footer .only-next .next {
     display: block;
     text-indent: -999em;
     position: relative;
-    z-index: 50; }
+    z-index: 50;
+    wiidth: 990px; }
   #header .header-image {
     position: absolute;
     left: 0;
@@ -453,7 +458,8 @@ footer .only-next .next {
       color: white;
       display: block;
       height: 34px;
-      line-height: 34px; }
+      line-height: 34px;
+      font-size: 16px; }
   #footer-carousel figure {
     width: 450px;
     height: 251px;
@@ -873,6 +879,10 @@ footer .only-next .next {
   .new .share .item {
     float: left;
     margin: 0 20px 0 0; }
+  .new .share .title {
+    overflow: visible; }
+  .new .share .fb {
+    width: 120px; }
 .new .tag-list {
   margin-bottom: 15px; }
   .new .tag-list h2 {
@@ -971,13 +981,14 @@ footer .only-next .next {
   visibility: hidden; }
 
 .share .item {
-  display: block; }
+  display: block;
+  height: 20px;
+  margin-bottom: 10px;
+  overflow: hidden; }
 .share .fb {
   width: 110px;
-  height: 20px;
   position: relative;
-  z-index: 50;
-  margin-bottom: 10px; }
+  z-index: 50; }
   .share .fb > div > span {
     width: 90px;
     height: 20px;
