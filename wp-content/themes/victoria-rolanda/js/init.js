@@ -20,7 +20,8 @@ $(document).ready(function() {
 	 * Switch for specifict content page
 	 */
 	switch ($('body').data('page'))	{
-		case 'home':			
+		case 'home':
+			/*
 			$('#featured-carousel').jCarouselLite({
 				btnNext: '.next',
 				btnPrev: '.prev',
@@ -30,7 +31,7 @@ $(document).ready(function() {
 				auto: $('#featured-carousel').data('auto') ? $('#featured-carousel').data('auto') : 5000,
 				speed: $('#featured-carousel').data('speed') ? $('#featured-carousel').data('speed') : 500
 			});
-			
+			*/
 			$('#footer-carousel').jCarouselLite({
 				btnNext: '.next',
 				btnPrev: '.prev',

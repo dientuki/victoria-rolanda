@@ -339,7 +339,8 @@ footer .only-next .next {
   #featured-carousel header {
     position: absolute;
     bottom: 0;
-    width: 660px; }
+    width: 660px;
+    z-index: 50; }
     #featured-carousel header a {
       color: white;
       font-family: 'KGSkinnyLatteRegular', Arial;
@@ -369,7 +370,8 @@ footer .only-next .next {
     height: 371px;
     position: absolute;
     top: 0;
-    background-color: white; }
+    background-color: white;
+    z-index: 20; }
     #featured-carousel figure img {
       width: 660px;
       height: 371px;

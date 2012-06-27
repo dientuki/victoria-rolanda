@@ -23,7 +23,7 @@
 	</script>	
 	
 	<script src="<?php bloginfo( 'template_url' ); ?>/js/libs/LAB-min.js"></script>
-	<script src="<?php bloginfo( 'template_url' ); ?>/js/lab-prod.js"></script>
+	<script src="<?php bloginfo( 'template_url' ); ?>/js/lab-dev.js"></script>
 	
 </body>
 </html>

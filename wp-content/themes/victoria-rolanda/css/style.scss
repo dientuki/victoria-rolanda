@@ -415,6 +415,7 @@ footer .only-next .next {
     position:absolute;
     bottom:0;
     width: $w;
+    z-index:50;
     
     a {
       color:white;
@@ -458,6 +459,7 @@ footer .only-next .next {
     position:absolute;
     top: 0;
     background-color:white;
+    z-index:20;
     
     img {
       width: $w;
