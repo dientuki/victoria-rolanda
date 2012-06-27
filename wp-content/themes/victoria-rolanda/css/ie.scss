@@ -50,6 +50,11 @@
     }
   }
   
+  #featured-carousel header h1,
+  #footer-carousel article header {
+    background: url(../images/ie6-carouselbg-fix.gif) repeat
+  }  
+  
   #logo {
     background: url(../images/ie6-header-fix.gif) repeat;
   }   
@@ -66,6 +71,7 @@
 
 .oldie {
 
+  /*
   #comment-form,
   .wp-polls-ans {
     
@@ -77,6 +83,14 @@
       }
     }
   }
+  */
+  
+  #featured-carousel header h1,
+  #footer-carousel article header {
+    background: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVQIW2NkYGBIAwAAcABoLkfeMwAAAABJRU5ErkJggg==) repeat;
+  }
+  
+  
  
   .button {
 

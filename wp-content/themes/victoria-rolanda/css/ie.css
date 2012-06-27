@@ -21,6 +21,9 @@
   min-height: 48px;
   height: auto !important;
   height: 48px; }
+.ie6 #featured-carousel header h1,
+.ie6 #footer-carousel article header {
+  background: url(../images/ie6-carouselbg-fix.gif) repeat; }
 .ie6 #logo {
   background: url(../images/ie6-header-fix.gif) repeat; }
 .ie6 #river-news article {
@@ -28,13 +31,24 @@
   height: auto !important;
   height: 198px; }
 
-.oldie #comment-form .submit,
-.oldie .wp-polls-ans .submit {
-  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#FF58B0',endColorstr='#FF3C95',GradientType=0); }
-  .oldie #comment-form .submit:hover,
-  .oldie .wp-polls-ans .submit:hover {
-    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#FF3C95',endColorstr='#FF58B0',GradientType=0); }
-.oldie .button a {
-  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#333333', endColorstr='#1f1f1f', GradientType=0 ); }
-  .oldie .button a:hover {
-    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#1f1f1f', endColorstr='#333333', GradientType=0 ); }
+.oldie {
+  /*
+  #comment-form,
+  .wp-polls-ans {
+    
+    .submit {
+      filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#FF58B0',endColorstr='#FF3C95',GradientType=0);
+      
+      &:hover {
+        filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#FF3C95',endColorstr='#FF58B0',GradientType=0);
+      }
+    }
+  }
+  */ }
+  .oldie #featured-carousel header h1,
+  .oldie #footer-carousel article header {
+    background: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVQIW2NkYGBIAwAAcABoLkfeMwAAAABJRU5ErkJggg==) repeat; }
+  .oldie .button a {
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#333333', endColorstr='#1f1f1f', GradientType=0 ); }
+    .oldie .button a:hover {
+      filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#1f1f1f', endColorstr='#333333', GradientType=0 ); }

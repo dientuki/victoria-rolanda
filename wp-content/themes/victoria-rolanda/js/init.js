@@ -69,7 +69,7 @@ $(document).ready(function() {
 	});	
 	
 	if(!Modernizr.input.placeholder){
-
+		
 		$('[placeholder]').focus(function() {
 		  var input = $(this);
 		  if (input.val() == input.attr('placeholder')) {
