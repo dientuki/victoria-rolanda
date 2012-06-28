@@ -2,8 +2,8 @@
 /*
 +----------------------------------------------------------------+
 |																							|
-|	WordPress 2.8 Plugin: WP-PostViews 1.60	 								|
-|	Copyright (c) 2009 Lester "GaMerZ" Chan									|
+|	WordPress Plugin: WP-PostViews	 								|
+|	Copyright (c) 2012 Lester "GaMerZ" Chan									|
 |																							|
 |	File Written By:																	|
 |	- Lester "GaMerZ" Chan															|
@@ -20,8 +20,8 @@
 ### Variables Variables Variables
 $base_name = plugin_basename('wp-postviews/postviews-options.php');
 $base_page = 'admin.php?page='.$base_name;
-$id = intval($_GET['id']);
-$mode = trim($_GET['mode']);
+$id = (isset($_GET['id']) ? intval($_GET['id']) : 0);
+$mode = (isset($_GET['mode']) ? trim($_GET['mode']) : '');
 $views_settings = array('views_options', 'widget_views_most_viewed', 'widget_views');
 $views_postmetas = array('views');
 

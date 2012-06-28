@@ -3,7 +3,7 @@ Contributors: GamerZ
 Donate link: http://lesterchan.net/site/donation/
 Tags: views, hits, counter, postviews
 Requires at least: 2.8
-Tested up to: 3.3.1
+Tested up to: 3.3.2
 Stable tag: trunk
 
 Enables you to display how many times a post/page had been viewed.
@@ -35,6 +35,9 @@ Enables you to display how many times a post/page had been viewed.
 * I spent most of my free time creating, updating, maintaining and supporting these plugins, if you really love my plugins and could spare me a couple of bucks, I will really appericiate it. If not feel free to use it without any obligations.
 
 == Changelog ==
+= Version 1.61 (21-05-2012) =
+* Move AJAX Request to wp-admin/admin-ajax.php
+
 = Version 1.60 (18-02-2011) =
 * NEW: Added Views Count To Edit Posts Screen
 * FIXED: Removed Global $post
