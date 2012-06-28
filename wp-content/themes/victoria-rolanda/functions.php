@@ -73,9 +73,46 @@ function is_new($id) {
 	}
 }
 
+/*
 function time_ago( $type = 'post' ) {
 	$d = 'comment' == $type ? 'get_comment_time' : 'get_post_time';
 
 	return 'hace ' . human_time_diff($d('U'), current_time('timestamp'));
 
+}
+*/
+
+function time_ago( $type = 'post' ) {
+	$period         = array("segundo", "minuto", "hora", "día", "semana", "mes", "año", "decada");
+	$periods         = array("segundos", "minutos", "horas", "dias", "semanas", "meses", "años", "decadas");
+	$lengths         = array("60","60","24","7","4.35","12","10");
+
+	$d = 'comment' == $type ? 'get_comment_time' : 'get_post_time';
+	
+	$now = time();
+	$date = $d('U');
+
+	// is it future date or past date
+	if($now > $date) {
+		$difference     = $now - $date;
+		//$tense         = "ago";
+		 
+	} else {
+		$difference     = $date - $now;
+		//$tense         = "from now";
+	}
+	 
+	for($j = 0; $difference >= $lengths[$j] && $j < count($lengths)-1; $j++) {
+		$difference /= $lengths[$j];
+	}
+	 
+	$difference = round($difference);
+	 
+	if($difference != 1) {
+		$pe = $periods[$j];
+	} else {
+		$pe = $period[$j];
+	}
+	 
+	return "hace $difference $pe";
 }

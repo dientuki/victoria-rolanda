@@ -33,18 +33,27 @@
 	<meta property="og:title" content="<?php echo $title; ?>" />
 	
 	<?php if (is_single() || is_page()): ?>
-	<meta property="og:type" content="article" />
-	<meta property="og:description" content="<?php the_excerpt_rss(); ?>" />
-	<meta property="description" content="<?php the_excerpt_rss(); ?>" />
-	<meta property="og:url" content="<?php the_permalink(); ?>" />
+		<meta property="og:type" content="article" />
+		<meta property="og:description" content="<?php the_excerpt_rss(); ?>" />
+		<meta property="description" content="<?php the_excerpt_rss(); ?>" />
+		<meta property="og:url" content="<?php the_permalink(); ?>" />
+		<?php if (has_post_thumbnail()): ?>
+			<meta property="og:image" content="<?php echo wp_get_attachment_thumb_url(get_post_thumbnail_id( $post->ID ))?>" />
+		<?php else: ?>
+			<meta property="og:image" content="<?php bloginfo( 'template_url' ); ?>/images/logo.png" />
+		<?php endif;?>
+	
 	<?php else: ?>
-	<meta property="og:type" content="website" />
-	<meta property="og:description" content="<?php bloginfo( 'description'); ?>" />
-	<meta property="description" content="<?php bloginfo( 'description'); ?>" />
-	<meta property="og:url" content="http://<?php echo $_SERVER["SERVER_NAME"] .$_SERVER["REQUEST_URI"] ?>" />
+		<meta property="og:type" content="website" />
+		<meta property="og:description" content="<?php bloginfo( 'description'); ?>" />
+		<meta property="description" content="<?php bloginfo( 'description'); ?>" />
+		<meta property="og:url" content="http://<?php echo $_SERVER["SERVER_NAME"] .$_SERVER["REQUEST_URI"] ?>" />
+		<meta property="og:image" content="<?php bloginfo( 'template_url' ); ?>/images/logo.png" />
 	<?php endif;?>
 	
-	<meta property="og:image" content="<?php bloginfo( 'template_url' ); ?>/images/logo.png" />
+	
+	
+	
 	<meta property="og:site_name" content="Victoria Rolanda" />
 	<meta property="og:region" content="Buenos Aires" />
 	<meta property="og:country-name" content="Argentina"/>
