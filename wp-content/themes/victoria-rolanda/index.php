@@ -10,6 +10,12 @@
     	<span class="category"><?php single_cat_title(); ?></span>
     </header>
     <?php endif; ?>
+    
+    <?php if (is_search()):?>
+    <header class="section">
+    	<span class="category">Busqueda</span>
+    </header>
+    <?php endif; ?>    
     	    
 		<?php get_template_part('river-news') ?>
     <?php get_sidebar('left'); ?>
