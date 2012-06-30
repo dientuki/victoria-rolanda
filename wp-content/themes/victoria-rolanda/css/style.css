@@ -248,7 +248,7 @@ footer .only-next .next {
   #header-box .follow-us {
     float: left;
     height: 25px;
-    margin-right: 10px; }
+    margin-right: 5px; }
     #header-box .follow-us .title {
       width: auto;
       line-height: 25px; }
@@ -518,7 +518,20 @@ footer .only-next .next {
   #pov ul li {
     width: 50%;
     float: left;
-    margin-bottom: 15px; }
+    margin-bottom: 15px;
+    position: relative; }
+  #pov .has-new {
+    background: url(../images/notif.png) no-repeat;
+    display: inline-block;
+    height: 18px;
+    position: absolute;
+    top: -10px;
+    width: 21px;
+    color: white;
+    font-size: 12px;
+    text-align: center;
+    line-height: 13px;
+    font-weight: bold; }
 
 #ranking {
   padding-bottom: 10px; }

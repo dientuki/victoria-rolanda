@@ -67,10 +67,12 @@ function is_new($id) {
 	$post_time = get_the_time('U', $id);
 	$now = time();
 	$diff = $now - $post_time;
-	//echo $now . '---' . $post_time .'---' . date('j', $diff);
-	if (date('j', $diff) <= 7 ) {
-		return 'has-new';
+	$day = (60*60*24)*7;
+	if ($diff <= $day ) {
+		return true;
 	}
+	
+	return false;
 }
 
 /*

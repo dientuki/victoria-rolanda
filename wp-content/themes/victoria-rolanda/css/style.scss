@@ -307,7 +307,7 @@ footer .only-next .next {
 	.follow-us {
 	 float:left;
 	 height: $h;
-	 margin-right:10px;
+	 margin-right:5px;
 	 
 	 .title {
 	   width: auto;
@@ -619,7 +619,7 @@ footer .only-next .next {
 	  font-size: 17px;
 	  line-height:17px;
     font-family: 'KGSkinnyLatteRegular', Arial;
-    text-transform: uppercase;  	  
+    text-transform: uppercase;  
 	  
 	  &:hover {
 	    color:white;
@@ -632,6 +632,21 @@ footer .only-next .next {
 	  width: 50%;
 	  float:left;
 	  margin-bottom: 15px;
+	  position: relative;
+	}
+	
+	.has-new{
+	  background: url(../images/notif.png) no-repeat;
+    display: inline-block;
+    height: 18px;
+    position: absolute;
+    top: -10px;
+    width: 21px;	 
+    color:white;
+    font-size: 12px;
+    text-align: center;
+    line-height: 13px;
+    font-weight: bold;
 	}
 
 }
