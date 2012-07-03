@@ -813,6 +813,10 @@ footer .only-next .next {
   
 }
 
+#respond h3{
+	@extend #comments .comments-title;
+}
+
 #river-news {
 	width: 450px;
 	float:right;
