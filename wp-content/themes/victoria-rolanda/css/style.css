@@ -119,37 +119,40 @@ footer .only-next .next {
     background: linear-gradient(top, #ff3c95 0%, #ff58b0 100%);
     /* W3C */ }
 
-#comment-form fieldset label {
-  float: left;
-  width: 100px;
-  height: 25px;
-  line-height: 25px; }
-#comment-form fieldset li {
-  height: 25px;
-  margin-bottom: 5px; }
-#comment-form fieldset input {
-  float: left;
-  width: 400px;
-  margin-right: 2px;
-  font-size: 14px;
-  height: 19px;
-  line-height: 19px; }
-#comment-form fieldset textarea {
-  font-size: 14px;
-  width: 549px;
-  resize: none;
-  height: 105px;
-  overflow: visible; }
-#comment-form fieldset .required {
-  float: left;
-  font-size: 14px;
-  color: red;
-  font-weight: bold; }
-#comment-form fieldset .textarea {
-  height: 111px; }
-#comment-form .comment-notes {
-  display: none;
-  visibility: hidden; }
+#comment-form {
+  margin-top: 5px; }
+  #comment-form fieldset label {
+    float: left;
+    width: 110px;
+    height: 25px;
+    line-height: 25px;
+    margin-right: 10px; }
+  #comment-form fieldset li {
+    height: 25px;
+    margin-bottom: 10px; }
+  #comment-form fieldset input {
+    float: left;
+    width: 520px;
+    margin-right: 2px;
+    font-size: 14px;
+    height: 19px;
+    line-height: 19px; }
+  #comment-form fieldset textarea {
+    font-size: 14px;
+    width: 520px;
+    resize: none;
+    height: 105px;
+    overflow: visible; }
+  #comment-form fieldset .required {
+    float: left;
+    font-size: 14px;
+    color: red;
+    font-weight: bold; }
+  #comment-form fieldset .textarea {
+    height: 111px; }
+  #comment-form .comment-notes {
+    display: none;
+    visibility: hidden; }
 
 #commentlist .bypostauthor {
   background: #f9adce;

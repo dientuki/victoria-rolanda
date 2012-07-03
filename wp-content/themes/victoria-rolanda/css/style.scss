@@ -108,22 +108,26 @@ footer .only-next .next {
 
 #comment-form {
 	
+	margin-top:5px;
+	
 	fieldset {
 	$h:25px;
+	$w:520px;
 	
 	  label {
 	   float:left;
-	   width: 100px;
+	   width: 110px;
 	   height:$h;
 	   line-height:$h;
+	   margin-right: 10px;
 	  }
 	  li {
 	    height:$h;
-	    margin-bottom: 5px;
+	    margin-bottom: 10px;
 	  }
 	  input {
 	    float:left;
-	    width: 400px;
+	    width:$w;
 	    margin-right: 2px;
 	    font-size: 14px;
 	    height: 19px;
@@ -131,7 +135,7 @@ footer .only-next .next {
 	  }
 	  textarea {
 	    font-size: 14px;
-	    width: 549px;
+	    width:$w;
 	    resize:none;
 	    height:105px;
 	    overflow: visible;
