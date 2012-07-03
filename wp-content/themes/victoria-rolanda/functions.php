@@ -118,3 +118,17 @@ function time_ago( $type = 'post' ) {
 	 
 	return "hace $difference $pe";
 }
+
+
+add_filter('comment_form_default_fields', 'comments_fields');
+function comments_fields($fields) {
+	
+	$commenter = wp_get_current_commenter();
+	$req = get_option( 'require_name_email' );
+	$aria_req = ( $req ? " aria-required='true'" : '' );
+		
+	$fields['author'] = '<li class="clearfix"><label for="author">Nombre:</label><input id="author" class="field" name="author" type="text" value="' . esc_attr( $commenter['comment_author'] ) . '" size="30"' . $aria_req . ' />' . ( $req ? '<span class="required">*</span>' : '' ) . '</li>';	
+	$fields['email'] = '<li class="clearfix"><label for="email">Email:</label><input id="email" class="field" name="email" type="text" value="' . esc_attr(  $commenter['comment_author_email'] ) . '" size="30"' . $aria_req . ' />' . ( $req ? '<span class="required">*</span>' : '' ) . '</li>';
+	$fields['url'] = '';
+	return $fields;
+}

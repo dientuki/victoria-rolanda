@@ -26,7 +26,8 @@ article {
 
 form {
 	
-	.submit {
+	.submit,
+	#submit {
     @include border_radius(7px);
     color:white;
     font-family: 'KGSkinnyLatteRegular', Arial;
@@ -40,7 +41,12 @@ form {
     height: 25px;
     width:100px;
     text-transform: uppercase;    
- 
+	}
+	
+	.field {
+    @include border_radius(7px);
+    border:solid 2px $pink;
+    padding:1px 3px;
 	}
 }
 
@@ -90,13 +96,67 @@ footer .only-next .next {
 
 #comment-form,
 .wp-polls-ans {
-  .submit {
+  .submit,
+  #submit {
     @include gradient_cross(#FF58B0,#FF3C95);
     
     &:hover {
       @include gradient_cross(#FF3C95,#FF58B0);
     }
   }
+}
+
+#comment-form {
+	
+	fieldset {
+	$h:25px;
+	
+	  label {
+	   float:left;
+	   width: 100px;
+	   height:$h;
+	   line-height:$h;
+	  }
+	  li {
+	    height:$h;
+	    margin-bottom: 5px;
+	  }
+	  input {
+	    float:left;
+	    width: 400px;
+	    margin-right: 2px;
+	    font-size: 14px;
+	    height: 19px;
+	    line-height: 19px;
+	  }
+	  textarea {
+	    font-size: 14px;
+	    width: 549px;
+	    resize:none;
+	    height:105px;
+	    overflow: visible;
+	  }
+	  
+	  .required {
+	    float:left;
+	    font-size: 14px;
+	    color:red;
+	    font-weight: bold;
+	  }
+	  
+	  .textarea {
+	     height:111px;
+	  }
+	}
+	
+	#submit {
+	
+	}
+	
+	.comment-notes {
+	  display:none;
+	  visibility: hidden;
+	}
 }
 
 #commentlist {
@@ -1153,10 +1213,8 @@ footer .only-next .next {
   position:relative;
 	
   .field {
-    padding:1px 22px 1px 3px;
-    @include border_radius(7px);
-    border:solid 2px $pink;
     width: 196px;
+    padding:1px 22px 1px 3px;
   }
   
   .submit {

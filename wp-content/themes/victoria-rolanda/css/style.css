@@ -11,7 +11,8 @@ article .entry-content {
   article .entry-content p {
     margin: 0; }
 
-form .submit {
+form .submit,
+form #submit {
   -webkit-border-radius: 7px;
   -moz-border-radius: 7px;
   border-radius: 7px;
@@ -31,6 +32,17 @@ form .submit {
   height: 25px;
   width: 100px;
   text-transform: uppercase; }
+form .field {
+  -webkit-border-radius: 7px;
+  -moz-border-radius: 7px;
+  border-radius: 7px;
+  /*
+  -moz-background-clip: padding;
+  -webkit-background-clip: padding-box;
+  background-clip: padding-box;
+  */
+  border: solid 2px #ff58b0;
+  padding: 1px 3px; }
 
 footer .only-next .next {
   width: 100%; }
@@ -71,7 +83,9 @@ footer .only-next .next {
   text-transform: uppercase; }
 
 #comment-form .submit,
-.wp-polls-ans .submit {
+#comment-form #submit,
+.wp-polls-ans .submit,
+.wp-polls-ans #submit {
   background: #ff58b0;
   /* Old browsers */
   background: -moz-linear-gradient(top, #ff58b0 0%, #ff3c95 100%);
@@ -87,7 +101,9 @@ footer .only-next .next {
   background: linear-gradient(top, #ff58b0 0%, #ff3c95 100%);
   /* W3C */ }
   #comment-form .submit:hover,
-  .wp-polls-ans .submit:hover {
+  #comment-form #submit:hover,
+  .wp-polls-ans .submit:hover,
+  .wp-polls-ans #submit:hover {
     background: #ff3c95;
     /* Old browsers */
     background: -moz-linear-gradient(top, #ff3c95 0%, #ff58b0 100%);
@@ -102,6 +118,38 @@ footer .only-next .next {
     /* IE10+ */
     background: linear-gradient(top, #ff3c95 0%, #ff58b0 100%);
     /* W3C */ }
+
+#comment-form fieldset label {
+  float: left;
+  width: 100px;
+  height: 25px;
+  line-height: 25px; }
+#comment-form fieldset li {
+  height: 25px;
+  margin-bottom: 5px; }
+#comment-form fieldset input {
+  float: left;
+  width: 400px;
+  margin-right: 2px;
+  font-size: 14px;
+  height: 19px;
+  line-height: 19px; }
+#comment-form fieldset textarea {
+  font-size: 14px;
+  width: 549px;
+  resize: none;
+  height: 105px;
+  overflow: visible; }
+#comment-form fieldset .required {
+  float: left;
+  font-size: 14px;
+  color: red;
+  font-weight: bold; }
+#comment-form fieldset .textarea {
+  height: 111px; }
+#comment-form .comment-notes {
+  display: none;
+  visibility: hidden; }
 
 #commentlist .bypostauthor {
   background: #f9adce;
@@ -989,17 +1037,8 @@ footer .only-next .next {
 .search-form {
   position: relative; }
   .search-form .field {
-    padding: 1px 22px 1px 3px;
-    -webkit-border-radius: 7px;
-    -moz-border-radius: 7px;
-    border-radius: 7px;
-    /*
-    -moz-background-clip: padding;
-    -webkit-background-clip: padding-box;
-    background-clip: padding-box;
-    */
-    border: solid 2px #ff58b0;
-    width: 196px; }
+    width: 196px;
+    padding: 1px 22px 1px 3px; }
   .search-form .submit {
     width: 19px;
     height: 19px;
