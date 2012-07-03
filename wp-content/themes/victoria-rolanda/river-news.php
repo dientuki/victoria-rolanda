@@ -19,9 +19,9 @@
 			  <article class="hnews">
 			    <header>
 			    	<?php if (is_home()):?>
-			      	<div class="category"><a href="<?php bloginfo( 'url' ); ?>/category/<?php echo $category[0]->category_nicename; ?>" title="<?php echo $category[0]->cat_name; ?>"><?php echo $category[0]->cat_name; ?></a></div>
+			      	<div class="category"><a href="<?php bloginfo( 'url' ); ?>/category/<?php echo $category[0]->category_nicename; ?>" title='<?php echo $category[0]->cat_name; ?>'><?php echo $category[0]->cat_name; ?></a></div>
 			      <?php endif; ?>
-			      <h1 class="entry-title"><a href="<?php the_permalink(); ?>" title="<?php the_title_attribute(); ?>" rel="bookmark"><?php the_title(); ?></a></h1>
+			      <h1 class="entry-title"><a href="<?php the_permalink(); ?>" title='<?php the_title_attribute(); ?>' rel="bookmark"><?php the_title(); ?></a></h1>
 			    </header>
 			
 			    <div class="entry-content">
@@ -31,12 +31,12 @@
 			    <div class="hmedia">
 			    	<figure>
 				    <?php if (has_post_thumbnail()): ?>	      
-				        <a href="<?php the_permalink(); ?>" title="<?php the_title_attribute(); ?>">
+				        <a href="<?php the_permalink(); ?>" title='<?php the_title_attribute(); ?>'>
 				          <?php the_post_thumbnail('thumbnail'); ?>
 				        </a>
 				    <?php else:?>
-				    	<a href="<?php the_permalink(); ?>" title="<?php the_title_attribute(); ?>">
-				    		<img src="<?php bloginfo( 'template_url' ); ?>/images/post-default.jpg" width="100" height="100" title="<?php the_title_attribute(); ?>" alt="<?php the_title_attribute(); ?>" />
+				    	<a href="<?php the_permalink(); ?>" title='<?php the_title_attribute(); ?>'>
+				    		<img src="<?php bloginfo( 'template_url' ); ?>/images/post-default.jpg" width="100" height="100" title='<?php the_title_attribute(); ?>' alt='<?php the_title_attribute(); ?>' />
 				    	</a>	    
 				    <?php endif; ?>
 				    	<figcaption class="hidden"><?php the_title(); ?></figcaption>

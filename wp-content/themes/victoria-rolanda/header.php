@@ -94,7 +94,7 @@
 		<?php else: ?>
 		  <img class="header-image" src="<?php echo bloginfo( 'template_url' ) . '/images/header-vr.jpg' ?>" width="990" height="190" alt="<?php bloginfo( 'name' ); ?>" />
 		<?php endif; ?>
-		<a id="logo" href="<?php echo home_url( '/' ); ?>" title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a>
+		<a id="logo" href="<?php echo home_url( '/' ); ?>" title='<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>' rel="home"><?php bloginfo( 'name' ); ?></a>
 		<div class="tagline hidden"><?php bloginfo( 'description' ); ?></div>
 		<?php wp_nav_menu( array( 'theme_location' => 'header',
 		                          'container' => 'nav', 'container_id' => 'header-menu', 'container_class' => '',

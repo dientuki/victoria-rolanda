@@ -14,7 +14,7 @@
 				<?php $query->the_post(); ?>
 					<article>
 						<header>
-							<h1><a rel="bookmark" href="<?php the_permalink() ?>" title="<?php the_title_attribute(); ?>"><?php echo the_title(); ?></a></h1>
+							<h1><a rel="bookmark" href="<?php the_permalink() ?>" title='<?php the_title_attribute(); ?>'><?php echo the_title(); ?></a></h1>
 							<div class="dropline"><?php the_excerpt(); ?></div>
 						</header>
 						<?php if (has_post_thumbnail()): ?>

@@ -531,7 +531,8 @@ footer .only-next .next {
     font-size: 12px;
     text-align: center;
     line-height: 13px;
-    font-weight: bold; }
+    font-weight: bold;
+    cursor: help; }
 
 #ranking {
   padding-bottom: 10px; }

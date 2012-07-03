@@ -20,11 +20,11 @@ $query = new WP_Query($args);
 			<article class="item item-<?php echo $i ?>" >
 				<?php if (has_post_thumbnail()): ?>
 					<figure>
-						<a href="<?php the_permalink() ?>" title="<?php the_title_attribute(); ?>"><?php the_post_thumbnail('related'); ?></a>
+						<a href="<?php the_permalink() ?>" title='<?php the_title_attribute(); ?>'><?php the_post_thumbnail('related'); ?></a>
 						<figcaption class="hidden"><?php echo the_title(); ?></figcaption>
 					</figure>
 				<?php endif; ?>
-				<h1><a href="<?php the_permalink() ?>" rel="bookmark" title="<?php the_title_attribute(); ?>"><?php the_title(); ?></a></h1>
+				<h1><a href="<?php the_permalink() ?>" rel="bookmark" title='<?php the_title_attribute(); ?>'><?php the_title(); ?></a></h1>
 			</article>
 			<?php if ($i%4 == 0) $i = 1; ?>
 			<?php $i++; ?>
