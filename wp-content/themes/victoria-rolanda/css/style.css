@@ -74,7 +74,7 @@ footer .only-next .next {
       padding: 0 5px;
       font-size: 18px; }
 
-#comments .comments-title {
+#comments .comments-title, #comments #respond h3, #respond #comments h3 {
   height: 40px;
   line-height: 40px;
   font-size: 25px;

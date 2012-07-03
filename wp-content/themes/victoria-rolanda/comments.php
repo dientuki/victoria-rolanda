@@ -83,7 +83,7 @@
 		$comment_config['comment_notes_before'] = '<fieldset><ul>';
 		$comment_config['id_form'] = 'comment-form';
 		$comment_config['comment_field'] = '<li class="textarea"><label for="comment">Comentario:</label><textarea id="comment" name="comment" class="field" aria-required="true"></textarea></li>';
-		$comment_config['title_reply'] = 'Escribir un comentario';
+		$comment_config['title_reply'] = 'Escribe un comentario';
 		//$comment_config['logged_in_as'] = '<p class="logged-in-as">' . sprintf( __( 'Logged in as <a href="%1$s">%2$s</a>. <a href="%3$s" title="Log out of this account">Log out?</a>' ), admin_url( 'profile.php' ), $user_identity, wp_logout_url( apply_filters( 'the_permalink', get_permalink( $post_id ) ) ) ) . '</p>';
 		
 	?>
