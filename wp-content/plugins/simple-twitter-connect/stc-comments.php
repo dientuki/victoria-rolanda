@@ -168,9 +168,9 @@ add_action('wp_ajax_nopriv_stc_comm_get_display', 'stc_comm_get_display');
 function stc_comm_get_display() {
 	$tw = stc_get_credentials();
 	if ($tw) {
-		echo "<div id='tw-user'>".
-			     "<img src='".$tw->profile_image_url."' width='48' height='48' alt='".$tw->screen_name."' title='".$tw->screen_name."' />".
-			     "<div class='user-info'>". $tw->screen_name . "<a href='?stc-logout=1'>Salir</a></div>".
+		echo "<div id='tw-user' class='social-conect'>".
+			     "<img class='avatar' src='".$tw->profile_image_url."' width='48' height='48' alt='".$tw->screen_name."' title='".$tw->screen_name."' />".
+			     "<div class='user-info'><span clas='user'>". $tw->screen_name . "</span> &middot; <a class='logout' href='?stc-logout=1'>Salir</a></div>".
 			   "</div>";
 		exit;
 	}

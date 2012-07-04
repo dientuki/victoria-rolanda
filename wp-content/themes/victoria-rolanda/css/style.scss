@@ -26,6 +26,10 @@ article {
 
 form {
 	
+	fieldset {
+	  position:relative;
+	}
+	
 	.submit,
 	#submit {
     @include border_radius(7px);
@@ -150,17 +154,33 @@ footer .only-next .next {
 	  
 	  .textarea {
 	     height:111px;
+	     margin-bottom: 0;
 	  }
 	}
 	
 	#submit {
-	
+	  width: 150px;
 	}
 	
 	.comment-notes {
 	  display:none;
 	  visibility: hidden;
 	}
+	
+  .fade {
+    display: none;
+    width: 100%;
+    height: 100%;
+    background: white;
+    position: absolute;
+    left: 0;
+    top: 0;
+    z-index: 50;
+  }
+  
+  .form-submit {
+    margin-bottom: 0;
+  }	
 }
 
 #commentlist {
@@ -818,7 +838,13 @@ footer .only-next .next {
 }
 
 #respond h3{
-	@extend .comments-title;
+    $h:40px;
+    height:$h;
+    line-height:$h;
+    font-size:25px;
+    text-transform:uppercase;     
+    font-family: 'KGSkinnyLatteRegular', Arial;
+    text-transform: uppercase; 
 }
 
 #river-news {
@@ -972,6 +998,11 @@ footer .only-next .next {
       text-align:center; 
 	  }
 	}
+}
+
+#stc_comm_send {
+	display: none;
+	visibility: hidden;
 }
 
 #poll {
@@ -1294,7 +1325,42 @@ footer .only-next .next {
 	.tw {}
 	.gplus {}
 	.pt {}
-}  
+}
+
+.social-conect {
+	position:relative;
+	margin-bottom:10px;
+	
+	.avatar {
+    @include border_radius(5px);
+    overflow: hidden;
+    width: 48px;
+    height: 48px;
+    position: absolute;
+    left:0;	  
+	}
+	
+  .user-info {
+    margin-left: 58px;
+  }	
+  
+  .logout {
+   color: $black80;
+    font-size: 14px;
+  }
+}
+
+.social-conected {
+	label {
+	  display:none;
+	  visibility: hidden;
+	}
+	
+	textarea {
+    margin-left: 58px;
+    width: 590px !important; 
+	}
+}
 
 .wrapper {
 	width: 990px;

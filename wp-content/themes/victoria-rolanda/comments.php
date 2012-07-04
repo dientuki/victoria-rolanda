@@ -79,7 +79,7 @@
 	<?php 
 		$comment_config = array();
 		$comment_config['label_submit'] = 'Comentar!';	
-		$comment_config['comment_notes_before'] = '<fieldset>';
+		$comment_config['comment_notes_before'] = '<fieldset><div class="fade"></div>';
 		$comment_config['comment_notes_after'] = '</fieldset>';
 		$comment_config['id_form'] = 'comment-form';
 		$comment_config['comment_field'] = '<div class="item textarea"><label for="comment">Comentario:</label><textarea id="comment" name="comment" class="field" aria-required="true"></textarea></div>';

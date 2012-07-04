@@ -47,7 +47,18 @@ $(document).ready(function() {
 			var data = { action: 'stc_comm_get_display'	}
 			$.post(ajax_url, data, function(response) {
 				if (response != '0' && response != 0) {
-					$('#comment-user-details').hide().after(response);
+					var $fieldset = $('#comment-form fieldset');
+					var $fade = $('#comment-form .fade')
+					$fieldset.css('height', $fieldset.height());
+					$fade.fadeIn('fast', function(){
+
+						$('#comment-user-details').hide().after(response);
+						$fieldset.addClass('social-conected');
+						$fieldset.animate({height: '138px'}, 750);
+						$fade.fadeOut(750);									
+						
+					});
+
 				}
 			});			
 		break;
