@@ -42,6 +42,15 @@ $(document).ready(function() {
 				speed: $('#footer-carousel').data('speed') ? $('#footer-carousel').data('speed') : 500
 			});
 		break;
+		case 'news':
+			var ajax_url = VR.base_path + '/wp-admin/admin-ajax.php';
+			var data = { action: 'stc_comm_get_display'	}
+			$.post(ajax_url, data, function(response) {
+				if (response != '0' && response != 0) {
+					$('#comment-user-details').hide().after(response);
+				}
+			});			
+		break;
 	}
 	
 	/**

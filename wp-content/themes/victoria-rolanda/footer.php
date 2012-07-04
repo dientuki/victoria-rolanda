@@ -19,11 +19,13 @@
 	
 	<script type="text/javascript" charset="utf-8">
 		var VR = {};
-		VR.BASE_PATH='<?php bloginfo( 'template_url' ); ?>';
+		VR.base_path = '<?php  bloginfo( 'wpurl' ) ?>';
+		VR.template_path='<?php bloginfo( 'template_url' ); ?>';
+		VR.anyware = 'LlXU5DCubrTtWpmdCtWxuQ';
 	</script>	
 	
 	<script src="<?php bloginfo( 'template_url' ); ?>/js/libs/LAB-min.js"></script>
-	<script src="<?php bloginfo( 'template_url' ); ?>/js/lab-min.js"></script>
+	<script src="<?php bloginfo( 'template_url' ); ?>/js/lab-dev.js"></script>
 	
 </body>
 </html>

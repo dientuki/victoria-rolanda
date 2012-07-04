@@ -168,11 +168,10 @@ add_action('wp_ajax_nopriv_stc_comm_get_display', 'stc_comm_get_display');
 function stc_comm_get_display() {
 	$tw = stc_get_credentials();
 	if ($tw) {
-		echo "<span id='tw-user'>".
-			 "<img src='http://api.twitter.com/1/users/profile_image/".$tw->screen_name."?size=bigger' width='96' height='96' />".
-			 "<span id='tw-msg'><strong>Hi ".$tw->name."!</strong><br />You are connected with your Twitter account. ".
-			 "<a href='?stc-logout=1'>Logout</a>".
-			 "</span></span>";
+		echo "<div id='tw-user'>".
+			     "<img src='".$tw->profile_image_url."' width='48' height='48' alt='".$tw->screen_name."' title='".$tw->screen_name."' />".
+			     "<div class='user-info'>". $tw->screen_name . "<a href='?stc-logout=1'>Salir</a></div>".
+			   "</div>";
 		exit;
 	}
 	
@@ -234,26 +233,26 @@ function stc_comm_login_button() {
 // this exists so that other plugins can hook into the same place to add their login buttons
 if (!function_exists('alt_login_method_div')) {
 
-add_action('alt_comment_login','alt_login_method_div',5,0);
-add_action('comment_form_before_fields', 'alt_login_method_div',5,0); // WP 3.0 support
-
-function alt_login_method_div() { echo '<div id="alt-login-methods">'; }
-
-add_action('alt_comment_login','alt_login_method_div_close',20,0);
-add_action('comment_form_before_fields', 'alt_login_method_div_close',20,0); // WP 3.0 support
-
-function alt_login_method_div_close() { echo '</div>'; }
+	add_action('alt_comment_login','alt_login_method_div',5,0);
+	add_action('comment_form_before_fields', 'alt_login_method_div',5,0); // WP 3.0 support
+	
+	function alt_login_method_div() { echo '<div id="alt-login-methods">'; }
+	
+	add_action('alt_comment_login','alt_login_method_div_close',20,0);
+	add_action('comment_form_before_fields', 'alt_login_method_div_close',20,0); // WP 3.0 support
+	
+	function alt_login_method_div_close() { echo '</div>'; }
 
 }
 
 // WP 3.0 support
 if (!function_exists('comment_user_details_begin')) {
 
-add_action('comment_form_before_fields', 'comment_user_details_begin',1,0);
-function comment_user_details_begin() { echo '<div id="comment-user-details">'; }
-
-add_action('comment_form_after_fields', 'comment_user_details_end',20,0);
-function comment_user_details_end() { echo '</div>'; }
+	add_action('comment_form_before_fields', 'comment_user_details_begin',1,0);
+	function comment_user_details_begin() { echo '<div id="comment-user-details">'; }
+	
+	add_action('comment_form_after_fields', 'comment_user_details_end',20,0);
+	function comment_user_details_end() { echo '</div>'; }
 
 }
 

@@ -127,8 +127,22 @@ function comments_fields($fields) {
 	$req = get_option( 'require_name_email' );
 	$aria_req = ( $req ? " aria-required='true'" : '' );
 		
-	$fields['author'] = '<li class="clearfix"><label for="author">Nombre:</label><input id="author" class="field" name="author" type="text" value="' . esc_attr( $commenter['comment_author'] ) . '" size="30"' . $aria_req . ' />' . ( $req ? '<span class="required">*</span>' : '' ) . '</li>';	
-	$fields['email'] = '<li class="clearfix"><label for="email">Email:</label><input id="email" class="field" name="email" type="text" value="' . esc_attr(  $commenter['comment_author_email'] ) . '" size="30"' . $aria_req . ' />' . ( $req ? '<span class="required">*</span>' : '' ) . '</li>';
+	$fields['author'] = '<div class="item clearfix"><label for="author">Nombre:</label><input id="author" class="field" name="author" type="text" value="' . esc_attr( $commenter['comment_author'] ) . '" size="30"' . $aria_req . ' />' . ( $req ? '<span class="required">*</span>' : '' ) . '</div>';	
+	$fields['email'] = '<div class="item clearfix"><label for="email">Email:</label><input id="email" class="field" name="email" type="text" value="' . esc_attr(  $commenter['comment_author_email'] ) . '" size="30"' . $aria_req . ' />' . ( $req ? '<span class="required">*</span>' : '' ) . '</div>';
 	$fields['url'] = '';
 	return $fields;
+}
+
+function get_data_page(){
+	if (is_single() || is_page()) {
+		return 'news';
+	}
+	
+	if ( (is_home() == false) || ($paged >= 1) ) {
+		return false;
+	}
+	
+	if (is_home() || is_front_page()){
+		return 'home';
+	}
 }
