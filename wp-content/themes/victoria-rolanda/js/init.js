@@ -5,7 +5,7 @@
 	  var js, fjs = d.getElementsByTagName(s)[0];
 	  if (d.getElementById(id)) return;
 	  js = d.createElement(s); js.id = id;
-	  js.src = "//connect.facebook.net/es_LA/all.js#xfbml=1&appId=322236784515173";
+	  js.src = "//connect.facebook.net/es_LA/all.js#xfbml=1&appId=133827663423423";
 	  fjs.parentNode.insertBefore(js, fjs);
 	}(document, 'script', 'facebook-jssdk'));
 
@@ -72,7 +72,16 @@ $(document).ready(function() {
 					});
 
 				}
-			});			
+			});
+			
+			sfc_update_user_details();
+			
+			$('#fb-user .logout').live('click', function(){ 
+				FB.logout(function(response){
+					window.location = window.location.href;
+				});
+				return false;
+			});
 		break;
 	}
 	
@@ -130,3 +139,25 @@ $(document).ready(function() {
 
 	$('body').addClass('js-finished');
 });
+
+function sfc_update_user_details(){
+	FB.getLoginStatus(function(response) {
+		if (response.authResponse) {
+			// Show their FB details TODO this should be configurable, or at least prettier...
+			if (!$('#fb-user').length) {
+				
+				var html = new Array();
+				html.push("<div id='fb-user' class='social-conect'>");
+				html.push("<fb:profile-pic linked='false' uid='loggedinuser' facebook-logo='false' width='48' height='48'></fb:profile-pic>");
+				html.push("<div class='user-info'><span clas='user'><fb:name linked='false' uid='loggedinuser' useyou='false'></fb:name></span> &middot; <a href='#' class='logout'>Logout</a></div>");
+				html.push("<input type='hidden' name='sfc_user_id' value='"+response.authResponse.userID+"' /><input type='hidden' name='sfc_user_token' value='"+response.authResponse.accessToken+"' />");
+				html.push('</div>');
+				
+				$('#comment-user-details').hide().after(html.join(''));
+			}
+
+			// Refresh the DOM
+			FB.XFBML.parse();
+		} 
+	});
+}

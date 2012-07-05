@@ -1350,6 +1350,18 @@ footer .only-next .next {
    color: $black80;
     font-size: 14px;
   }
+  
+  .fb_profile_pic_rendered {
+    overflow: hidden;
+    width: 48px;
+    height: 48px;
+    position: absolute;
+    left:0;
+    
+    img {
+      @include border_radius(5px);
+    }  
+  }  
 }
 
 .user-conected {

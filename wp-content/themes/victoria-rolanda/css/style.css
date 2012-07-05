@@ -1137,6 +1137,21 @@ footer .only-next .next {
   .social-conect .logout {
     color: #333333;
     font-size: 14px; }
+  .social-conect .fb_profile_pic_rendered {
+    overflow: hidden;
+    width: 48px;
+    height: 48px;
+    position: absolute;
+    left: 0; }
+    .social-conect .fb_profile_pic_rendered img {
+      -webkit-border-radius: 5px;
+      -moz-border-radius: 5px;
+      border-radius: 5px;
+      /*
+      -moz-background-clip: padding;
+      -webkit-background-clip: padding-box;
+      background-clip: padding-box;
+      */ }
 
 .user-conected label {
   display: none;
