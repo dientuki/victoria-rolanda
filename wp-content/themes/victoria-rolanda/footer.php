@@ -17,11 +17,12 @@
 	})();
 	</script>		
 	
+	<?php $options = get_option('stc_options'); ?>
 	<script type="text/javascript" charset="utf-8">
 		var VR = {};
 		VR.base_path = '<?php  bloginfo( 'wpurl' ) ?>';
 		VR.template_path='<?php bloginfo( 'template_url' ); ?>';
-		VR.anyware = 'LlXU5DCubrTtWpmdCtWxuQ';
+		VR.anyware = '<?php echo $options['consumer_key'];?>';
 	</script>	
 	
 	<script src="<?php bloginfo( 'template_url' ); ?>/js/libs/LAB-min.js"></script>

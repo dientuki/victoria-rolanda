@@ -111,12 +111,13 @@ footer .only-next .next {
 }
 
 #comment-form {
-	
+  $w:520px;
+  	
 	margin-top:5px;
-	
-	fieldset {
+
+  fieldset {
 	$h:25px;
-	$w:520px;
+	
 	
 	  label {
 	   float:left;
@@ -137,14 +138,6 @@ footer .only-next .next {
 	    height: 19px;
 	    line-height: 19px;
 	  }
-	  textarea {
-	    font-size: 14px;
-	    width:$w;
-	    resize:none;
-	    height:105px;
-	    overflow: visible;
-	  }
-	  
 	  .required {
 	    float:left;
 	    font-size: 14px;
@@ -157,6 +150,14 @@ footer .only-next .next {
 	     margin-bottom: 0;
 	  }
 	}
+	
+  textarea {
+    font-size: 14px;
+    width:$w;
+    resize:none;
+    height:105px;
+    overflow: visible;
+  }	
 	
 	#submit {
 	  width: 150px;
@@ -732,6 +733,7 @@ footer .only-next .next {
     line-height: 13px;
     font-weight: bold;
     cursor:help;
+    margin-left: -2px;
 	}
 
 }
@@ -1350,7 +1352,7 @@ footer .only-next .next {
   }
 }
 
-.social-conected {
+.user-conected {
 	label {
 	  display:none;
 	  visibility: hidden;

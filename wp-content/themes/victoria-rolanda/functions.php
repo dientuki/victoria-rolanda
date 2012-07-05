@@ -146,3 +146,26 @@ function get_data_page(){
 		return 'home';
 	}
 }
+
+function get_logged(){
+	
+	if (is_user_logged_in() == false){
+		return false;
+	}
+	
+	global $userdata;
+	get_currentuserinfo();
+	//die(print_r($userdata));
+	
+	$html  = ' <div id="wp-user" class="social-conect">';
+	$html .= get_avatar( $userdata->user_email, 48 );
+	$html .= '<div class="user-info">';
+	$html .= '<span clas="user">'.$userdata->user_nicename .'</span> &middot; <a class="logout" href="' . admin_url( 'profile.php' ) . '" title="Administrador">Ver panel</a> &middot; <a class="logout" href="' . wp_logout_url( apply_filters( 'the_permalink', get_permalink( $post_id ) ) ) . '">Salir</a>';
+	$html .= '</div></div>';
+	
+	//$html .= get_avatar( $userdata->ID, 48 ); 
+	
+	
+	return $html;
+	//'<p class="logged-in-as">' . $user_identity . sprintf( __( 'Logged in as <a href="%1$s">%2$s</a>. <a href="%3$s" title="Log out of this account">Log out?</a>' ), admin_url( 'profile.php' ), $user_identity, wp_logout_url( apply_filters( 'the_permalink', get_permalink( $post_id ) ) ) ) . '</p>'
+}

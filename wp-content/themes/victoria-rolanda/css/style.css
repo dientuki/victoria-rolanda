@@ -139,12 +139,6 @@ footer .only-next .next {
     font-size: 14px;
     height: 19px;
     line-height: 19px; }
-  #comment-form fieldset textarea {
-    font-size: 14px;
-    width: 520px;
-    resize: none;
-    height: 105px;
-    overflow: visible; }
   #comment-form fieldset .required {
     float: left;
     font-size: 14px;
@@ -153,6 +147,12 @@ footer .only-next .next {
   #comment-form fieldset .textarea {
     height: 111px;
     margin-bottom: 0; }
+  #comment-form textarea {
+    font-size: 14px;
+    width: 520px;
+    resize: none;
+    height: 105px;
+    overflow: visible; }
   #comment-form #submit {
     width: 150px; }
   #comment-form .comment-notes {
@@ -599,7 +599,8 @@ footer .only-next .next {
     text-align: center;
     line-height: 13px;
     font-weight: bold;
-    cursor: help; }
+    cursor: help;
+    margin-left: -2px; }
 
 #ranking {
   padding-bottom: 10px; }
@@ -1137,10 +1138,10 @@ footer .only-next .next {
     color: #333333;
     font-size: 14px; }
 
-.social-conected label {
+.user-conected label {
   display: none;
   visibility: hidden; }
-.social-conected textarea {
+.user-conected textarea {
   margin-left: 58px;
   width: 590px !important; }
 

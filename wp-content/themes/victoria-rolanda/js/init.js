@@ -20,6 +20,10 @@ $(document).ready(function() {
 	 * Switch for specifict content page
 	 */
 	switch ($('body').data('page'))	{
+	
+		/**
+		 * Home page
+		 */
 		case 'home':
 
 			$('#featured-carousel').jCarouselLite({
@@ -42,7 +46,15 @@ $(document).ready(function() {
 				speed: $('#footer-carousel').data('speed') ? $('#footer-carousel').data('speed') : 500
 			});
 		break;
+		
+		/**
+		 * News page
+		 */
 		case 'news':
+			
+			/**
+			 * Twitter Connect
+			 */
 			var ajax_url = VR.base_path + '/wp-admin/admin-ajax.php';
 			var data = { action: 'stc_comm_get_display'	}
 			$.post(ajax_url, data, function(response) {
@@ -53,7 +65,7 @@ $(document).ready(function() {
 					$fade.fadeIn('fast', function(){
 
 						$('#comment-user-details').hide().after(response);
-						$fieldset.addClass('social-conected');
+						$fieldset.find('div.textarea').addClass('user-conected');
 						$fieldset.animate({height: '138px'}, 750);
 						$fade.fadeOut(750);									
 						
