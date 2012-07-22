@@ -75,7 +75,7 @@
 	<link rel="alternate" type="application/rss+xml" title="<?php echo $title; ?> | RSS de los comentarios" href="<?php the_permalink(); ?>/feed" />
 	<link rel='canonical' href='<?php the_permalink(); ?>' />
 	<link rel='shortlink' href='<?php the_guid(); ?>' />
-		<?php process_postviews(); ?>	
+		<?php if (function_exists('process_postviews')) {process_postviews();} ?>	
 	<?php endif; ?>
 
 	<link rel="EditURI" type="application/rsd+xml" title="RSD" href="http://<?php echo $_SERVER["SERVER_NAME"] . $_SERVER["REQUEST_URI"] ?>xmlrpc.php?rsd" />
