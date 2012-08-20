@@ -10,7 +10,7 @@ java -jar /usr/share/yui/yuicompressor.jar --type css --line-break 200 -o tmp/cs
 java -jar /usr/share/yui/yuicompressor.jar --type css --line-break 200 -o tmp/css/40_carousel.css  css/carousel.css
 java -jar /usr/share/yui/yuicompressor.jar --type css --line-break 200 -o tmp/css/50_wp-polls.css  css/wp-polls.css
 
-java -jar /usr/share/yui/yuicompressor.jar --type css --line-break 200 -o tmp/css/ie-min.css  css/ie.css
+java -jar /usr/share/yui/yuicompressor.jar --type css --line-break 200 -o css/ie-min.css  css/ie.css
 
 cat tmp/css/* > css/vr-min.css
 echo 'css compresed...'
@@ -18,7 +18,7 @@ echo 'css compresed...'
 echo 'compresing js...'
 mkdir -p tmp/js
 
-#java -jar /usr/share/yui/yuicompressor-2.4.7.jar --type js --line-break 200 -o tmp/js/10_jcarousellite.js  js/plugins/jcarousellite-1-0-1.js
+#java -jar /usr/share/yui/yuicompressor.jar --type js --line-break 200 -o tmp/js/10_jcarousellite.js  js/plugins/jcarousellite-1-0-1.js
 cp js/plugins/jcarousellite-1-0-1-min.js tmp/js/10_jcarousellite.js
 java -jar /usr/share/yui/yuicompressor.jar --type js --line-break 200 -o tmp/js/20_wp-polls.js  js/plugins/wp-polls.js
 java -jar /usr/share/yui/yuicompressor.jar --type js --line-break 200 -o tmp/js/30_init.js      js/init.js
