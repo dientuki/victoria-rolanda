@@ -1,5 +1,3 @@
-article .author {
-  text-align: right; }
 article .entry-content,
 article .entry-content p {
   font-size: 16px;
@@ -960,7 +958,7 @@ footer .only-next .next {
     padding: 0 5px;
     text-transform: uppercase; }
 .new figure {
-  margin-bottom: 15px;
+  margin-bottom: 10px;
   -webkit-border-radius: 7px;
   -moz-border-radius: 7px;
   border-radius: 7px;
@@ -972,6 +970,9 @@ footer .only-next .next {
   overflow: hidden;
   width: 660px;
   height: 371px; }
+.new .author {
+  text-align: right;
+  margin-bottom: 15px; }
 .new .dropline {
   line-height: 1.3em; }
 .new .entry-content p {

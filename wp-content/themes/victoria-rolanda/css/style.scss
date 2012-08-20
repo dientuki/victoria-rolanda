@@ -3,10 +3,6 @@
 
 article {
 	
-	.author {
-	  text-align: right;
-	}
-	
 	.entry-content,
 	.entry-content p {
 	  font-size: 16px;
@@ -1146,12 +1142,17 @@ footer .only-next .next {
   }
   
   figure {
-    margin-bottom: 15px;
+    margin-bottom: 10px;
     @include border_radius(7px);
     overflow: hidden;
     width: 660px;
     height: 371px;
-  }  
+  } 
+
+  .author {
+    text-align: right;
+    margin-bottom: 15px;
+  }
   
   .dropline {
     line-height: 1.3em;
