@@ -25,6 +25,10 @@
     	</figure>
     	<?php endif; ?>
     	
+      <div class="author vcard">
+      	Por: <a title="<?php the_author()?>" href="<?php echo get_author_posts_url( get_the_author_meta( 'ID' ) ); ?>" rel="author"><?php the_author()?></a>
+      </div>          	
+    	
     	<div class="entry-content clearfix">
     		<?php the_content(); ?>
     	</div>
