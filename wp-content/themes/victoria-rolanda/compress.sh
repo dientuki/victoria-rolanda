@@ -10,7 +10,7 @@ java -jar /usr/share/yui/yuicompressor.jar --type css --line-break 200 -o tmp/cs
 java -jar /usr/share/yui/yuicompressor.jar --type css --line-break 200 -o tmp/css/40_carousel.css  css/carousel.css
 java -jar /usr/share/yui/yuicompressor.jar --type css --line-break 200 -o tmp/css/50_wp-polls.css  css/wp-polls.css
 
-java -jar /usr/share/yui/yuicompressor.jar --type css --line-break 200 -o tmp/css/ie-min.css  css/ie.css
+java -jar /usr/share/yui/yuicompressor.jar --type css --line-break 200 -o css/ie-min.css  css/ie.css
 
 cat tmp/css/* > css/vr-min.css
 echo 'css compresed...'
