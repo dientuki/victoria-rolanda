@@ -1,3 +1,5 @@
+article .author {
+  text-align: right; }
 article .entry-content,
 article .entry-content p {
   font-size: 16px;
