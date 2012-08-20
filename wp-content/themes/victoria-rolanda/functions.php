@@ -67,10 +67,12 @@ function is_new($id) {
 	$post_time = get_the_time('U', $id);
 	$now = time();
 	$diff = $now - $post_time;
-	//echo $now . '---' . $post_time .'---' . date('j', $diff);
-	if (date('j', $diff) <= 7 ) {
-		return 'has-new';
+	$day = (60*60*24)*7;
+	if ($diff <= $day ) {
+		return true;
 	}
+	
+	return false;
 }
 
 /*
@@ -115,4 +117,55 @@ function time_ago( $type = 'post' ) {
 	}
 	 
 	return "hace $difference $pe";
+}
+
+
+add_filter('comment_form_default_fields', 'comments_fields');
+function comments_fields($fields) {
+	
+	$commenter = wp_get_current_commenter();
+	$req = get_option( 'require_name_email' );
+	$aria_req = ( $req ? " aria-required='true'" : '' );
+		
+	$fields['author'] = '<div class="item clearfix"><label for="author">Nombre:</label><input id="author" class="field" name="author" type="text" value="' . esc_attr( $commenter['comment_author'] ) . '" size="30"' . $aria_req . ' />' . ( $req ? '<span class="required">*</span>' : '' ) . '</div>';	
+	$fields['email'] = '<div class="item clearfix"><label for="email">Email:</label><input id="email" class="field" name="email" type="text" value="' . esc_attr(  $commenter['comment_author_email'] ) . '" size="30"' . $aria_req . ' />' . ( $req ? '<span class="required">*</span>' : '' ) . '</div>';
+	$fields['url'] = '';
+	return $fields;
+}
+
+function get_data_page(){
+	if (is_single() || is_page()) {
+		return 'news';
+	}
+	
+	if ( (is_home() == false) || ($paged >= 1) ) {
+		return false;
+	}
+	
+	if (is_home() || is_front_page()){
+		return 'home';
+	}
+}
+
+function get_logged(){
+	
+	if (is_user_logged_in() == false){
+		return false;
+	}
+	
+	global $userdata;
+	get_currentuserinfo();
+	//die(print_r($userdata));
+	
+	$html  = ' <div id="wp-user" class="social-conect">';
+	$html .= get_avatar( $userdata->user_email, 48 );
+	$html .= '<div class="user-info">';
+	$html .= '<span clas="user">'.$userdata->user_nicename .'</span> &middot; <a class="logout" href="' . admin_url( 'profile.php' ) . '" title="Administrador">Ver panel</a> &middot; <a class="logout" href="' . wp_logout_url( apply_filters( 'the_permalink', get_permalink( $post_id ) ) ) . '">Salir</a>';
+	$html .= '</div></div>';
+	
+	//$html .= get_avatar( $userdata->ID, 48 ); 
+	
+	
+	return $html;
+	//'<p class="logged-in-as">' . $user_identity . sprintf( __( 'Logged in as <a href="%1$s">%2$s</a>. <a href="%3$s" title="Log out of this account">Log out?</a>' ), admin_url( 'profile.php' ), $user_identity, wp_logout_url( apply_filters( 'the_permalink', get_permalink( $post_id ) ) ) ) . '</p>'
 }

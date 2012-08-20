@@ -11,7 +11,10 @@ article .entry-content {
   article .entry-content p {
     margin: 0; }
 
-form .submit {
+form fieldset {
+  position: relative; }
+form .submit,
+form #submit {
   -webkit-border-radius: 7px;
   -moz-border-radius: 7px;
   border-radius: 7px;
@@ -31,6 +34,17 @@ form .submit {
   height: 25px;
   width: 100px;
   text-transform: uppercase; }
+form .field {
+  -webkit-border-radius: 7px;
+  -moz-border-radius: 7px;
+  border-radius: 7px;
+  /*
+  -moz-background-clip: padding;
+  -webkit-background-clip: padding-box;
+  background-clip: padding-box;
+  */
+  border: solid 2px #ff58b0;
+  padding: 1px 3px; }
 
 footer .only-next .next {
   width: 100%; }
@@ -71,7 +85,9 @@ footer .only-next .next {
   text-transform: uppercase; }
 
 #comment-form .submit,
-.wp-polls-ans .submit {
+#comment-form #submit,
+.wp-polls-ans .submit,
+.wp-polls-ans #submit {
   background: #ff58b0;
   /* Old browsers */
   background: -moz-linear-gradient(top, #ff58b0 0%, #ff3c95 100%);
@@ -87,7 +103,9 @@ footer .only-next .next {
   background: linear-gradient(top, #ff58b0 0%, #ff3c95 100%);
   /* W3C */ }
   #comment-form .submit:hover,
-  .wp-polls-ans .submit:hover {
+  #comment-form #submit:hover,
+  .wp-polls-ans .submit:hover,
+  .wp-polls-ans #submit:hover {
     background: #ff3c95;
     /* Old browsers */
     background: -moz-linear-gradient(top, #ff3c95 0%, #ff58b0 100%);
@@ -102,6 +120,55 @@ footer .only-next .next {
     /* IE10+ */
     background: linear-gradient(top, #ff3c95 0%, #ff58b0 100%);
     /* W3C */ }
+
+#comment-form {
+  margin-top: 5px; }
+  #comment-form fieldset label {
+    float: left;
+    width: 110px;
+    height: 25px;
+    line-height: 25px;
+    margin-right: 10px; }
+  #comment-form fieldset .item {
+    height: 25px;
+    margin-bottom: 10px; }
+  #comment-form fieldset input {
+    float: left;
+    width: 520px;
+    margin-right: 2px;
+    font-size: 14px;
+    height: 19px;
+    line-height: 19px; }
+  #comment-form fieldset .required {
+    float: left;
+    font-size: 14px;
+    color: red;
+    font-weight: bold; }
+  #comment-form fieldset .textarea {
+    height: 111px;
+    margin-bottom: 0; }
+  #comment-form textarea {
+    font-size: 14px;
+    width: 520px;
+    resize: none;
+    height: 105px;
+    overflow: visible; }
+  #comment-form #submit {
+    width: 150px; }
+  #comment-form .comment-notes {
+    display: none;
+    visibility: hidden; }
+  #comment-form .fade {
+    display: none;
+    width: 100%;
+    height: 100%;
+    background: white;
+    position: absolute;
+    left: 0;
+    top: 0;
+    z-index: 50; }
+  #comment-form .form-submit {
+    margin-bottom: 0; }
 
 #commentlist .bypostauthor {
   background: #f9adce;
@@ -248,7 +315,7 @@ footer .only-next .next {
   #header-box .follow-us {
     float: left;
     height: 25px;
-    margin-right: 10px; }
+    margin-right: 5px; }
     #header-box .follow-us .title {
       width: auto;
       line-height: 25px; }
@@ -518,7 +585,22 @@ footer .only-next .next {
   #pov ul li {
     width: 50%;
     float: left;
-    margin-bottom: 15px; }
+    margin-bottom: 15px;
+    position: relative; }
+  #pov .has-new {
+    background: url(../images/notif.png) no-repeat;
+    display: inline-block;
+    height: 18px;
+    position: absolute;
+    top: -10px;
+    width: 21px;
+    color: white;
+    font-size: 12px;
+    text-align: center;
+    line-height: 13px;
+    font-weight: bold;
+    cursor: help;
+    margin-left: -2px; }
 
 #ranking {
   padding-bottom: 10px; }
@@ -610,6 +692,14 @@ footer .only-next .next {
     margin-right: 2px; }
   #related .item-4 {
     margin-right: 0; }
+
+#respond h3 {
+  height: 40px;
+  line-height: 40px;
+  font-size: 25px;
+  text-transform: uppercase;
+  font-family: 'KGSkinnyLatteRegular', Arial;
+  text-transform: uppercase; }
 
 #river-news {
   width: 450px;
@@ -739,6 +829,10 @@ footer .only-next .next {
       text-decoration: none;
       line-height: 30px;
       text-align: center; }
+
+#stc_comm_send {
+  display: none;
+  visibility: hidden; }
 
 #poll {
   padding: 10px 10px 5px 10px;
@@ -975,17 +1069,8 @@ footer .only-next .next {
 .search-form {
   position: relative; }
   .search-form .field {
-    padding: 1px 22px 1px 3px;
-    -webkit-border-radius: 7px;
-    -moz-border-radius: 7px;
-    border-radius: 7px;
-    /*
-    -moz-background-clip: padding;
-    -webkit-background-clip: padding-box;
-    background-clip: padding-box;
-    */
-    border: solid 2px #ff58b0;
-    width: 196px; }
+    width: 196px;
+    padding: 1px 22px 1px 3px; }
   .search-form .submit {
     width: 19px;
     height: 19px;
@@ -1029,6 +1114,51 @@ footer .only-next .next {
   .share .fb span.fb_edge_comment_widget.fb_iframe_widget {
     width: auto;
     height: auto; }
+
+.social-conect {
+  position: relative;
+  margin-bottom: 10px; }
+  .social-conect .avatar {
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    border-radius: 5px;
+    /*
+    -moz-background-clip: padding;
+    -webkit-background-clip: padding-box;
+    background-clip: padding-box;
+    */
+    overflow: hidden;
+    width: 48px;
+    height: 48px;
+    position: absolute;
+    left: 0; }
+  .social-conect .user-info {
+    margin-left: 58px; }
+  .social-conect .logout {
+    color: #333333;
+    font-size: 14px; }
+  .social-conect .fb_profile_pic_rendered {
+    overflow: hidden;
+    width: 48px;
+    height: 48px;
+    position: absolute;
+    left: 0; }
+    .social-conect .fb_profile_pic_rendered img {
+      -webkit-border-radius: 5px;
+      -moz-border-radius: 5px;
+      border-radius: 5px;
+      /*
+      -moz-background-clip: padding;
+      -webkit-background-clip: padding-box;
+      background-clip: padding-box;
+      */ }
+
+.user-conected label {
+  display: none;
+  visibility: hidden; }
+.user-conected textarea {
+  margin-left: 58px;
+  width: 590px !important; }
 
 .wrapper {
   width: 990px;

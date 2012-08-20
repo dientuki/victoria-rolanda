@@ -51,9 +51,6 @@
 		<meta property="og:image" content="<?php bloginfo( 'template_url' ); ?>/images/logo.png" />
 	<?php endif;?>
 	
-	
-	
-	
 	<meta property="og:site_name" content="Victoria Rolanda" />
 	<meta property="og:region" content="Buenos Aires" />
 	<meta property="og:country-name" content="Argentina"/>
@@ -72,11 +69,21 @@
 	<link rel="pingback" href="<?php bloginfo( 'pingback_url' ); ?>" />
 	<script src="<?php bloginfo( 'template_url' ); ?>/js/libs/modernizr.js"></script>
 	
-	<?php wp_head(); ?>
+	<?php //wp_head(); ?>
+	
+	<?php if (is_single() || is_page()): ?>
+	<link rel="alternate" type="application/rss+xml" title="<?php echo $title; ?> | RSS de los comentarios" href="<?php the_permalink(); ?>/feed" />
+	<link rel='canonical' href='<?php the_permalink(); ?>' />
+	<link rel='shortlink' href='<?php the_guid(); ?>' />
+		<?php if (function_exists('process_postviews')) {process_postviews();} ?>	
+	<?php endif; ?>
+
+	<link rel="EditURI" type="application/rsd+xml" title="RSD" href="http://<?php echo $_SERVER["SERVER_NAME"] . $_SERVER["REQUEST_URI"] ?>xmlrpc.php?rsd" />
+	<link rel="wlwmanifest" type="application/wlwmanifest+xml" href="http://<?php echo $_SERVER["SERVER_NAME"] . $_SERVER["REQUEST_URI"] ?>wp-includes/wlwmanifest.xml" /> 
 
 </head>
 
-<body <?php body_class(); ?> data-page="home">
+<body <?php body_class(); ?> data-page="<?php echo get_data_page(); ?>">
 	<section id="header-box" class="wrapper">
 		<ul class="follow-us clearfix">
 			<li class="title">Seguinos:</li>
@@ -94,7 +101,7 @@
 		<?php else: ?>
 		  <img class="header-image" src="<?php echo bloginfo( 'template_url' ) . '/images/header-vr.jpg' ?>" width="990" height="190" alt="<?php bloginfo( 'name' ); ?>" />
 		<?php endif; ?>
-		<a id="logo" href="<?php echo home_url( '/' ); ?>" title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a>
+		<a id="logo" href="<?php echo home_url( '/' ); ?>" title='<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>' rel="home"><?php bloginfo( 'name' ); ?></a>
 		<div class="tagline hidden"><?php bloginfo( 'description' ); ?></div>
 		<?php wp_nav_menu( array( 'theme_location' => 'header',
 		                          'container' => 'nav', 'container_id' => 'header-menu', 'container_class' => '',

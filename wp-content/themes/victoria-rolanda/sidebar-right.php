@@ -17,7 +17,7 @@
 			  <?php $query = new WP_Query(array('posts_per_page'=>1, 'cat' => $category->cat_ID)); ?>
 			  <?php while ( $query->have_posts() ): ?>
 				  <?php $query->the_post(); ?>
-					<li class="<?php echo is_new(get_the_ID()); ?>"><a href="<?php the_permalink() ?>" title="<?php echo the_title_attribute(); ?>"><?php echo $category->cat_name; ?></a></li>
+					<li><a href="<?php the_permalink() ?>" title='<?php the_title_attribute(); ?>'><?php echo $category->cat_name; ?></a><?php if (is_new(get_the_ID()) == true): ?><span class="has-new" title='Nuevo Post! "<?php the_title_attribute(); ?>"'>!</span><?php endif; ?></li>
 				<?php endwhile; ?>
 			<?php endforeach;?>
 		</ul>
@@ -43,7 +43,7 @@
 				$query = $wpdb->get_results($sql);
 				?>		
 				<?php foreach ($query as $post): ?>
-					<li class="item"><span><?php echo $x; ?></span> <a href="<?php the_permalink() ?>" title="<?php echo the_title_attribute(); ?>"><?php echo the_title(); ?></a></li>
+					<li class="item"><span><?php echo $x; ?></span> <a href="<?php the_permalink() ?>" title='<?php echo the_title_attribute(); ?>'><?php echo the_title(); ?></a></li>
 					<?php $x++; ?>
 				<?php endforeach;?>
 			</ul>
@@ -54,7 +54,7 @@
 				$query = $wpdb->get_results($sql);
 				?>
 				<?php foreach ($query as $post): ?>
-					<li class="item"><?php echo $x; ?> <a href="<?php the_permalink() ?>" title="<?php echo the_title_attribute(); ?>"><?php echo the_title(); ?></a></li>
+					<li class="item"><?php echo $x; ?> <a href="<?php the_permalink() ?>" title='<?php echo the_title_attribute(); ?>'><?php echo the_title(); ?></a></li>
 					<?php $x++; ?>
 				<?php endforeach;?>
 			</ul>

@@ -26,7 +26,12 @@ article {
 
 form {
 	
-	.submit {
+	fieldset {
+	  position:relative;
+	}
+	
+	.submit,
+	#submit {
     @include border_radius(7px);
     color:white;
     font-family: 'KGSkinnyLatteRegular', Arial;
@@ -40,7 +45,12 @@ form {
     height: 25px;
     width:100px;
     text-transform: uppercase;    
- 
+	}
+	
+	.field {
+    @include border_radius(7px);
+    border:solid 2px $pink;
+    padding:1px 3px;
 	}
 }
 
@@ -90,13 +100,88 @@ footer .only-next .next {
 
 #comment-form,
 .wp-polls-ans {
-  .submit {
+  .submit,
+  #submit {
     @include gradient_cross(#FF58B0,#FF3C95);
     
     &:hover {
       @include gradient_cross(#FF3C95,#FF58B0);
     }
   }
+}
+
+#comment-form {
+  $w:520px;
+  	
+	margin-top:5px;
+
+  fieldset {
+	$h:25px;
+	
+	
+	  label {
+	   float:left;
+	   width: 110px;
+	   height:$h;
+	   line-height:$h;
+	   margin-right: 10px;
+	  }
+	  .item {
+	    height:$h;
+	    margin-bottom: 10px;
+	  }
+	  input {
+	    float:left;
+	    width:$w;
+	    margin-right: 2px;
+	    font-size: 14px;
+	    height: 19px;
+	    line-height: 19px;
+	  }
+	  .required {
+	    float:left;
+	    font-size: 14px;
+	    color:red;
+	    font-weight: bold;
+	  }
+	  
+	  .textarea {
+	     height:111px;
+	     margin-bottom: 0;
+	  }
+	}
+	
+  textarea {
+    font-size: 14px;
+    width:$w;
+    resize:none;
+    height:105px;
+    overflow: visible;
+  }	
+	
+	#submit {
+	  width: 150px;
+	}
+	
+	.comment-notes {
+	  display:none;
+	  visibility: hidden;
+	}
+	
+  .fade {
+    display: none;
+    width: 100%;
+    height: 100%;
+    background: white;
+    position: absolute;
+    left: 0;
+    top: 0;
+    z-index: 50;
+  }
+  
+  .form-submit {
+    margin-bottom: 0;
+  }	
 }
 
 #commentlist {
@@ -307,7 +392,7 @@ footer .only-next .next {
 	.follow-us {
 	 float:left;
 	 height: $h;
-	 margin-right:10px;
+	 margin-right:5px;
 	 
 	 .title {
 	   width: auto;
@@ -619,7 +704,7 @@ footer .only-next .next {
 	  font-size: 17px;
 	  line-height:17px;
     font-family: 'KGSkinnyLatteRegular', Arial;
-    text-transform: uppercase;  	  
+    text-transform: uppercase;  
 	  
 	  &:hover {
 	    color:white;
@@ -632,6 +717,23 @@ footer .only-next .next {
 	  width: 50%;
 	  float:left;
 	  margin-bottom: 15px;
+	  position: relative;
+	}
+	
+	.has-new{
+	  background: url(../images/notif.png) no-repeat;
+    display: inline-block;
+    height: 18px;
+    position: absolute;
+    top: -10px;
+    width: 21px;	 
+    color:white;
+    font-size: 12px;
+    text-align: center;
+    line-height: 13px;
+    font-weight: bold;
+    cursor:help;
+    margin-left: -2px;
 	}
 
 }
@@ -735,6 +837,16 @@ footer .only-next .next {
   }
   
   
+}
+
+#respond h3{
+    $h:40px;
+    height:$h;
+    line-height:$h;
+    font-size:25px;
+    text-transform:uppercase;     
+    font-family: 'KGSkinnyLatteRegular', Arial;
+    text-transform: uppercase; 
 }
 
 #river-news {
@@ -888,6 +1000,11 @@ footer .only-next .next {
       text-align:center; 
 	  }
 	}
+}
+
+#stc_comm_send {
+	display: none;
+	visibility: hidden;
 }
 
 #poll {
@@ -1137,10 +1254,8 @@ footer .only-next .next {
   position:relative;
 	
   .field {
-    padding:1px 22px 1px 3px;
-    @include border_radius(7px);
-    border:solid 2px $pink;
     width: 196px;
+    padding:1px 22px 1px 3px;
   }
   
   .submit {
@@ -1212,7 +1327,54 @@ footer .only-next .next {
 	.tw {}
 	.gplus {}
 	.pt {}
-}  
+}
+
+.social-conect {
+	position:relative;
+	margin-bottom:10px;
+	
+	.avatar {
+    @include border_radius(5px);
+    overflow: hidden;
+    width: 48px;
+    height: 48px;
+    position: absolute;
+    left:0;	  
+	}
+	
+  .user-info {
+    margin-left: 58px;
+  }	
+  
+  .logout {
+   color: $black80;
+    font-size: 14px;
+  }
+  
+  .fb_profile_pic_rendered {
+    overflow: hidden;
+    width: 48px;
+    height: 48px;
+    position: absolute;
+    left:0;
+    
+    img {
+      @include border_radius(5px);
+    }  
+  }  
+}
+
+.user-conected {
+	label {
+	  display:none;
+	  visibility: hidden;
+	}
+	
+	textarea {
+    margin-left: 58px;
+    width: 590px !important; 
+	}
+}
 
 .wrapper {
 	width: 990px;

@@ -76,8 +76,19 @@
 	
 	<footer>
 	
-	<?php comment_form(); ?>
-
+	<?php 
+		$comment_config = array();
+		$comment_config['label_submit'] = 'Comentar!';	
+		$comment_config['comment_notes_before'] = '<fieldset><div class="fade"></div>';
+		$comment_config['comment_notes_after'] = '</fieldset>';
+		$comment_config['id_form'] = 'comment-form';
+		$tmp = is_user_logged_in() ? ' user-conected': '';
+		$comment_config['comment_field'] = '<div class="item textarea' . $tmp . '"><label for="comment">Comentario:</label><textarea id="comment" name="comment" class="field" aria-required="true"></textarea></div>';
+		$comment_config['title_reply'] = 'Escribe un comentario';
+		$comment_config['logged_in_as'] = get_logged();
+		
+	?>
+	<?php comment_form($comment_config); ?>
 	</footer>
 
 </section>
